@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ProductWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ProductWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDS" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDS_WithProductvm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDS_WithProductvm" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDS_WithProductvm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDS_WithProductvmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceNew" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBOMReferenceNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBOMReferenceNo" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBOMReferenceNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBOMReferenceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchOverheadForBOMNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOverheadForBOMNew" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchOverheadForBOMNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOverheadForBOMNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchBanderolProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderolProducts" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchBanderolProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderolProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLIFOPurchaseInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLIFOPurchaseInformation" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLIFOPurchaseInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLIFOPurchaseInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastNBRPriceFromBOM_VatName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastNBRPriceFromBOM_VatName" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastNBRPriceFromBOM_VatName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastNBRPriceFromBOM_VatNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastNBRPriceFromBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastNBRPriceFromBOM" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastNBRPriceFromBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastNBRPriceFromBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetTransactionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionType" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetTransactionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_ProductDTByItemNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductDTByItemNo" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_ProductDTByItemNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductDTByItemNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectBOMRaw_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBOMRaw" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectBOMRaw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBOMRawResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastVatableFromBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastVatableFromBOM" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastVatableFromBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastVatableFromBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastTollChargeFBOMOH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTollChargeFBOMOH" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastTollChargeFBOMOH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTollChargeFBOMOHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceForInternalSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceForInternalSales" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceForInternalSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceForInternalSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceTender_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceTender" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceTender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceVAT16_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceVAT16" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceVAT16_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceVAT16Response" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceVAT17_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceVAT17" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_AvgPriceVAT17_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvgPriceVAT17Response" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DeleteProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductNames" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DeleteProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DeleteToProductStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToProductStock" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DeleteToProductStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToProductStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDownByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_DropDownByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBOM" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBomIdFromBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBomIdFromBOM" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetBomIdFromBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBomIdFromBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExcelProductDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelProductDetails" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExcelProductDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelProductDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExistingProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetExistingProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastUseQuantityFromBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastUseQuantityFromBOM" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetLastUseQuantityFromBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastUseQuantityFromBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByType" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductCodeUOMn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductCodeUOMn" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductCodeUOMn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductCodeUOMnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductIdByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductIdByName" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductIdByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductIdByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductNoByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNoByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductNoByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNoByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductNoByGroup_Code_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNoByGroup_Code" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductNoByGroup_Code_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNoByGroup_CodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductUOMc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUOMc" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductUOMc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUOMcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductUOMn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUOMn" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductUOMn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUOMnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductWithCostPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductWithCostPrice" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetProductWithCostPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductWithCostPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetReconsciliationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReconsciliationData" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_GetReconsciliationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReconsciliationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InserToProductStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserToProductStock" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InserToProductStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserToProductStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InsertToProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InsertToProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InsertToProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductNames" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_InsertToProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchByItemNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByItemNo" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchByItemNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByItemNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchChassis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchChassis" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchChassis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchChassisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchEngine" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductbyMultipleSaleInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductbyMultipleSaleInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductbyMultipleSaleInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductbyMultipleSaleInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductDT" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectProductDTAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductDTAll" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectProductDTAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductDTAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductFinder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductFinder" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductFinder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductFinderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDSDispose_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDSDispose" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductMiniDSDispose_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductMiniDSDisposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductNames" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductStock" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SearchProductStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectAllOverhead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOverhead" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectAllOverhead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOverheadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductName" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_SelectProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_TrackingStockCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingStockCheck" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_TrackingStockCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingStockCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateToProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToProductNames" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateToProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateToProductStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToProductStock" />
+  </wsdl:message>
+  <wsdl:message name="IProductWCF_UpdateToProductStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToProductStockResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DoWork" message="tns:IProductWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DoWorkResponse" message="tns:IProductWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDS" message="tns:IProductWCF_SearchProductMiniDS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDSResponse" message="tns:IProductWCF_SearchProductMiniDS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDS_WithProductvm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDS_WithProductvm" message="tns:IProductWCF_SearchProductMiniDS_WithProductvm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDS_WithProductvmResponse" message="tns:IProductWCF_SearchProductMiniDS_WithProductvm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceNew" message="tns:IProductWCF_AvgPriceNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceNewResponse" message="tns:IProductWCF_AvgPriceNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SelectAll" message="tns:IProductWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SelectAllResponse" message="tns:IProductWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMReferenceNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetBOMReferenceNo" message="tns:IProductWCF_GetBOMReferenceNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetBOMReferenceNoResponse" message="tns:IProductWCF_GetBOMReferenceNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOverheadForBOMNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchOverheadForBOMNew" message="tns:IProductWCF_SearchOverheadForBOMNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchOverheadForBOMNewResponse" message="tns:IProductWCF_SearchOverheadForBOMNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderolProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchBanderolProducts" message="tns:IProductWCF_SearchBanderolProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchBanderolProductsResponse" message="tns:IProductWCF_SearchBanderolProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLIFOPurchaseInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLIFOPurchaseInformation" message="tns:IProductWCF_GetLIFOPurchaseInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLIFOPurchaseInformationResponse" message="tns:IProductWCF_GetLIFOPurchaseInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNBRPriceFromBOM_VatName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOM_VatName" message="tns:IProductWCF_GetLastNBRPriceFromBOM_VatName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOM_VatNameResponse" message="tns:IProductWCF_GetLastNBRPriceFromBOM_VatName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNBRPriceFromBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOM" message="tns:IProductWCF_GetLastNBRPriceFromBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOMResponse" message="tns:IProductWCF_GetLastNBRPriceFromBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetTransactionType" message="tns:IProductWCF_GetTransactionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetTransactionTypeResponse" message="tns:IProductWCF_GetTransactionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductDTByItemNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/ProductDTByItemNo" message="tns:IProductWCF_ProductDTByItemNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/ProductDTByItemNoResponse" message="tns:IProductWCF_ProductDTByItemNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBOMRaw">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SelectBOMRaw" message="tns:IProductWCF_SelectBOMRaw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SelectBOMRawResponse" message="tns:IProductWCF_SelectBOMRaw_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastVatableFromBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLastVatableFromBOM" message="tns:IProductWCF_GetLastVatableFromBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLastVatableFromBOMResponse" message="tns:IProductWCF_GetLastVatableFromBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTollChargeFBOMOH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLastTollChargeFBOMOH" message="tns:IProductWCF_GetLastTollChargeFBOMOH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLastTollChargeFBOMOHResponse" message="tns:IProductWCF_GetLastTollChargeFBOMOH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceForInternalSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceForInternalSales" message="tns:IProductWCF_AvgPriceForInternalSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceForInternalSalesResponse" message="tns:IProductWCF_AvgPriceForInternalSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceTender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceTender" message="tns:IProductWCF_AvgPriceTender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceTenderResponse" message="tns:IProductWCF_AvgPriceTender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceVAT16">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceVAT16" message="tns:IProductWCF_AvgPriceVAT16_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceVAT16Response" message="tns:IProductWCF_AvgPriceVAT16_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceVAT17">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceVAT17" message="tns:IProductWCF_AvgPriceVAT17_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/AvgPriceVAT17Response" message="tns:IProductWCF_AvgPriceVAT17_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/Delete" message="tns:IProductWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DeleteResponse" message="tns:IProductWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DeleteProductNames" message="tns:IProductWCF_DeleteProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DeleteProductNamesResponse" message="tns:IProductWCF_DeleteProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToProductStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DeleteToProductStock" message="tns:IProductWCF_DeleteToProductStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DeleteToProductStockResponse" message="tns:IProductWCF_DeleteToProductStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DropDown" message="tns:IProductWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DropDownResponse" message="tns:IProductWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DropDownAll" message="tns:IProductWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DropDownAllResponse" message="tns:IProductWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/DropDownByCategory" message="tns:IProductWCF_DropDownByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/DropDownByCategoryResponse" message="tns:IProductWCF_DropDownByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetBOM" message="tns:IProductWCF_GetBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetBOMResponse" message="tns:IProductWCF_GetBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBomIdFromBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetBomIdFromBOM" message="tns:IProductWCF_GetBomIdFromBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetBomIdFromBOMResponse" message="tns:IProductWCF_GetBomIdFromBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetExcelData" message="tns:IProductWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetExcelDataResponse" message="tns:IProductWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelProductDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetExcelProductDetails" message="tns:IProductWCF_GetExcelProductDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetExcelProductDetailsResponse" message="tns:IProductWCF_GetExcelProductDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetExistingProductName" message="tns:IProductWCF_GetExistingProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetExistingProductNameResponse" message="tns:IProductWCF_GetExistingProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUseQuantityFromBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetLastUseQuantityFromBOM" message="tns:IProductWCF_GetLastUseQuantityFromBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetLastUseQuantityFromBOMResponse" message="tns:IProductWCF_GetLastUseQuantityFromBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductByType" message="tns:IProductWCF_GetProductByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductByTypeResponse" message="tns:IProductWCF_GetProductByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCodeUOMn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductCodeUOMn" message="tns:IProductWCF_GetProductCodeUOMn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductCodeUOMnResponse" message="tns:IProductWCF_GetProductCodeUOMn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductIdByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductIdByName" message="tns:IProductWCF_GetProductIdByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductIdByNameResponse" message="tns:IProductWCF_GetProductIdByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNoByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductNoByGroup" message="tns:IProductWCF_GetProductNoByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductNoByGroupResponse" message="tns:IProductWCF_GetProductNoByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNoByGroup_Code">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductNoByGroup_Code" message="tns:IProductWCF_GetProductNoByGroup_Code_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductNoByGroup_CodeResponse" message="tns:IProductWCF_GetProductNoByGroup_Code_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUOMc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductUOMc" message="tns:IProductWCF_GetProductUOMc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductUOMcResponse" message="tns:IProductWCF_GetProductUOMc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUOMn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductUOMn" message="tns:IProductWCF_GetProductUOMn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductUOMnResponse" message="tns:IProductWCF_GetProductUOMn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductWithCostPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetProductWithCostPrice" message="tns:IProductWCF_GetProductWithCostPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetProductWithCostPriceResponse" message="tns:IProductWCF_GetProductWithCostPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReconsciliationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/GetReconsciliationData" message="tns:IProductWCF_GetReconsciliationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/GetReconsciliationDataResponse" message="tns:IProductWCF_GetReconsciliationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserToProductStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/InserToProductStock" message="tns:IProductWCF_InserToProductStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/InserToProductStockResponse" message="tns:IProductWCF_InserToProductStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/InsertToProduct" message="tns:IProductWCF_InsertToProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/InsertToProductResponse" message="tns:IProductWCF_InsertToProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/InsertToProductNames" message="tns:IProductWCF_InsertToProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/InsertToProductNamesResponse" message="tns:IProductWCF_InsertToProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByItemNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchByItemNo" message="tns:IProductWCF_SearchByItemNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchByItemNoResponse" message="tns:IProductWCF_SearchByItemNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchChassis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchChassis" message="tns:IProductWCF_SearchChassis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchChassisResponse" message="tns:IProductWCF_SearchChassis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEngine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchEngine" message="tns:IProductWCF_SearchEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchEngineResponse" message="tns:IProductWCF_SearchEngine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductbyMultipleSaleInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductbyMultipleSaleInvoice" message="tns:IProductWCF_SearchProductbyMultipleSaleInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductbyMultipleSaleInvoiceResponse" message="tns:IProductWCF_SearchProductbyMultipleSaleInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductDT" message="tns:IProductWCF_SearchProductDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductDTResponse" message="tns:IProductWCF_SearchProductDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductDTAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SelectProductDTAll" message="tns:IProductWCF_SelectProductDTAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SelectProductDTAllResponse" message="tns:IProductWCF_SelectProductDTAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductFinder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductFinder" message="tns:IProductWCF_SearchProductFinder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductFinderResponse" message="tns:IProductWCF_SearchProductFinder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDSDispose">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDSDispose" message="tns:IProductWCF_SearchProductMiniDSDispose_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductMiniDSDisposeResponse" message="tns:IProductWCF_SearchProductMiniDSDispose_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductNames" message="tns:IProductWCF_SearchProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductNamesResponse" message="tns:IProductWCF_SearchProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SearchProductStock" message="tns:IProductWCF_SearchProductStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SearchProductStockResponse" message="tns:IProductWCF_SearchProductStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOverhead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SelectAllOverhead" message="tns:IProductWCF_SelectAllOverhead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SelectAllOverheadResponse" message="tns:IProductWCF_SelectAllOverhead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/SelectProductName" message="tns:IProductWCF_SelectProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/SelectProductNameResponse" message="tns:IProductWCF_SelectProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingStockCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/TrackingStockCheck" message="tns:IProductWCF_TrackingStockCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/TrackingStockCheckResponse" message="tns:IProductWCF_TrackingStockCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/UpdateProduct" message="tns:IProductWCF_UpdateProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/UpdateProductResponse" message="tns:IProductWCF_UpdateProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToProductNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/UpdateToProductNames" message="tns:IProductWCF_UpdateToProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/UpdateToProductNamesResponse" message="tns:IProductWCF_UpdateToProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToProductStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductWCF/UpdateToProductStock" message="tns:IProductWCF_UpdateToProductStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductWCF/UpdateToProductStockResponse" message="tns:IProductWCF_UpdateToProductStock_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductWCF" type="tns:IProductWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDS">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductMiniDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDS_WithProductvm">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductMiniDS_WithProductvm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceNew">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/AvgPriceNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMReferenceNo">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetBOMReferenceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchOverheadForBOMNew">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchOverheadForBOMNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderolProducts">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchBanderolProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLIFOPurchaseInformation">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLIFOPurchaseInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNBRPriceFromBOM_VatName">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOM_VatName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastNBRPriceFromBOM">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLastNBRPriceFromBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionType">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetTransactionType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductDTByItemNo">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/ProductDTByItemNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBOMRaw">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SelectBOMRaw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastVatableFromBOM">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLastVatableFromBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTollChargeFBOMOH">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLastTollChargeFBOMOH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceForInternalSales">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/AvgPriceForInternalSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceTender">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/AvgPriceTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceVAT16">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/AvgPriceVAT16" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgPriceVAT17">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/AvgPriceVAT17" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductNames">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DeleteProductNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToProductStock">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DeleteToProductStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownByCategory">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/DropDownByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOM">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBomIdFromBOM">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetBomIdFromBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelProductDetails">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetExcelProductDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingProductName">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetExistingProductName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUseQuantityFromBOM">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetLastUseQuantityFromBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByType">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCodeUOMn">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductCodeUOMn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductIdByName">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductIdByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNoByGroup">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductNoByGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNoByGroup_Code">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductNoByGroup_Code" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUOMc">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductUOMc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUOMn">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductUOMn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductWithCostPrice">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetProductWithCostPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReconsciliationData">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/GetReconsciliationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserToProductStock">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/InserToProductStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProduct">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/InsertToProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductNames">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/InsertToProductNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByItemNo">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchByItemNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchChassis">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchChassis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEngine">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductbyMultipleSaleInvoice">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductbyMultipleSaleInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductDT">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductDTAll">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SelectProductDTAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductFinder">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductFinder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductMiniDSDispose">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductMiniDSDispose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductNames">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductStock">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SearchProductStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOverhead">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SelectAllOverhead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProductName">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/SelectProductName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingStockCheck">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/TrackingStockCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProduct">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/UpdateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToProductNames">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/UpdateToProductNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToProductStock">
+      <soap:operation soapAction="http://tempuri.org/IProductWCF/UpdateToProductStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductWCF">
+    <wsdl:port name="BasicHttpBinding_IProductWCF" binding="tns:BasicHttpBinding_IProductWCF">
+      <soap:address location="http://localhost:50568/WCF/ProductWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

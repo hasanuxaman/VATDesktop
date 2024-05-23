@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SettingWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SettingWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SettingWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISettingWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SearchSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSettings" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SearchSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateInternalIssueValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInternalIssueValue" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateInternalIssueValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInternalIssueValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_settingsDataInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:settingsDataInsert" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_settingsDataInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:settingsDataInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCode" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateCodeGeneration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCodeGeneration" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_UpdateCodeGeneration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCodeGenerationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SettingsUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SettingsUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SettingsUpdatelist_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsUpdatelist" />
+  </wsdl:message>
+  <wsdl:message name="ISettingWCF_SettingsUpdatelist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsUpdatelistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISettingWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/DoWork" message="tns:ISettingWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/DoWorkResponse" message="tns:ISettingWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/DropDownAll" message="tns:ISettingWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/DropDownAllResponse" message="tns:ISettingWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/SelectAll" message="tns:ISettingWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/SelectAllResponse" message="tns:ISettingWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/SearchSettings" message="tns:ISettingWCF_SearchSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/SearchSettingsResponse" message="tns:ISettingWCF_SearchSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInternalIssueValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/UpdateInternalIssueValue" message="tns:ISettingWCF_UpdateInternalIssueValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/UpdateInternalIssueValueResponse" message="tns:ISettingWCF_UpdateInternalIssueValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="settingsDataInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/settingsDataInsert" message="tns:ISettingWCF_settingsDataInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/settingsDataInsertResponse" message="tns:ISettingWCF_settingsDataInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/UpdateCode" message="tns:ISettingWCF_UpdateCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/UpdateCodeResponse" message="tns:ISettingWCF_UpdateCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCodeGeneration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/UpdateCodeGeneration" message="tns:ISettingWCF_UpdateCodeGeneration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/UpdateCodeGenerationResponse" message="tns:ISettingWCF_UpdateCodeGeneration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingsUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/SettingsUpdate" message="tns:ISettingWCF_SettingsUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/SettingsUpdateResponse" message="tns:ISettingWCF_SettingsUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingsUpdatelist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingWCF/SettingsUpdatelist" message="tns:ISettingWCF_SettingsUpdatelist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingWCF/SettingsUpdatelistResponse" message="tns:ISettingWCF_SettingsUpdatelist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISettingWCF" type="tns:ISettingWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSettings">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/SearchSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInternalIssueValue">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/UpdateInternalIssueValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="settingsDataInsert">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/settingsDataInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCode">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/UpdateCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCodeGeneration">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/UpdateCodeGeneration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingsUpdate">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/SettingsUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingsUpdatelist">
+      <soap:operation soapAction="http://tempuri.org/ISettingWCF/SettingsUpdatelist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SettingWCF">
+    <wsdl:port name="BasicHttpBinding_ISettingWCF" binding="tns:BasicHttpBinding_ISettingWCF">
+      <soap:address location="http://localhost:50568/WCF/SettingWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

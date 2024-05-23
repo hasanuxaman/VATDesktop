@@ -1,0 +1,2679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReportWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ReportWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ReportWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReportWCF_StockReportRMReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockReportRMReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockReportRMReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockReportRMReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferToDepotReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferToDepotReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferToDepotReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferToDepotReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSStatementReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:VDSStatementReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSStatementReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VDSStatementReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Chak_khaReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Chak_khaReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Chak_khaReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Chak_khaReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Chak_kaReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Chak_kaReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Chak_kaReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Chak_kaReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDS_Certificatet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDS_Certificatet" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDS_Certificatet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDS_CertificatetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Adjustment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Adjustment" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Adjustment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSAmountReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSAmountReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSAmountReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSAmountReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferIssueOutReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferIssueOutReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferIssueOutReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferIssueOutReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferReceiveInReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferReceiveInReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferReceiveInReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferReceiveInReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Wastage_InputMessage">
+    <wsdl:part name="parameters" element="tns:Wastage" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Wastage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WastageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptDeliveryReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:RptDeliveryReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptDeliveryReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RptDeliveryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DepositNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DepositNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT16New_InputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT16New" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT16New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT16NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT17New_InputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT17New" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT17New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT17NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT18New_InputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT18New" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MISVAT18New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MISVAT18NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ProductCategoryNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ProductCategoryNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ProductNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ProductNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_IssueNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_IssueNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiveNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiveNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleNewWithChassisEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleNewWithChassisEngine" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleNewWithChassisEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleNewWithChassisEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockWithAdjNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockWithAdjNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockWithAdjNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockWithAdjNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockWastage_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockWastage" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockWastage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockWastageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VehicleNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VehicleNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VendorGroupNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VendorGroupNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VendorGroupNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VendorGroupNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_InputOutputCoEfficient_InputMessage">
+    <wsdl:part name="parameters" element="tns:InputOutputCoEfficient" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_InputOutputCoEfficient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InputOutputCoEfficientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VendorReportNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VendorReportNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VendorReportNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VendorReportNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TrasurryDepositeNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrasurryDepositeNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TrasurryDepositeNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrasurryDepositeNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDepositDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDepositDetail" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDepositDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDepositDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDepositDetail_MISReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDepositDetail_MISReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDepositDetail_MISReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDepositDetail_MISReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDeposit_MISReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDeposit_MISReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSDeposit_MISReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSDeposit_MISReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSDepositNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VDSDepositNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSDepositNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VDSDepositNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SDTrasurryDepositeNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SDTrasurryDepositeNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SDTrasurryDepositeNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SDTrasurryDepositeNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfileString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfileString" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfileString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfileStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfile" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CurrencyReportNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyReportNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CurrencyReportNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyReportNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CostingNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CostingNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CostingNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CostingNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfileSecurity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfileSecurity" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ComapnyProfileSecurity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComapnyProfileSecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MonthlySales_InputMessage">
+    <wsdl:part name="parameters" element="tns:MonthlySales" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MonthlySales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MonthlySalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MonthlyPurchases_InputMessage">
+    <wsdl:part name="parameters" element="tns:MonthlyPurchases" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MonthlyPurchases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MonthlyPurchasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:VDSReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDSReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VDSReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DemandReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DemandReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BanderolForm_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolForm_4" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BanderolForm_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolForm_4Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BanderolForm_5_InputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolForm_5" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BanderolForm_5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolForm_5Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_GetReturnType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReturnType" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_GetReturnType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReturnTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SelectMultipleInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMultipleInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SelectMultipleInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMultipleInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptBanderolProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:RptBanderolProduct" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptBanderolProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RptBanderolProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT11Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT11Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT11Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT11ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT6_1Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT6_1Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT6_1Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT6_1ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT18Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT18Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT18Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT18ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT18_OldFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT18_OldFormat" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT18_OldFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT18_OldFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauMonthlySales_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauMonthlySales" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauMonthlySales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauMonthlySalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauSaleMis_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauSaleMis" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauSaleMis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauSaleMisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauSaleNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauSaleNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauSaleNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauSaleNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauCreditNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauCreditNote" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauCreditNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauCreditNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT19Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT19Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BureauVAT19Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BureauVAT19ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptVAT7Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:RptVAT7Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RptVAT7Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RptVAT7ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TollRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:TollRegister" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TollRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TollRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TollRegisterRaw_InputMessage">
+    <wsdl:part name="parameters" element="tns:TollRegisterRaw" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TollRegisterRaw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TollRegisterRawResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT16AttachToll_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT16AttachToll" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT16AttachToll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT16AttachTollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseReturnNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseReturnNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseReturnNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseReturnNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Current_AC_VAT18_InputMessage">
+    <wsdl:part name="parameters" element="tns:Current_AC_VAT18" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_Current_AC_VAT18_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Current_AC_VAT18Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SerialStockStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SerialStockStatus" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SerialStockStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SerialStockStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseWithLCInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseWithLCInfo" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseWithLCInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseWithLCInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18_Sanofi_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18_Sanofi" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18_Sanofi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18_SanofiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:TDSReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TDSReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TDSReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_LocalPurchaseReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocalPurchaseReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_LocalPurchaseReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocalPurchaseReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ImportDataReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ImportDataReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiedVsSaleReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiedVsSaleReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiedVsSaleReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiedVsSaleReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SalesStatementForServiceReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatementForServiceReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SalesStatementForServiceReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatementForServiceReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SalesStatementDeliveryReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatementDeliveryReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SalesStatementDeliveryReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesStatementDeliveryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockReportFGReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockReportFGReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_StockReportFGReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockReportFGReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferIssueNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferIssueNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_TransferIssueNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferIssueNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18New_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18New" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_10Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_10Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_10Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_10ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDS12KhaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VDS12KhaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VDS12KhaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VDS12KhaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MIS19_InputMessage">
+    <wsdl:part name="parameters" element="tns:MIS19" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_MIS19_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MIS19Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT11ReportCommercialImporterNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT11ReportCommercialImporterNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT11ReportCommercialImporterNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT11ReportCommercialImporterNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_7_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_7" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_7_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_7Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_8_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_8" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_8_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_8Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT11ReportNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT11ReportNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT11ReportNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT11ReportNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1KhaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1KhaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1KhaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1KhaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleTrackingReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleTrackingReport" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleTrackingReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleTrackingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_3Toll_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_3Toll" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_3Toll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_3TollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT20ReportNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT20ReportNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT20ReportNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT20ReportNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CreditNoteNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditNoteNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CreditNoteNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditNoteNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CreditNoteAmountNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditNoteAmountNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CreditNoteAmountNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditNoteAmountNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DebitNoteNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:DebitNoteNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_DebitNoteNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DebitNoteNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTracking" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking1_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTracking1" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTracking1Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking2_InputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTracking2" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BatchTracking2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BatchTracking2Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT16NewforTollRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT16NewforTollRegister" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT16NewforTollRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT16NewforTollRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_WithConn_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1_WithConn" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_WithConn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1_WithConnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1Toll_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1Toll" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1Toll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1TollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_Branching_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1_Branching" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_Branching_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1_BranchingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2_1" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2Toll_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2Toll" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT6_2Toll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT6_2TollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormAPart3_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormAPart3" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormAPart3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormAPart3Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormAPart4_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormAPart4" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormAPart4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormAPart4Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormBPart3_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormBPart3" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormBPart3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormBPart3Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormCPart3_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormCPart3" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormCPart3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormCPart3Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormCPart4_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormCPart4" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormCPart4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormCPart4Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormGPart8_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormGPart8" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormGPart8_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormGPart8Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormDPart5_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormDPart5" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormDPart5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormDPart5Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormEPart6_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormEPart6" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormEPart6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormEPart6Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormFPart6_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormFPart6" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_SubFormFPart6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_SubFormFPart6Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_Process_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_Process" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_Process_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_ProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_Report" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_V2" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT9_1_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT9_1_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SD_Data_InputMessage">
+    <wsdl:part name="parameters" element="tns:SD_Data" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SD_Data_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SD_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT19NewNewformat_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT19NewNewformat" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT19NewNewformat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT19NewNewformatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18Breakdown_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18Breakdown" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT18Breakdown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT18BreakdownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RepFormKaTradingNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:RepFormKaTradingNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_RepFormKaTradingNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RepFormKaTradingNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT24_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT24" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT24_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT24Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT22_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT22" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT22_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT22Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VATDDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:VATDDB" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VATDDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VATDDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseMis_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseMis" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_PurchaseMis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseMisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleMis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleMis" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleMis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleMisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_IssueMis_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueMis" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_IssueMis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueMisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiveMis_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveMis" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_ReceiveMis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveMisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleReceiveMIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleReceiveMIS" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_SaleReceiveMIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleReceiveMISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1KaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1KaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1KaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1KaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1GaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1GaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1GaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1GaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1GhaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1GhaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VAT1GhaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT1GhaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_FormKaNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormKaNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_FormKaNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormKaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMNew_withFNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMNew_withFNo" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMNew_withFNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMNew_withFNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMDownload" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BOMDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VATDisposeDsNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VATDisposeDsNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_VATDisposeDsNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VATDisposeDsNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BankNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:BankNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_BankNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BankNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CustomerGroupNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerGroupNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CustomerGroupNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerGroupNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CustomerNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerNew" />
+  </wsdl:message>
+  <wsdl:message name="IReportWCF_CustomerNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReportWCF">
+    <wsdl:operation name="StockReportRMReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/StockReportRMReport" message="tns:IReportWCF_StockReportRMReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/StockReportRMReportResponse" message="tns:IReportWCF_StockReportRMReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferToDepotReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TransferToDepotReport" message="tns:IReportWCF_TransferToDepotReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TransferToDepotReportResponse" message="tns:IReportWCF_TransferToDepotReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VDSStatementReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VDSStatementReport" message="tns:IReportWCF_VDSStatementReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VDSStatementReportResponse" message="tns:IReportWCF_VDSStatementReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Chak_khaReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/Chak_khaReport" message="tns:IReportWCF_Chak_khaReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/Chak_khaReportResponse" message="tns:IReportWCF_Chak_khaReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Chak_kaReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/Chak_kaReport" message="tns:IReportWCF_Chak_kaReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/Chak_kaReportResponse" message="tns:IReportWCF_Chak_kaReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDS_Certificatet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDS_Certificatet" message="tns:IReportWCF_TDS_Certificatet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDS_CertificatetResponse" message="tns:IReportWCF_TDS_Certificatet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Adjustment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/Adjustment" message="tns:IReportWCF_Adjustment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/AdjustmentResponse" message="tns:IReportWCF_Adjustment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSAmountReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSAmountReport" message="tns:IReportWCF_TDSAmountReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSAmountReportResponse" message="tns:IReportWCF_TDSAmountReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferIssueOutReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TransferIssueOutReport" message="tns:IReportWCF_TransferIssueOutReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TransferIssueOutReportResponse" message="tns:IReportWCF_TransferIssueOutReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferReceiveInReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TransferReceiveInReport" message="tns:IReportWCF_TransferReceiveInReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TransferReceiveInReportResponse" message="tns:IReportWCF_TransferReceiveInReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Wastage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/Wastage" message="tns:IReportWCF_Wastage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/WastageResponse" message="tns:IReportWCF_Wastage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RptDeliveryReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/RptDeliveryReport" message="tns:IReportWCF_RptDeliveryReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/RptDeliveryReportResponse" message="tns:IReportWCF_RptDeliveryReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/DepositNew" message="tns:IReportWCF_DepositNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/DepositNewResponse" message="tns:IReportWCF_DepositNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT16New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MISVAT16New" message="tns:IReportWCF_MISVAT16New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MISVAT16NewResponse" message="tns:IReportWCF_MISVAT16New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT17New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MISVAT17New" message="tns:IReportWCF_MISVAT17New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MISVAT17NewResponse" message="tns:IReportWCF_MISVAT17New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT18New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MISVAT18New" message="tns:IReportWCF_MISVAT18New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MISVAT18NewResponse" message="tns:IReportWCF_MISVAT18New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ProductCategoryNew" message="tns:IReportWCF_ProductCategoryNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ProductCategoryNewResponse" message="tns:IReportWCF_ProductCategoryNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ProductNew" message="tns:IReportWCF_ProductNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ProductNewResponse" message="tns:IReportWCF_ProductNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/PurchaseNew" message="tns:IReportWCF_PurchaseNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/PurchaseNewResponse" message="tns:IReportWCF_PurchaseNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/IssueNew" message="tns:IReportWCF_IssueNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/IssueNewResponse" message="tns:IReportWCF_IssueNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ReceiveNew" message="tns:IReportWCF_ReceiveNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ReceiveNewResponse" message="tns:IReportWCF_ReceiveNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SaleNew" message="tns:IReportWCF_SaleNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SaleNewResponse" message="tns:IReportWCF_SaleNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleNewWithChassisEngine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SaleNewWithChassisEngine" message="tns:IReportWCF_SaleNewWithChassisEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SaleNewWithChassisEngineResponse" message="tns:IReportWCF_SaleNewWithChassisEngine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/StockNew" message="tns:IReportWCF_StockNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/StockNewResponse" message="tns:IReportWCF_StockNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockWithAdjNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/StockWithAdjNew" message="tns:IReportWCF_StockWithAdjNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/StockWithAdjNewResponse" message="tns:IReportWCF_StockWithAdjNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockWastage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/StockWastage" message="tns:IReportWCF_StockWastage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/StockWastageResponse" message="tns:IReportWCF_StockWastage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehicleNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VehicleNew" message="tns:IReportWCF_VehicleNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VehicleNewResponse" message="tns:IReportWCF_VehicleNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VendorGroupNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VendorGroupNew" message="tns:IReportWCF_VendorGroupNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VendorGroupNewResponse" message="tns:IReportWCF_VendorGroupNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InputOutputCoEfficient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/InputOutputCoEfficient" message="tns:IReportWCF_InputOutputCoEfficient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/InputOutputCoEfficientResponse" message="tns:IReportWCF_InputOutputCoEfficient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VendorReportNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VendorReportNew" message="tns:IReportWCF_VendorReportNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VendorReportNewResponse" message="tns:IReportWCF_VendorReportNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrasurryDepositeNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TrasurryDepositeNew" message="tns:IReportWCF_TrasurryDepositeNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TrasurryDepositeNewResponse" message="tns:IReportWCF_TrasurryDepositeNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSDeposit" message="tns:IReportWCF_TDSDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSDepositResponse" message="tns:IReportWCF_TDSDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSDepositDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSDepositDetail" message="tns:IReportWCF_TDSDepositDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSDepositDetailResponse" message="tns:IReportWCF_TDSDepositDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSDepositDetail_MISReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSDepositDetail_MISReport" message="tns:IReportWCF_TDSDepositDetail_MISReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSDepositDetail_MISReportResponse" message="tns:IReportWCF_TDSDepositDetail_MISReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSDeposit_MISReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSDeposit_MISReport" message="tns:IReportWCF_TDSDeposit_MISReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSDeposit_MISReportResponse" message="tns:IReportWCF_TDSDeposit_MISReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VDSDepositNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VDSDepositNew" message="tns:IReportWCF_VDSDepositNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VDSDepositNewResponse" message="tns:IReportWCF_VDSDepositNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SDTrasurryDepositeNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SDTrasurryDepositeNew" message="tns:IReportWCF_SDTrasurryDepositeNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SDTrasurryDepositeNewResponse" message="tns:IReportWCF_SDTrasurryDepositeNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfileString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfileString" message="tns:IReportWCF_ComapnyProfileString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfileStringResponse" message="tns:IReportWCF_ComapnyProfileString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfile" message="tns:IReportWCF_ComapnyProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfileResponse" message="tns:IReportWCF_ComapnyProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyReportNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CurrencyReportNew" message="tns:IReportWCF_CurrencyReportNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CurrencyReportNewResponse" message="tns:IReportWCF_CurrencyReportNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CostingNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CostingNew" message="tns:IReportWCF_CostingNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CostingNewResponse" message="tns:IReportWCF_CostingNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfileSecurity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfileSecurity" message="tns:IReportWCF_ComapnyProfileSecurity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ComapnyProfileSecurityResponse" message="tns:IReportWCF_ComapnyProfileSecurity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MonthlySales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MonthlySales" message="tns:IReportWCF_MonthlySales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MonthlySalesResponse" message="tns:IReportWCF_MonthlySales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MonthlyPurchases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MonthlyPurchases" message="tns:IReportWCF_MonthlyPurchases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MonthlyPurchasesResponse" message="tns:IReportWCF_MonthlyPurchases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VDSReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VDSReport" message="tns:IReportWCF_VDSReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VDSReportResponse" message="tns:IReportWCF_VDSReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/DemandReport" message="tns:IReportWCF_DemandReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/DemandReportResponse" message="tns:IReportWCF_DemandReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BanderolForm_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BanderolForm_4" message="tns:IReportWCF_BanderolForm_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BanderolForm_4Response" message="tns:IReportWCF_BanderolForm_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BanderolForm_5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BanderolForm_5" message="tns:IReportWCF_BanderolForm_5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BanderolForm_5Response" message="tns:IReportWCF_BanderolForm_5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/GetReturnType" message="tns:IReportWCF_GetReturnType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/GetReturnTypeResponse" message="tns:IReportWCF_GetReturnType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMultipleInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SelectMultipleInvoices" message="tns:IReportWCF_SelectMultipleInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SelectMultipleInvoicesResponse" message="tns:IReportWCF_SelectMultipleInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RptBanderolProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/RptBanderolProduct" message="tns:IReportWCF_RptBanderolProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/RptBanderolProductResponse" message="tns:IReportWCF_RptBanderolProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT11Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT11Report" message="tns:IReportWCF_BureauVAT11Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT11ReportResponse" message="tns:IReportWCF_BureauVAT11Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT6_1Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT6_1Report" message="tns:IReportWCF_BureauVAT6_1Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT6_1ReportResponse" message="tns:IReportWCF_BureauVAT6_1Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT18Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT18Report" message="tns:IReportWCF_BureauVAT18Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT18ReportResponse" message="tns:IReportWCF_BureauVAT18Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT18_OldFormat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT18_OldFormat" message="tns:IReportWCF_BureauVAT18_OldFormat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT18_OldFormatResponse" message="tns:IReportWCF_BureauVAT18_OldFormat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauMonthlySales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauMonthlySales" message="tns:IReportWCF_BureauMonthlySales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauMonthlySalesResponse" message="tns:IReportWCF_BureauMonthlySales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauSaleMis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauSaleMis" message="tns:IReportWCF_BureauSaleMis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauSaleMisResponse" message="tns:IReportWCF_BureauSaleMis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauSaleNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauSaleNew" message="tns:IReportWCF_BureauSaleNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauSaleNewResponse" message="tns:IReportWCF_BureauSaleNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauCreditNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauCreditNote" message="tns:IReportWCF_BureauCreditNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauCreditNoteResponse" message="tns:IReportWCF_BureauCreditNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT19Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT19Report" message="tns:IReportWCF_BureauVAT19Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BureauVAT19ReportResponse" message="tns:IReportWCF_BureauVAT19Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RptVAT7Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/RptVAT7Report" message="tns:IReportWCF_RptVAT7Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/RptVAT7ReportResponse" message="tns:IReportWCF_RptVAT7Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TollRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TollRegister" message="tns:IReportWCF_TollRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TollRegisterResponse" message="tns:IReportWCF_TollRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TollRegisterRaw">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TollRegisterRaw" message="tns:IReportWCF_TollRegisterRaw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TollRegisterRawResponse" message="tns:IReportWCF_TollRegisterRaw_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT16AttachToll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT16AttachToll" message="tns:IReportWCF_VAT16AttachToll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT16AttachTollResponse" message="tns:IReportWCF_VAT16AttachToll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseReturnNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/PurchaseReturnNew" message="tns:IReportWCF_PurchaseReturnNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/PurchaseReturnNewResponse" message="tns:IReportWCF_PurchaseReturnNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Current_AC_VAT18">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/Current_AC_VAT18" message="tns:IReportWCF_Current_AC_VAT18_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/Current_AC_VAT18Response" message="tns:IReportWCF_Current_AC_VAT18_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SerialStockStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SerialStockStatus" message="tns:IReportWCF_SerialStockStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SerialStockStatusResponse" message="tns:IReportWCF_SerialStockStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseWithLCInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/PurchaseWithLCInfo" message="tns:IReportWCF_PurchaseWithLCInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/PurchaseWithLCInfoResponse" message="tns:IReportWCF_PurchaseWithLCInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT18_Sanofi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT18_Sanofi" message="tns:IReportWCF_VAT18_Sanofi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT18_SanofiResponse" message="tns:IReportWCF_VAT18_Sanofi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TDSReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TDSReport" message="tns:IReportWCF_TDSReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TDSReportResponse" message="tns:IReportWCF_TDSReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalPurchaseReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/LocalPurchaseReport" message="tns:IReportWCF_LocalPurchaseReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/LocalPurchaseReportResponse" message="tns:IReportWCF_LocalPurchaseReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportDataReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ImportDataReport" message="tns:IReportWCF_ImportDataReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ImportDataReportResponse" message="tns:IReportWCF_ImportDataReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiedVsSaleReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ReceiedVsSaleReport" message="tns:IReportWCF_ReceiedVsSaleReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ReceiedVsSaleReportResponse" message="tns:IReportWCF_ReceiedVsSaleReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatementForServiceReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SalesStatementForServiceReport" message="tns:IReportWCF_SalesStatementForServiceReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SalesStatementForServiceReportResponse" message="tns:IReportWCF_SalesStatementForServiceReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatementDeliveryReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SalesStatementDeliveryReport" message="tns:IReportWCF_SalesStatementDeliveryReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SalesStatementDeliveryReportResponse" message="tns:IReportWCF_SalesStatementDeliveryReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockReportFGReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/StockReportFGReport" message="tns:IReportWCF_StockReportFGReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/StockReportFGReportResponse" message="tns:IReportWCF_StockReportFGReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/DoWork" message="tns:IReportWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/DoWorkResponse" message="tns:IReportWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferIssueNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/TransferIssueNew" message="tns:IReportWCF_TransferIssueNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/TransferIssueNewResponse" message="tns:IReportWCF_TransferIssueNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT18New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT18New" message="tns:IReportWCF_VAT18New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT18NewResponse" message="tns:IReportWCF_VAT18New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_10Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_10Report" message="tns:IReportWCF_VAT6_10Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_10ReportResponse" message="tns:IReportWCF_VAT6_10Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VDS12KhaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VDS12KhaNew" message="tns:IReportWCF_VDS12KhaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VDS12KhaNewResponse" message="tns:IReportWCF_VDS12KhaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS19">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/MIS19" message="tns:IReportWCF_MIS19_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/MIS19Response" message="tns:IReportWCF_MIS19_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT11ReportCommercialImporterNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT11ReportCommercialImporterNew" message="tns:IReportWCF_VAT11ReportCommercialImporterNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT11ReportCommercialImporterNewResponse" message="tns:IReportWCF_VAT11ReportCommercialImporterNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_7">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_7" message="tns:IReportWCF_VAT6_7_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_7Response" message="tns:IReportWCF_VAT6_7_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_8">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_8" message="tns:IReportWCF_VAT6_8_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_8Response" message="tns:IReportWCF_VAT6_8_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT11ReportNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT11ReportNew" message="tns:IReportWCF_VAT11ReportNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT11ReportNewResponse" message="tns:IReportWCF_VAT11ReportNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT1KhaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT1KhaNew" message="tns:IReportWCF_VAT1KhaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT1KhaNewResponse" message="tns:IReportWCF_VAT1KhaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleTrackingReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SaleTrackingReport" message="tns:IReportWCF_SaleTrackingReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SaleTrackingReportResponse" message="tns:IReportWCF_SaleTrackingReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_3Toll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_3Toll" message="tns:IReportWCF_VAT6_3Toll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_3TollResponse" message="tns:IReportWCF_VAT6_3Toll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT20ReportNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT20ReportNew" message="tns:IReportWCF_VAT20ReportNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT20ReportNewResponse" message="tns:IReportWCF_VAT20ReportNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditNoteNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CreditNoteNew" message="tns:IReportWCF_CreditNoteNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CreditNoteNewResponse" message="tns:IReportWCF_CreditNoteNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditNoteAmountNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CreditNoteAmountNew" message="tns:IReportWCF_CreditNoteAmountNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CreditNoteAmountNewResponse" message="tns:IReportWCF_CreditNoteAmountNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DebitNoteNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/DebitNoteNew" message="tns:IReportWCF_DebitNoteNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/DebitNoteNewResponse" message="tns:IReportWCF_DebitNoteNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BatchTracking" message="tns:IReportWCF_BatchTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BatchTrackingResponse" message="tns:IReportWCF_BatchTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BatchTracking1" message="tns:IReportWCF_BatchTracking1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BatchTracking1Response" message="tns:IReportWCF_BatchTracking1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BatchTracking2" message="tns:IReportWCF_BatchTracking2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BatchTracking2Response" message="tns:IReportWCF_BatchTracking2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT16NewforTollRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT16NewforTollRegister" message="tns:IReportWCF_VAT16NewforTollRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT16NewforTollRegisterResponse" message="tns:IReportWCF_VAT16NewforTollRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1_WithConn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1_WithConn" message="tns:IReportWCF_VAT6_1_WithConn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1_WithConnResponse" message="tns:IReportWCF_VAT6_1_WithConn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1Toll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1Toll" message="tns:IReportWCF_VAT6_1Toll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1TollResponse" message="tns:IReportWCF_VAT6_1Toll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1_Branching">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1_Branching" message="tns:IReportWCF_VAT6_1_Branching_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1_BranchingResponse" message="tns:IReportWCF_VAT6_1_Branching_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1" message="tns:IReportWCF_VAT6_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_1Response" message="tns:IReportWCF_VAT6_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2_1" message="tns:IReportWCF_VAT6_2_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2_1Response" message="tns:IReportWCF_VAT6_2_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2" message="tns:IReportWCF_VAT6_2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2Response" message="tns:IReportWCF_VAT6_2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2Toll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2Toll" message="tns:IReportWCF_VAT6_2Toll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT6_2TollResponse" message="tns:IReportWCF_VAT6_2Toll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1" message="tns:IReportWCF_VAT9_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1Response" message="tns:IReportWCF_VAT9_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormAPart3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart3" message="tns:IReportWCF_VAT9_1_SubFormAPart3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart3Response" message="tns:IReportWCF_VAT9_1_SubFormAPart3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormAPart4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart4" message="tns:IReportWCF_VAT9_1_SubFormAPart4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart4Response" message="tns:IReportWCF_VAT9_1_SubFormAPart4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormBPart3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormBPart3" message="tns:IReportWCF_VAT9_1_SubFormBPart3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormBPart3Response" message="tns:IReportWCF_VAT9_1_SubFormBPart3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormCPart3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart3" message="tns:IReportWCF_VAT9_1_SubFormCPart3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart3Response" message="tns:IReportWCF_VAT9_1_SubFormCPart3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormCPart4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart4" message="tns:IReportWCF_VAT9_1_SubFormCPart4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart4Response" message="tns:IReportWCF_VAT9_1_SubFormCPart4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormGPart8">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormGPart8" message="tns:IReportWCF_VAT9_1_SubFormGPart8_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormGPart8Response" message="tns:IReportWCF_VAT9_1_SubFormGPart8_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormDPart5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormDPart5" message="tns:IReportWCF_VAT9_1_SubFormDPart5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormDPart5Response" message="tns:IReportWCF_VAT9_1_SubFormDPart5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormEPart6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormEPart6" message="tns:IReportWCF_VAT9_1_SubFormEPart6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormEPart6Response" message="tns:IReportWCF_VAT9_1_SubFormEPart6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormFPart6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormFPart6" message="tns:IReportWCF_VAT9_1_SubFormFPart6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_SubFormFPart6Response" message="tns:IReportWCF_VAT9_1_SubFormFPart6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_Process">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_Process" message="tns:IReportWCF_VAT9_1_Process_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_ProcessResponse" message="tns:IReportWCF_VAT9_1_Process_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_Report" message="tns:IReportWCF_VAT9_1_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_ReportResponse" message="tns:IReportWCF_VAT9_1_Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_V2" message="tns:IReportWCF_VAT9_1_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT9_1_V2Response" message="tns:IReportWCF_VAT9_1_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SD_Data">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SD_Data" message="tns:IReportWCF_SD_Data_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SD_DataResponse" message="tns:IReportWCF_SD_Data_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT19NewNewformat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT19NewNewformat" message="tns:IReportWCF_VAT19NewNewformat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT19NewNewformatResponse" message="tns:IReportWCF_VAT19NewNewformat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT18Breakdown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT18Breakdown" message="tns:IReportWCF_VAT18Breakdown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT18BreakdownResponse" message="tns:IReportWCF_VAT18Breakdown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RepFormKaTradingNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/RepFormKaTradingNew" message="tns:IReportWCF_RepFormKaTradingNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/RepFormKaTradingNewResponse" message="tns:IReportWCF_RepFormKaTradingNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT24">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT24" message="tns:IReportWCF_VAT24_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT24Response" message="tns:IReportWCF_VAT24_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT22">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT22" message="tns:IReportWCF_VAT22_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT22Response" message="tns:IReportWCF_VAT22_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VATDDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VATDDB" message="tns:IReportWCF_VATDDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VATDDBResponse" message="tns:IReportWCF_VATDDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseMis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/PurchaseMis" message="tns:IReportWCF_PurchaseMis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/PurchaseMisResponse" message="tns:IReportWCF_PurchaseMis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleMis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SaleMis" message="tns:IReportWCF_SaleMis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SaleMisResponse" message="tns:IReportWCF_SaleMis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueMis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/IssueMis" message="tns:IReportWCF_IssueMis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/IssueMisResponse" message="tns:IReportWCF_IssueMis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/ReceiveMis" message="tns:IReportWCF_ReceiveMis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/ReceiveMisResponse" message="tns:IReportWCF_ReceiveMis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleReceiveMIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/SaleReceiveMIS" message="tns:IReportWCF_SaleReceiveMIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/SaleReceiveMISResponse" message="tns:IReportWCF_SaleReceiveMIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT1KaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT1KaNew" message="tns:IReportWCF_VAT1KaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT1KaNewResponse" message="tns:IReportWCF_VAT1KaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT1GaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT1GaNew" message="tns:IReportWCF_VAT1GaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT1GaNewResponse" message="tns:IReportWCF_VAT1GaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT1GhaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VAT1GhaNew" message="tns:IReportWCF_VAT1GhaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VAT1GhaNewResponse" message="tns:IReportWCF_VAT1GhaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormKaNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/FormKaNew" message="tns:IReportWCF_FormKaNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/FormKaNewResponse" message="tns:IReportWCF_FormKaNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMNew_withFNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BOMNew_withFNo" message="tns:IReportWCF_BOMNew_withFNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BOMNew_withFNoResponse" message="tns:IReportWCF_BOMNew_withFNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BOMNew" message="tns:IReportWCF_BOMNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BOMNewResponse" message="tns:IReportWCF_BOMNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BOMDownload" message="tns:IReportWCF_BOMDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BOMDownloadResponse" message="tns:IReportWCF_BOMDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VATDisposeDsNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/VATDisposeDsNew" message="tns:IReportWCF_VATDisposeDsNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/VATDisposeDsNewResponse" message="tns:IReportWCF_VATDisposeDsNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BankNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/BankNew" message="tns:IReportWCF_BankNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/BankNewResponse" message="tns:IReportWCF_BankNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerGroupNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CustomerGroupNew" message="tns:IReportWCF_CustomerGroupNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CustomerGroupNewResponse" message="tns:IReportWCF_CustomerGroupNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportWCF/CustomerNew" message="tns:IReportWCF_CustomerNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportWCF/CustomerNewResponse" message="tns:IReportWCF_CustomerNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReportWCF" type="tns:IReportWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StockReportRMReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/StockReportRMReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferToDepotReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TransferToDepotReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VDSStatementReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VDSStatementReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Chak_khaReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/Chak_khaReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Chak_kaReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/Chak_kaReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDS_Certificatet">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDS_Certificatet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Adjustment">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/Adjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSAmountReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSAmountReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferIssueOutReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TransferIssueOutReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferReceiveInReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TransferReceiveInReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wastage">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/Wastage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RptDeliveryReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/RptDeliveryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/DepositNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT16New">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MISVAT16New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT17New">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MISVAT17New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MISVAT18New">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MISVAT18New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ProductCategoryNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ProductNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/PurchaseNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/IssueNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ReceiveNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SaleNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleNewWithChassisEngine">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SaleNewWithChassisEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/StockNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockWithAdjNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/StockWithAdjNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockWastage">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/StockWastage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehicleNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VehicleNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VendorGroupNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VendorGroupNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InputOutputCoEfficient">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/InputOutputCoEfficient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VendorReportNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VendorReportNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrasurryDepositeNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TrasurryDepositeNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSDeposit">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSDepositDetail">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSDepositDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSDepositDetail_MISReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSDepositDetail_MISReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSDeposit_MISReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSDeposit_MISReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VDSDepositNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VDSDepositNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SDTrasurryDepositeNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SDTrasurryDepositeNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfileString">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ComapnyProfileString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfile">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ComapnyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyReportNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CurrencyReportNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CostingNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CostingNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComapnyProfileSecurity">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ComapnyProfileSecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonthlySales">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MonthlySales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonthlyPurchases">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MonthlyPurchases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VDSReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VDSReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/DemandReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BanderolForm_4">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BanderolForm_4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BanderolForm_5">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BanderolForm_5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnType">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/GetReturnType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMultipleInvoices">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SelectMultipleInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RptBanderolProduct">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/RptBanderolProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT11Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauVAT11Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT6_1Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauVAT6_1Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT18Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauVAT18Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT18_OldFormat">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauVAT18_OldFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauMonthlySales">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauMonthlySales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauSaleMis">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauSaleMis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauSaleNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauSaleNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauCreditNote">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauCreditNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BureauVAT19Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BureauVAT19Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RptVAT7Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/RptVAT7Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TollRegister">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TollRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TollRegisterRaw">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TollRegisterRaw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT16AttachToll">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT16AttachToll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseReturnNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/PurchaseReturnNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Current_AC_VAT18">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/Current_AC_VAT18" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SerialStockStatus">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SerialStockStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseWithLCInfo">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/PurchaseWithLCInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT18_Sanofi">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT18_Sanofi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TDSReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TDSReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalPurchaseReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/LocalPurchaseReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDataReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ImportDataReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiedVsSaleReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ReceiedVsSaleReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatementForServiceReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SalesStatementForServiceReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesStatementDeliveryReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SalesStatementDeliveryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockReportFGReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/StockReportFGReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferIssueNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/TransferIssueNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT18New">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT18New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_10Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_10Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VDS12KhaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VDS12KhaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS19">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/MIS19" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT11ReportCommercialImporterNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT11ReportCommercialImporterNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_7">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_8">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_8" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT11ReportNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT11ReportNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT1KhaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT1KhaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleTrackingReport">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SaleTrackingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_3Toll">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_3Toll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT20ReportNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT20ReportNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditNoteNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CreditNoteNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditNoteAmountNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CreditNoteAmountNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitNoteNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/DebitNoteNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BatchTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking1">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BatchTracking1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchTracking2">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BatchTracking2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT16NewforTollRegister">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT16NewforTollRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1_WithConn">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_1_WithConn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1Toll">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_1Toll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1_Branching">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_1_Branching" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_1">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2_1">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_2_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT6_2Toll">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT6_2Toll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormAPart3">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormAPart4">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormAPart4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormBPart3">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormBPart3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormCPart3">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormCPart4">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormCPart4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormGPart8">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormGPart8" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormDPart5">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormDPart5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormEPart6">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormEPart6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_SubFormFPart6">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_SubFormFPart6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_Process">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_Process" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_Report">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT9_1_V2">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT9_1_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SD_Data">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SD_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT19NewNewformat">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT19NewNewformat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT18Breakdown">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT18Breakdown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RepFormKaTradingNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/RepFormKaTradingNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT24">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT24" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT22">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT22" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VATDDB">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VATDDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseMis">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/PurchaseMis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleMis">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SaleMis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueMis">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/IssueMis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMis">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/ReceiveMis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleReceiveMIS">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/SaleReceiveMIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT1KaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT1KaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT1GaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT1GaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT1GhaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VAT1GhaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormKaNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/FormKaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMNew_withFNo">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BOMNew_withFNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BOMNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMDownload">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BOMDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VATDisposeDsNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/VATDisposeDsNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/BankNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerGroupNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CustomerGroupNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerNew">
+      <soap:operation soapAction="http://tempuri.org/IReportWCF/CustomerNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportWCF">
+    <wsdl:port name="BasicHttpBinding_IReportWCF" binding="tns:BasicHttpBinding_IReportWCF">
+      <soap:address location="http://localhost:50568/WCF/ReportWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

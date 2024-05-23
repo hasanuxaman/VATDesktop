@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Trading" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NonStock" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductMiniDSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDS_WithProductvm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Productvmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDS_WithProductvmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductMiniDS_WithProductvmResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isPost" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Vat16" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Vat17" type="xs:boolean" />
+        <xs:element minOccurs="0" name="transfer" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AvgPriceNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="likeVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBOMReferenceNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBOMReferenceNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBOMReferenceNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOverheadForBOMNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOverheadForBOMNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchOverheadForBOMNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchBanderolProductsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLIFOPurchaseInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receiveDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLIFOPurchaseInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLIFOPurchaseInformationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastNBRPriceFromBOM_VatName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastNBRPriceFromBOM_VatNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastNBRPriceFromBOM_VatNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastNBRPriceFromBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastNBRPriceFromBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastNBRPriceFromBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTransactionTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductDTByItemNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductDTByItemNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductDTByItemNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBOMRaw">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBOMRawResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectBOMRawResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastVatableFromBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastVatableFromBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastVatableFromBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastTollChargeFBOMOH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeadName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastTollChargeFBOMOHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastTollChargeFBOMOHResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceForInternalSales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isPost" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceForInternalSalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AvgPriceForInternalSalesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceTender">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceTenderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AvgPriceTenderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceVAT16">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceVAT16Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AvgPriceVAT16Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceVAT17">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvgPriceVAT17Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AvgPriceVAT17Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProductNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProductNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteProductNamesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteToProductStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="psVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteToProductStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteToProductStockResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDownResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DropDownResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDownAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDownAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DropDownAllResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDownByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropDownByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DropDownByCategoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBomIdFromBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RawItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBomIdFromBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBomIdFromBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcelData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcelDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExcelDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcelProductDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcelProductDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExcelProductDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistingProductName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistingProductNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExistingProductNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastUseQuantityFromBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RawItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastUseQuantityFromBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastUseQuantityFromBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductByTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductCodeUOMn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductCodeUOMnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductCodeUOMnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductIdByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductIdByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductIdByNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNoByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNoByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductNoByGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNoByGroup_Code">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNoByGroup_CodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductNoByGroup_CodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductUOMc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uomFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uomTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductUOMcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductUOMcResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductUOMn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductUOMnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductUOMnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductWithCostPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductWithCostPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductWithCostPriceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReconsciliationData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReconsciliationDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReconsciliationDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserToProductStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="psVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserToProductStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InserToProductStockResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Trackingswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AutoSave" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertToProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToProductNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToProductNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertToProductNamesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByItemNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByItemNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchByItemNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchChassis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchChassisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchChassisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchEngine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchEngineResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductbyMultipleSaleInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleInvoiceNos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductbyMultipleSaleInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductbyMultipleSaleInvoiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HSCodeNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Trading" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NonStock" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="databaseName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isvds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductDTResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProductDTAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dt" type="xs:boolean" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="databaseName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isvds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userBranchswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProductDTAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectProductDTAllResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductFinder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductFinderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductFinderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDSDispose">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="purchaseNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductMiniDSDisposeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductMiniDSDisposeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Names" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductNamesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchProductStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchProductStockResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllOverhead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllOverheadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllOverheadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProductName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="likeVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProductNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectProductNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingStockCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrackingStockCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TrackingStockCheckResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Trackingswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateToProductNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vmwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateToProductNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateToProductNamesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateToProductStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="psVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateToProductStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateToProductStockResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

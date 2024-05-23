@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetailSaleNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactiondate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetailSaleNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchTenderDetailSaleNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetailSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactiondate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetailSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchTenderDetailSaleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dtTenderMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dtTenderDwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchTenderDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderHeaderByCustomerGrp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RefNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerGrpID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchTenderHeaderByCustomerGrpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchTenderHeaderByCustomerGrpResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dt" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tenderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderInsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderInsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderInsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderUpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

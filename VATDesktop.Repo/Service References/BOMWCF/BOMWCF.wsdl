@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BOMWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BOMWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BOMWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBOMWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMMasterNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMMasterNew" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMMasterNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMMasterNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMRawNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMRawNew" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMRawNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMRawNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchOHNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOHNew" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchOHNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOHNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsert" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_DeleteBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBOM" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_DeleteBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPost" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindCostingFrom_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCostingFrom" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindCostingFrom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCostingFromResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMMaster" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMRaw_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMRaw" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchBOMRaw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBOMRawResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchOH_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOH" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchOH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceInsert" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServicePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServicePost" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServicePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServicePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceDelete" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_ServiceDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchInputValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInputValues" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchInputValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInputValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchServicePrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SearchServicePrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_CustomerByBomId_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerByBomId" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_CustomerByBomId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerByBomIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_UseQuantityDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:UseQuantityDT" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_UseQuantityDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UseQuantityDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllItems" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllOverheads_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOverheads" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_SelectAllOverheads_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOverheadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPreInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPreInsert" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPreInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPreInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindBOMIDOverHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBOMIDOverHead" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindBOMIDOverHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBOMIDOverHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMImport" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsertX_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsertX" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsertX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsertXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsert2_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsert2" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMInsert2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMInsert2Response" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMUpdateX_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMUpdateX" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMUpdateX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMUpdateXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPostX_InputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPostX" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_BOMPostX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BOMPostXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindBOMID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBOMID" />
+  </wsdl:message>
+  <wsdl:message name="IBOMWCF_FindBOMID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBOMIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBOMWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/DoWork" message="tns:IBOMWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/DoWorkResponse" message="tns:IBOMWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMMasterNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMMasterNew" message="tns:IBOMWCF_SearchBOMMasterNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMMasterNewResponse" message="tns:IBOMWCF_SearchBOMMasterNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMRawNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMRawNew" message="tns:IBOMWCF_SearchBOMRawNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMRawNewResponse" message="tns:IBOMWCF_SearchBOMRawNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOHNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchOHNew" message="tns:IBOMWCF_SearchOHNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchOHNewResponse" message="tns:IBOMWCF_SearchOHNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsert" message="tns:IBOMWCF_BOMInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsertResponse" message="tns:IBOMWCF_BOMInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMUpdate" message="tns:IBOMWCF_BOMUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMUpdateResponse" message="tns:IBOMWCF_BOMUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/DeleteBOM" message="tns:IBOMWCF_DeleteBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/DeleteBOMResponse" message="tns:IBOMWCF_DeleteBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMPost" message="tns:IBOMWCF_BOMPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMPostResponse" message="tns:IBOMWCF_BOMPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCostingFrom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/FindCostingFrom" message="tns:IBOMWCF_FindCostingFrom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/FindCostingFromResponse" message="tns:IBOMWCF_FindCostingFrom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SelectAll" message="tns:IBOMWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllResponse" message="tns:IBOMWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllList" message="tns:IBOMWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllListResponse" message="tns:IBOMWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMMaster" message="tns:IBOMWCF_SearchBOMMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMMasterResponse" message="tns:IBOMWCF_SearchBOMMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMRaw">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMRaw" message="tns:IBOMWCF_SearchBOMRaw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchBOMRawResponse" message="tns:IBOMWCF_SearchBOMRaw_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchOH" message="tns:IBOMWCF_SearchOH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchOHResponse" message="tns:IBOMWCF_SearchOH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/ServiceInsert" message="tns:IBOMWCF_ServiceInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/ServiceInsertResponse" message="tns:IBOMWCF_ServiceInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/ServiceUpdate" message="tns:IBOMWCF_ServiceUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/ServiceUpdateResponse" message="tns:IBOMWCF_ServiceUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/ServicePost" message="tns:IBOMWCF_ServicePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/ServicePostResponse" message="tns:IBOMWCF_ServicePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/ServiceDelete" message="tns:IBOMWCF_ServiceDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/ServiceDeleteResponse" message="tns:IBOMWCF_ServiceDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchInputValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchInputValues" message="tns:IBOMWCF_SearchInputValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchInputValuesResponse" message="tns:IBOMWCF_SearchInputValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchServicePrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SearchServicePrice" message="tns:IBOMWCF_SearchServicePrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SearchServicePriceResponse" message="tns:IBOMWCF_SearchServicePrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerByBomId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/CustomerByBomId" message="tns:IBOMWCF_CustomerByBomId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/CustomerByBomIdResponse" message="tns:IBOMWCF_CustomerByBomId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UseQuantityDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/UseQuantityDT" message="tns:IBOMWCF_UseQuantityDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/UseQuantityDTResponse" message="tns:IBOMWCF_UseQuantityDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllItems" message="tns:IBOMWCF_SelectAllItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllItemsResponse" message="tns:IBOMWCF_SelectAllItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOverheads">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllOverheads" message="tns:IBOMWCF_SelectAllOverheads_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/SelectAllOverheadsResponse" message="tns:IBOMWCF_SelectAllOverheads_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMPreInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMPreInsert" message="tns:IBOMWCF_BOMPreInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMPreInsertResponse" message="tns:IBOMWCF_BOMPreInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBOMIDOverHead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/FindBOMIDOverHead" message="tns:IBOMWCF_FindBOMIDOverHead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/FindBOMIDOverHeadResponse" message="tns:IBOMWCF_FindBOMIDOverHead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMImport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMImport" message="tns:IBOMWCF_BOMImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMImportResponse" message="tns:IBOMWCF_BOMImport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsertX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsertX" message="tns:IBOMWCF_BOMInsertX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsertXResponse" message="tns:IBOMWCF_BOMInsertX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsert2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsert2" message="tns:IBOMWCF_BOMInsert2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMInsert2Response" message="tns:IBOMWCF_BOMInsert2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMUpdateX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMUpdateX" message="tns:IBOMWCF_BOMUpdateX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMUpdateXResponse" message="tns:IBOMWCF_BOMUpdateX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BOMPostX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/BOMPostX" message="tns:IBOMWCF_BOMPostX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/BOMPostXResponse" message="tns:IBOMWCF_BOMPostX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBOMID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBOMWCF/FindBOMID" message="tns:IBOMWCF_FindBOMID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBOMWCF/FindBOMIDResponse" message="tns:IBOMWCF_FindBOMID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBOMWCF" type="tns:IBOMWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMMasterNew">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchBOMMasterNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMRawNew">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchBOMRawNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchOHNew">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchOHNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsert">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMUpdate">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBOM">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/DeleteBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMPost">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCostingFrom">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/FindCostingFrom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMMaster">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchBOMMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBOMRaw">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchBOMRaw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchOH">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchOH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceInsert">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/ServiceInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdate">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/ServiceUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicePost">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/ServicePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDelete">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/ServiceDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInputValues">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchInputValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchServicePrice">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SearchServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerByBomId">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/CustomerByBomId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UseQuantityDT">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/UseQuantityDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllItems">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SelectAllItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOverheads">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/SelectAllOverheads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMPreInsert">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMPreInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBOMIDOverHead">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/FindBOMIDOverHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMImport">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsertX">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMInsertX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMInsert2">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMInsert2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMUpdateX">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMUpdateX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOMPostX">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/BOMPostX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBOMID">
+      <soap:operation soapAction="http://tempuri.org/IBOMWCF/FindBOMID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BOMWCF">
+    <wsdl:port name="BasicHttpBinding_IBOMWCF" binding="tns:BasicHttpBinding_IBOMWCF">
+      <soap:address location="http://localhost:50568/WCF/BOMWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

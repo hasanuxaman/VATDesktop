@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindVendorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vendorName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AutoSave" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindVendorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindVendorIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindItemId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AutoSave" type="xs:boolean" />
+        <xs:element minOccurs="0" name="uom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="vatRate" type="xs:decimal" />
+        <xs:element minOccurs="0" name="NbrPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindItemIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindItemIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUOMn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUOMnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindUOMnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUOMc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uomFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uomTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUOMcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindUOMcResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPrePurchaseNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPrePurchaseNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckPrePurchaseNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCustomerId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCustomerIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCustomerIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateFromBDTForBureau">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="convertionDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateFromBDTForBureauResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCurrencyRateFromBDTForBureauResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSaleInvoiceNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSaleInvoiceNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindSaleInvoiceNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckBankID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckBankIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckBankIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindBranchId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindBranchIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindBranchIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLastNBRPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLastNBRPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindLastNBRPriceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAvgPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAvgPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindAvgPriceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCurrencyIdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateFromBDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateFromBDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCurrencyRateFromBDTResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateBDTtoUSD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="convertionDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCurrencyRateBDTtoUSDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCurrencyRateBDTtoUSDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckReceiveReturnID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReturnID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckReceiveReturnIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckReceiveReturnIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIssueReturnID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReturnID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIssueReturnIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckIssueReturnIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAvgPriceImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAvgPriceImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindAvgPriceImportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLastNBRPriceFromBOM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLastNBRPriceFromBOMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindLastNBRPriceFromBOMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCustGroupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="custGrpName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custGrpID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCustGroupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCustGroupIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSaleImportIdExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSaleImportIdExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckSaleImportIdExistResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

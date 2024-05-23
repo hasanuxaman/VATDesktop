@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonImportWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonImportWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonImportWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonImportWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindVendorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindVendorId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindVendorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindVendorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindItemId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindItemId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindItemId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindUOMn_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUOMn" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindUOMn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUOMnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindUOMc_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUOMc" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindUOMc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUOMcResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckPrePurchaseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPrePurchaseNo" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckPrePurchaseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPrePurchaseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCustomerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCustomerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_GetProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_GetProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateFromBDTForBureau_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateFromBDTForBureau" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateFromBDTForBureau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateFromBDTForBureauResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindSaleInvoiceNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSaleInvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindSaleInvoiceNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSaleInvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckBankID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBankID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckBankID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBankIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindBranchId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBranchId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindBranchId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBranchIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindLastNBRPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindLastNBRPrice" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindLastNBRPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindLastNBRPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindAvgPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAvgPrice" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindAvgPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAvgPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateFromBDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateFromBDT" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateFromBDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateFromBDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateBDTtoUSD_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateBDTtoUSD" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCurrencyRateBDTtoUSD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCurrencyRateBDTtoUSDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckReceiveReturnID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckReceiveReturnID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckReceiveReturnID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckReceiveReturnIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckIssueReturnID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIssueReturnID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckIssueReturnID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIssueReturnIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindAvgPriceImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAvgPriceImport" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindAvgPriceImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAvgPriceImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindLastNBRPriceFromBOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindLastNBRPriceFromBOM" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindLastNBRPriceFromBOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindLastNBRPriceFromBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCustGroupID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustGroupID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_FindCustGroupID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustGroupIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckSaleImportIdExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSaleImportIdExist" />
+  </wsdl:message>
+  <wsdl:message name="ICommonImportWCF_CheckSaleImportIdExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSaleImportIdExistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonImportWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/DoWork" message="tns:ICommonImportWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/DoWorkResponse" message="tns:ICommonImportWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindVendorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindVendorId" message="tns:ICommonImportWCF_FindVendorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindVendorIdResponse" message="tns:ICommonImportWCF_FindVendorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindItemId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindItemId" message="tns:ICommonImportWCF_FindItemId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindItemIdResponse" message="tns:ICommonImportWCF_FindItemId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUOMn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindUOMn" message="tns:ICommonImportWCF_FindUOMn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindUOMnResponse" message="tns:ICommonImportWCF_FindUOMn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUOMc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindUOMc" message="tns:ICommonImportWCF_FindUOMc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindUOMcResponse" message="tns:ICommonImportWCF_FindUOMc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPrePurchaseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckPrePurchaseNo" message="tns:ICommonImportWCF_CheckPrePurchaseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckPrePurchaseNoResponse" message="tns:ICommonImportWCF_CheckPrePurchaseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCustomerId" message="tns:ICommonImportWCF_FindCustomerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCustomerIdResponse" message="tns:ICommonImportWCF_FindCustomerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/GetProductInfo" message="tns:ICommonImportWCF_GetProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/GetProductInfoResponse" message="tns:ICommonImportWCF_GetProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateFromBDTForBureau">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDTForBureau" message="tns:ICommonImportWCF_FindCurrencyRateFromBDTForBureau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDTForBureauResponse" message="tns:ICommonImportWCF_FindCurrencyRateFromBDTForBureau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSaleInvoiceNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindSaleInvoiceNo" message="tns:ICommonImportWCF_FindSaleInvoiceNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindSaleInvoiceNoResponse" message="tns:ICommonImportWCF_FindSaleInvoiceNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBankID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckBankID" message="tns:ICommonImportWCF_CheckBankID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckBankIDResponse" message="tns:ICommonImportWCF_CheckBankID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBranchId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindBranchId" message="tns:ICommonImportWCF_FindBranchId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindBranchIdResponse" message="tns:ICommonImportWCF_FindBranchId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindLastNBRPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindLastNBRPrice" message="tns:ICommonImportWCF_FindLastNBRPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindLastNBRPriceResponse" message="tns:ICommonImportWCF_FindLastNBRPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAvgPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindAvgPrice" message="tns:ICommonImportWCF_FindAvgPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindAvgPriceResponse" message="tns:ICommonImportWCF_FindAvgPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyId" message="tns:ICommonImportWCF_FindCurrencyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyIdResponse" message="tns:ICommonImportWCF_FindCurrencyId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateFromBDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDT" message="tns:ICommonImportWCF_FindCurrencyRateFromBDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDTResponse" message="tns:ICommonImportWCF_FindCurrencyRateFromBDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateBDTtoUSD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateBDTtoUSD" message="tns:ICommonImportWCF_FindCurrencyRateBDTtoUSD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCurrencyRateBDTtoUSDResponse" message="tns:ICommonImportWCF_FindCurrencyRateBDTtoUSD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckReceiveReturnID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckReceiveReturnID" message="tns:ICommonImportWCF_CheckReceiveReturnID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckReceiveReturnIDResponse" message="tns:ICommonImportWCF_CheckReceiveReturnID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIssueReturnID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckIssueReturnID" message="tns:ICommonImportWCF_CheckIssueReturnID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckIssueReturnIDResponse" message="tns:ICommonImportWCF_CheckIssueReturnID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAvgPriceImport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindAvgPriceImport" message="tns:ICommonImportWCF_FindAvgPriceImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindAvgPriceImportResponse" message="tns:ICommonImportWCF_FindAvgPriceImport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindLastNBRPriceFromBOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindLastNBRPriceFromBOM" message="tns:ICommonImportWCF_FindLastNBRPriceFromBOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindLastNBRPriceFromBOMResponse" message="tns:ICommonImportWCF_FindLastNBRPriceFromBOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustGroupID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCustGroupID" message="tns:ICommonImportWCF_FindCustGroupID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/FindCustGroupIDResponse" message="tns:ICommonImportWCF_FindCustGroupID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSaleImportIdExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckSaleImportIdExist" message="tns:ICommonImportWCF_CheckSaleImportIdExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonImportWCF/CheckSaleImportIdExistResponse" message="tns:ICommonImportWCF_CheckSaleImportIdExist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonImportWCF" type="tns:ICommonImportWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindVendorId">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindVendorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindItemId">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindItemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUOMn">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindUOMn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUOMc">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindUOMc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPrePurchaseNo">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/CheckPrePurchaseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerId">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCustomerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/GetProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateFromBDTForBureau">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDTForBureau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSaleInvoiceNo">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindSaleInvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBankID">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/CheckBankID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBranchId">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindBranchId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindLastNBRPrice">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindLastNBRPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAvgPrice">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindAvgPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyId">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCurrencyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateFromBDT">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCurrencyRateFromBDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCurrencyRateBDTtoUSD">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCurrencyRateBDTtoUSD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReceiveReturnID">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/CheckReceiveReturnID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIssueReturnID">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/CheckIssueReturnID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAvgPriceImport">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindAvgPriceImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindLastNBRPriceFromBOM">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindLastNBRPriceFromBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustGroupID">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/FindCustGroupID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSaleImportIdExist">
+      <soap:operation soapAction="http://tempuri.org/ICommonImportWCF/CheckSaleImportIdExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonImportWCF">
+    <wsdl:port name="BasicHttpBinding_ICommonImportWCF" binding="tns:BasicHttpBinding_ICommonImportWCF">
+      <soap:address location="http://localhost:50568/WCF/CommonImportWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

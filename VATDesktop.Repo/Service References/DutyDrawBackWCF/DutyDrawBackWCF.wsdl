@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DutyDrawBackWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DutyDrawBackWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DutyDrawBackWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDutyDrawBackWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBacknsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBacknsert" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBacknsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBacknsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBackPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBackPost" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBackPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBackPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBackUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBackUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_DutyDrawBackUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DutyDrawBackUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_Purchase_DDBQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:Purchase_DDBQty" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_Purchase_DDBQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Purchase_DDBQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchddBackDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchddBackDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchddBackDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchddBackDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchDDBackHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDDBackHeader" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchDDBackHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDDBackHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchddbSaleInvoices_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchddbSaleInvoices" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_SearchddbSaleInvoices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchddbSaleInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_VAT7_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:VAT7_1" />
+  </wsdl:message>
+  <wsdl:message name="IDutyDrawBackWCF_VAT7_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VAT7_1Response" />
+  </wsdl:message>
+  <wsdl:portType name="IDutyDrawBackWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DoWork" message="tns:IDutyDrawBackWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DoWorkResponse" message="tns:IDutyDrawBackWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBacknsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBacknsert" message="tns:IDutyDrawBackWCF_DutyDrawBacknsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBacknsertResponse" message="tns:IDutyDrawBackWCF_DutyDrawBacknsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBackPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackPost" message="tns:IDutyDrawBackWCF_DutyDrawBackPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackPostResponse" message="tns:IDutyDrawBackWCF_DutyDrawBackPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBackUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackUpdate" message="tns:IDutyDrawBackWCF_DutyDrawBackUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackUpdateResponse" message="tns:IDutyDrawBackWCF_DutyDrawBackUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Purchase_DDBQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/Purchase_DDBQty" message="tns:IDutyDrawBackWCF_Purchase_DDBQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/Purchase_DDBQtyResponse" message="tns:IDutyDrawBackWCF_Purchase_DDBQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchddBackDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchddBackDetails" message="tns:IDutyDrawBackWCF_SearchddBackDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchddBackDetailsResponse" message="tns:IDutyDrawBackWCF_SearchddBackDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDDBackHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchDDBackHeader" message="tns:IDutyDrawBackWCF_SearchDDBackHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchDDBackHeaderResponse" message="tns:IDutyDrawBackWCF_SearchDDBackHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchddbSaleInvoices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchddbSaleInvoices" message="tns:IDutyDrawBackWCF_SearchddbSaleInvoices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/SearchddbSaleInvoicesResponse" message="tns:IDutyDrawBackWCF_SearchddbSaleInvoices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VAT7_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/VAT7_1" message="tns:IDutyDrawBackWCF_VAT7_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDutyDrawBackWCF/VAT7_1Response" message="tns:IDutyDrawBackWCF_VAT7_1_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDutyDrawBackWCF" type="tns:IDutyDrawBackWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBacknsert">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBacknsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBackPost">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DutyDrawBackUpdate">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/DutyDrawBackUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Purchase_DDBQty">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/Purchase_DDBQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchddBackDetails">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/SearchddBackDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDDBackHeader">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/SearchDDBackHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchddbSaleInvoices">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/SearchddbSaleInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VAT7_1">
+      <soap:operation soapAction="http://tempuri.org/IDutyDrawBackWCF/VAT7_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DutyDrawBackWCF">
+    <wsdl:port name="BasicHttpBinding_IDutyDrawBackWCF" binding="tns:BasicHttpBinding_IDutyDrawBackWCF">
+      <soap:address location="http://localhost:50568/WCF/DutyDrawBackWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

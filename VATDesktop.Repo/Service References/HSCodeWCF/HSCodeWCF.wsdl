@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HSCodeWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/HSCodeWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/HSCodeWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHSCodeWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_InsertfromExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertfromExcel" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_InsertfromExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertfromExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_InsertToHSCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToHSCode" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_InsertToHSCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToHSCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_UpdateHSCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHSCode" />
+  </wsdl:message>
+  <wsdl:message name="IHSCodeWCF_UpdateHSCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHSCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHSCodeWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/DoWork" message="tns:IHSCodeWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/DoWorkResponse" message="tns:IHSCodeWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/Delete" message="tns:IHSCodeWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/DeleteResponse" message="tns:IHSCodeWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/GetExcelData" message="tns:IHSCodeWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/GetExcelDataResponse" message="tns:IHSCodeWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertfromExcel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/InsertfromExcel" message="tns:IHSCodeWCF_InsertfromExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/InsertfromExcelResponse" message="tns:IHSCodeWCF_InsertfromExcel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToHSCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/InsertToHSCode" message="tns:IHSCodeWCF_InsertToHSCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/InsertToHSCodeResponse" message="tns:IHSCodeWCF_InsertToHSCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/SelectAll" message="tns:IHSCodeWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/SelectAllResponse" message="tns:IHSCodeWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/SelectAllList" message="tns:IHSCodeWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/SelectAllListResponse" message="tns:IHSCodeWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHSCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHSCodeWCF/UpdateHSCode" message="tns:IHSCodeWCF_UpdateHSCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHSCodeWCF/UpdateHSCodeResponse" message="tns:IHSCodeWCF_UpdateHSCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHSCodeWCF" type="tns:IHSCodeWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertfromExcel">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/InsertfromExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToHSCode">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/InsertToHSCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHSCode">
+      <soap:operation soapAction="http://tempuri.org/IHSCodeWCF/UpdateHSCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HSCodeWCF">
+    <wsdl:port name="BasicHttpBinding_IHSCodeWCF" binding="tns:BasicHttpBinding_IHSCodeWCF">
+      <soap:address location="http://localhost:50568/WCF/HSCodeWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

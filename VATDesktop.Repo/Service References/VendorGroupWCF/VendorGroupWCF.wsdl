@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VendorGroupWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/VendorGroupWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/VendorGroupWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVendorGroupWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_InsertToVendorGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToVendorGroup" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_InsertToVendorGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToVendorGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_UpdateToVendorGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToVendorGroup" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_UpdateToVendorGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToVendorGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IVendorGroupWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVendorGroupWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/DoWork" message="tns:IVendorGroupWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/DoWorkResponse" message="tns:IVendorGroupWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToVendorGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/InsertToVendorGroup" message="tns:IVendorGroupWCF_InsertToVendorGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/InsertToVendorGroupResponse" message="tns:IVendorGroupWCF_InsertToVendorGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToVendorGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/UpdateToVendorGroup" message="tns:IVendorGroupWCF_UpdateToVendorGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/UpdateToVendorGroupResponse" message="tns:IVendorGroupWCF_UpdateToVendorGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/DropDownAll" message="tns:IVendorGroupWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/DropDownAllResponse" message="tns:IVendorGroupWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/DropDown" message="tns:IVendorGroupWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/DropDownResponse" message="tns:IVendorGroupWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/SelectAll" message="tns:IVendorGroupWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/SelectAllResponse" message="tns:IVendorGroupWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/SelectAllList" message="tns:IVendorGroupWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/SelectAllListResponse" message="tns:IVendorGroupWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendorGroupWCF/Delete" message="tns:IVendorGroupWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVendorGroupWCF/DeleteResponse" message="tns:IVendorGroupWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVendorGroupWCF" type="tns:IVendorGroupWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToVendorGroup">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/InsertToVendorGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToVendorGroup">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/UpdateToVendorGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IVendorGroupWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VendorGroupWCF">
+    <wsdl:port name="BasicHttpBinding_IVendorGroupWCF" binding="tns:BasicHttpBinding_IVendorGroupWCF">
+      <soap:address location="http://localhost:50568/WCF/VendorGroupWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

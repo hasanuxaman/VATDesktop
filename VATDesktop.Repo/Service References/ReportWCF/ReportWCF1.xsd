@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="StockReportRMReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockReportRMReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StockReportRMReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferToDepotReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferToDepotReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransferToDepotReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSStatementReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSStatementReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VDSStatementReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chak_khaReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chak_khaReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Chak_khaReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chak_kaReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="TransferTo" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chak_kaReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Chak_kaReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDS_Certificatet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDS_CertificatetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDS_CertificatetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Adjustment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeadId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AdjType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjustmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdjustmentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSAmountReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conditionField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSAmountReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSAmountReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferIssueOutReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="TransferTo" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferIssueOutReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransferIssueOutReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferReceiveInReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchFromId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferReceiveInReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransferReceiveInReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Wastage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WastageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WastageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptDeliveryReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="challanNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptDeliveryReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RptDeliveryReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DepositNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT16New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT16NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MISVAT16NewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT17New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT17NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MISVAT17NewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT18New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MISVAT18NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MISVAT18NewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductCategoryNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cgID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductCategoryNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductCategoryNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurchaseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorGroupId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromBOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rCostPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pCategoryLike" type="xs:boolean" />
+        <xs:element minOccurs="0" name="PGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="waste" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoryLike" type="xs:boolean" />
+        <xs:element minOccurs="0" name="PGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiveNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiveNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReceiveDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReceiveDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiveNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiveNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPromotional" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoryLike" type="xs:boolean" />
+        <xs:element minOccurs="0" name="PGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleNewWithChassisEngine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPromotional" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chassis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="engine" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleNewWithChassisEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleNewWithChassisEngineResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WithoutZero" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pCategoryLike" type="xs:boolean" />
+        <xs:element minOccurs="0" name="PGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StockNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockWithAdjNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WithoutZero" type="xs:boolean" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockWithAdjNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StockWithAdjNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockWastage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WithoutZero" type="xs:boolean" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockWastageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StockWastageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VehicleNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VehicleNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VendorGroupNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VendorGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VendorGroupNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VendorGroupNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InputOutputCoEfficient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RawItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InputOutputCoEfficientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InputOutputCoEfficientResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VendorReportNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VendorID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VendorReportNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VendorReportNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrasurryDepositeNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrasurryDepositeNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TrasurryDepositeNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDeposit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSDepositResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDepositDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDepositDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSDepositDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDepositDetail_MISReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDepositDetail_MISReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSDepositDetail_MISReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDeposit_MISReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSDeposit_MISReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSDeposit_MISReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSDepositNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSDepositNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VDSDepositNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SDTrasurryDepositeNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SDTrasurryDepositeNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SDTrasurryDepositeNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfileString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfileStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComapnyProfileStringResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComapnyProfileResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurrencyReportNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CurrencyReportNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CurrencyReportNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CostingNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="totalQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rCostPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CostingNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CostingNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfileSecurity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComapnyProfileSecurityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComapnyProfileSecurityResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlySales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPromotional" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlySalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MonthlySalesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlyPurchases">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurchaseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorGroupId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromBOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UOMc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rCostPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlyPurchasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MonthlyPurchasesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepositNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDSReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VDSReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DemandDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DemandDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolForm_4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolForm_4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolForm_4Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolForm_5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolForm_5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolForm_5Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReturnType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReturnTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReturnTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMultipleInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="noOfChallan" type="xs:int" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="challanDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="challanDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMultipleInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectMultipleInvoicesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptBanderolProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptBanderolProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RptBanderolProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT11Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT11ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauVAT11ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT6_1Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT6_1ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauVAT6_1ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT18Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT18ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauVAT18ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT18_OldFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT18_OldFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauVAT18_OldFormatResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauMonthlySales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPromotional" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauMonthlySalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauMonthlySalesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauSaleMis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauSaleMisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauSaleMisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauSaleNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Customerid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyDiscount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPromotional" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauSaleNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauSaleNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauCreditNote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauCreditNoteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauCreditNoteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT19Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BureauVAT19ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BureauVAT19ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptVAT7Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vat7No" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RptVAT7ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RptVAT7ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TollRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollRegisterRaw">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollRegisterRawResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TollRegisterRawResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT16AttachToll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT16AttachTollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT16AttachTollResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseReturnNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseReturnNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseReturnNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Current_AC_VAT18">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Current_AC_VAT18Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Current_AC_VAT18Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SerialStockStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SerialStockStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SerialStockStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseWithLCInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LCDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LCDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VendorGroupId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LCNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseWithLCInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseWithLCInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18_Sanofi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18_SanofiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT18_SanofiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TDSReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TDSReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalPurchaseReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalPurchaseReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalPurchaseReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportDataReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportDataReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportDataReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiedVsSaleReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connVM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiedVsSaleReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiedVsSaleReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesStatementForServiceReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesStatementForServiceReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesStatementForServiceReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesStatementDeliveryReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalesStatementDeliveryReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesStatementDeliveryReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockReportFGReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StockReportFGReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StockReportFGReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferIssueNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransferIssueNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DBName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferIssueNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransferIssueNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT18NewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_10Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalAmount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_10ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_10ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDS12KhaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VendorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepositDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IssueDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BillDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BillDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurchaseNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chkPurchaseVDS" type="xs:boolean" />
+        <xs:element minOccurs="0" name="chkAll" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VDS12KhaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VDS12KhaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MIS19">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MIS19Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MIS19Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT11ReportCommercialImporterNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT11ReportCommercialImporterNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT11ReportCommercialImporterNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_7">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_7Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_7Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_8">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_8Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_8Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT11ReportNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ddmmyy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT11ReportNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT11ReportNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1KhaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1KhaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT1KhaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleTrackingReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleTrackingReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleTrackingReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_3Toll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TollNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_3TollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_3TollResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT20ReportNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT20ReportNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT20ReportNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditNoteNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditNoteNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreditNoteNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditNoteAmountNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditNoteAmountNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreditNoteAmountNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DebitNoteNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DebitNoteNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DebitNoteNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTracking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTrackingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchTrackingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTracking1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTracking1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchTracking1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTracking2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchTracking2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchTracking2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT16NewforTollRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT16NewforTollRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT16NewforTollRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1_WithConn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="Opening" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1_WithConnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_1_WithConnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1Toll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1TollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_1TollResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1_Branching">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DBName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1_BranchingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_1_BranchingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DBName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2_1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_2_1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="Opening" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Opening6_2" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2Toll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT6_2TollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT6_2TollResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormAPart3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormAPart3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormAPart3Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormAPart4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormAPart4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormAPart4Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormBPart3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormBPart3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormBPart3Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormCPart3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormCPart3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormCPart3Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormCPart4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormCPart4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormCPart4Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormGPart8">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormGPart8Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormGPart8Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormDPart5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormDPart5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormDPart5Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormEPart6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormEPart6Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormEPart6Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormFPart6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNo" type="xs:int" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_SubFormFPart6Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_SubFormFPart6Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_Process">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_ProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_ProcessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_ReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_ReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT9_1_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT9_1_V2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SD_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SD_DataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SD_DataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT19NewNewformat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT19NewNewformatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT19NewNewformatResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18Breakdown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PeriodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportInBDT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT18BreakdownResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT18BreakdownResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepFormKaTradingNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepFormKaTradingNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RepFormKaTradingNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT24">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ddbackno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ddbFinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT24Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT24Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT22">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ddbackno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT22Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT22Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VATDDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ddbackno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesInvoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VATDDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VATDDBResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseMis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurchaseMisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseMisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleMis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="VatType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleMisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleMisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueMis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueMisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IssueMisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiveMis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiveId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiveMisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiveMisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleReceiveMIS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaleReceiveMISResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaleReceiveMISResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1KaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1KaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT1KaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1GaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsPercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1GaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT1GaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1GhaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="finishitemno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT1GhaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT1GhaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormKaNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormKaNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FormKaNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMNew_withFNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsPercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMNew_withFNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BOMNew_withFNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BOMId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="VATName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsPercent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BOMNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BOMDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BOMDownloadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VATDisposeDsNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposeNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VATDisposeDsNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VATDisposeDsNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerGroupNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerGroupNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerGroupNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerGroupID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connection" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposeInsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposeInsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposeInsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposePost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposePostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposePostResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposeUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisposeUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposeUpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDisposeDetailDTNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposeNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDisposeDetailDTNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDisposeDetailDTNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDisposeHeaderDTNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisposeNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DisposeDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DisposeDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="databasename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDisposeHeaderDTNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDisposeHeaderDTNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DepositTDSWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DepositTDSWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DepositTDSWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDepositTDSWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsert" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsert2_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsert2" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsert2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsert2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsertX_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsertX" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositInsertX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositInsertXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositPost" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositPostX_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositPostX" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositPostX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositPostXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositUpdateX_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepositUpdateX" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_DepositUpdateX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositUpdateXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_ReverseAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseAmount" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_ReverseAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SearchVDSDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVDSDT" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SearchVDSDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVDSDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_UpdateVdsComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVdsComplete" />
+  </wsdl:message>
+  <wsdl:message name="IDepositTDSWCF_UpdateVdsComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVdsCompleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDepositTDSWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DoWork" message="tns:IDepositTDSWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DoWorkResponse" message="tns:IDepositTDSWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsert" message="tns:IDepositTDSWCF_DepositInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsertResponse" message="tns:IDepositTDSWCF_DepositInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsert2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsert2" message="tns:IDepositTDSWCF_DepositInsert2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsert2Response" message="tns:IDepositTDSWCF_DepositInsert2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsertX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsertX" message="tns:IDepositTDSWCF_DepositInsertX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositInsertXResponse" message="tns:IDepositTDSWCF_DepositInsertX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositPost" message="tns:IDepositTDSWCF_DepositPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositPostResponse" message="tns:IDepositTDSWCF_DepositPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositPostX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositPostX" message="tns:IDepositTDSWCF_DepositPostX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositPostXResponse" message="tns:IDepositTDSWCF_DepositPostX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositUpdate" message="tns:IDepositTDSWCF_DepositUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositUpdateResponse" message="tns:IDepositTDSWCF_DepositUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositUpdateX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositUpdateX" message="tns:IDepositTDSWCF_DepositUpdateX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/DepositUpdateXResponse" message="tns:IDepositTDSWCF_DepositUpdateX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/ImportData" message="tns:IDepositTDSWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/ImportDataResponse" message="tns:IDepositTDSWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/ReverseAmount" message="tns:IDepositTDSWCF_ReverseAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/ReverseAmountResponse" message="tns:IDepositTDSWCF_ReverseAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchVDSDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/SearchVDSDT" message="tns:IDepositTDSWCF_SearchVDSDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/SearchVDSDTResponse" message="tns:IDepositTDSWCF_SearchVDSDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/SelectAll" message="tns:IDepositTDSWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/SelectAllResponse" message="tns:IDepositTDSWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/SelectAllList" message="tns:IDepositTDSWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/SelectAllListResponse" message="tns:IDepositTDSWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVdsComplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDepositTDSWCF/UpdateVdsComplete" message="tns:IDepositTDSWCF_UpdateVdsComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDepositTDSWCF/UpdateVdsCompleteResponse" message="tns:IDepositTDSWCF_UpdateVdsComplete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDepositTDSWCF" type="tns:IDepositTDSWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsert">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsert2">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositInsert2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositInsertX">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositInsertX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositPost">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositPostX">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositPostX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositUpdate">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositUpdateX">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/DepositUpdateX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseAmount">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/ReverseAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVDSDT">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/SearchVDSDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVdsComplete">
+      <soap:operation soapAction="http://tempuri.org/IDepositTDSWCF/UpdateVdsComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DepositTDSWCF">
+    <wsdl:port name="BasicHttpBinding_IDepositTDSWCF" binding="tns:BasicHttpBinding_IDepositTDSWCF">
+      <soap:address location="http://localhost:50568/WCF/DepositTDSWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

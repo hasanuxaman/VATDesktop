@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomerWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CustomerWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CustomerWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_DeleteCustomerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_DeleteCustomerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_GetExcelAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_GetExcelAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_InsertToCustomerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_InsertToCustomerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_InsertToCustomerNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerNew" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_InsertToCustomerNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCountry" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCustomerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCustomerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCustomerByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SearchCustomerByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_UpdateToCustomerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_UpdateToCustomerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_UpdateToCustomerNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerNew" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerWCF_UpdateToCustomerNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/DoWork" message="tns:ICustomerWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/DoWorkResponse" message="tns:ICustomerWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/SelectAllList" message="tns:ICustomerWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/SelectAllListResponse" message="tns:ICustomerWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/Delete" message="tns:ICustomerWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/DeleteResponse" message="tns:ICustomerWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/DeleteCustomerAddress" message="tns:ICustomerWCF_DeleteCustomerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/DeleteCustomerAddressResponse" message="tns:ICustomerWCF_DeleteCustomerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/DropDown" message="tns:ICustomerWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/DropDownResponse" message="tns:ICustomerWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/GetExcelAddress" message="tns:ICustomerWCF_GetExcelAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/GetExcelAddressResponse" message="tns:ICustomerWCF_GetExcelAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/GetExcelData" message="tns:ICustomerWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/GetExcelDataResponse" message="tns:ICustomerWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/InsertToCustomerAddress" message="tns:ICustomerWCF_InsertToCustomerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/InsertToCustomerAddressResponse" message="tns:ICustomerWCF_InsertToCustomerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/InsertToCustomerNew" message="tns:ICustomerWCF_InsertToCustomerNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/InsertToCustomerNewResponse" message="tns:ICustomerWCF_InsertToCustomerNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCountry" message="tns:ICustomerWCF_SearchCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCountryResponse" message="tns:ICustomerWCF_SearchCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCustomerAddress" message="tns:ICustomerWCF_SearchCustomerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCustomerAddressResponse" message="tns:ICustomerWCF_SearchCustomerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCustomerByCode" message="tns:ICustomerWCF_SearchCustomerByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/SearchCustomerByCodeResponse" message="tns:ICustomerWCF_SearchCustomerByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/SelectAll" message="tns:ICustomerWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/SelectAllResponse" message="tns:ICustomerWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/UpdateToCustomerAddress" message="tns:ICustomerWCF_UpdateToCustomerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/UpdateToCustomerAddressResponse" message="tns:ICustomerWCF_UpdateToCustomerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerWCF/UpdateToCustomerNew" message="tns:ICustomerWCF_UpdateToCustomerNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerWCF/UpdateToCustomerNewResponse" message="tns:ICustomerWCF_UpdateToCustomerNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomerWCF" type="tns:ICustomerWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/DeleteCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelAddress">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/GetExcelAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/InsertToCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerNew">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/InsertToCustomerNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCountry">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/SearchCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/SearchCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerByCode">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/SearchCustomerByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/UpdateToCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerNew">
+      <soap:operation soapAction="http://tempuri.org/ICustomerWCF/UpdateToCustomerNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerWCF">
+    <wsdl:port name="BasicHttpBinding_ICustomerWCF" binding="tns:BasicHttpBinding_ICustomerWCF">
+      <soap:address location="http://localhost:50568/WCF/CustomerWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

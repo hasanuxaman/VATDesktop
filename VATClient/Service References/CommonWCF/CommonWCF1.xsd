@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" />
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettingsDesktop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettingGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SettingName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettingsDesktopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettingsDesktopResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataAlreadyUsed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompareTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompareField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompareWith" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" minOccurs="0" name="connVM" nillable="true" type="q1:SysDBInfoVMTemp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataAlreadyUsedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataAlreadyUsedResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettingValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="settingGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="settingName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" minOccurs="0" name="connVM" nillable="true" type="q2:SysDBInfoVMTemp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettingValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettingValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettingGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SettingName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" minOccurs="0" name="connVM" nillable="true" type="q3:SysDBInfoVMTemp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettingsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

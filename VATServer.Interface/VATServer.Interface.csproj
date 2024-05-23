@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31A02E04-EA0B-4AA6-BAC1-9EFCD3F9259F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VATServer.Interface</RootNamespace>
+    <AssemblyName>VATServer.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAdjustment.cs" />
+    <Compile Include="IAdjustmentHistory.cs" />
+    <Compile Include="IBanderolProducts.cs" />
+    <Compile Include="IBanderols.cs" />
+    <Compile Include="IMPLSalesInvoiceBankPayment.cs" />
+    <Compile Include="IMPLBankPaymentReceive.cs" />
+    <Compile Include="IDistrict.cs" />
+    <Compile Include="IDivision.cs" />
+    <Compile Include="ISectors.cs" />
+    <Compile Include="IMPLZoneProfile.cs" />
+    <Compile Include="IMPLZoneBranchMapping.cs" />
+    <Compile Include="IMPLBankInformation.cs" />
+    <Compile Include="IBankInformation.cs" />
+    <Compile Include="IBOM.cs" />
+    <Compile Include="IBranch.cs" />
+    <Compile Include="IBranchProfile.cs" />
+    <Compile Include="IBureauSale.cs" />
+    <Compile Include="ICode.cs" />
+    <Compile Include="ICommon.cs" />
+    <Compile Include="ICommonImport.cs" />
+    <Compile Include="ICompanyInformation.cs" />
+    <Compile Include="ICompanyprofile.cs" />
+    <Compile Include="ICurrencies.cs" />
+    <Compile Include="ICurrencyConversion.cs" />
+    <Compile Include="ICustomer.cs" />
+    <Compile Include="ICustomerDiscount.cs" />
+    <Compile Include="ICustomerGroup.cs" />
+    <Compile Include="IDemand.cs" />
+    <Compile Include="IDeposit.cs" />
+    <Compile Include="IDepositTDS.cs" />
+    <Compile Include="IDispose.cs" />
+    <Compile Include="IDutyDrawBack.cs" />
+    <Compile Include="IFiscalYear.cs" />
+    <Compile Include="ICPCDetails.cs" />
+    <Compile Include="IHSCode.cs" />
+    <Compile Include="IImport.cs" />
+    <Compile Include="IIssue.cs" />
+    <Compile Include="IIssueBOM.cs" />
+    <Compile Include="IPackaging.cs" />
+    <Compile Include="IPrefix.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IProductCategory.cs" />
+    <Compile Include="IPurchaseMPL.cs" />
+    <Compile Include="IPurchase.cs" />
+    <Compile Include="IReceive.cs" />
+    <Compile Include="IReport.cs" />
+    <Compile Include="IMPLSalesInvSA4.cs" />
+    <Compile Include="ITanksMPL.cs" />
+    <Compile Include="IMPLBankDepositSlip.cs" />
+    <Compile Include="IMPLIN89.cs" />
+    <Compile Include="ITransferReceiveMPL.cs" />
+    <Compile Include="ITransferIssueMPL.cs" />
+    <Compile Include="ISaleMPL.cs" />
+    <Compile Include="ISale.cs" />
+    <Compile Include="ISaleExport.cs" />
+    <Compile Include="ISalesInvoiceExp.cs" />
+    <Compile Include="ISDDeposit.cs" />
+    <Compile Include="ISetting.cs" />
+    <Compile Include="ISettingRole.cs" />
+    <Compile Include="ISetup.cs" />
+    <Compile Include="IShift.cs" />
+    <Compile Include="ITDSs.cs" />
+    <Compile Include="ITender.cs" />
+    <Compile Include="IToll6_3Invoice.cs" />
+    <Compile Include="ITracking.cs" />
+    <Compile Include="ITransferIssue.cs" />
+    <Compile Include="ITransferReceive.cs" />
+    <Compile Include="IUOM.cs" />
+    <Compile Include="IUOMName.cs" />
+    <Compile Include="IUserBranchDetail.cs" />
+    <Compile Include="IUserGroup.cs" />
+    <Compile Include="IUserInformation.cs" />
+    <Compile Include="IUserMenuAllRoll.cs" />
+    <Compile Include="IUserMenuRolls.cs" />
+    <Compile Include="IVDS.cs" />
+    <Compile Include="IVehicle.cs" />
+    <Compile Include="IVendor.cs" />
+    <Compile Include="IVendorGroup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VATViewModel\VATViewModel.csproj">
+      <Project>{59C2521F-549A-4906-A3E4-ADDB9BE584BA}</Project>
+      <Name>VATViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc25477e-0341-44f3-a4ab-64cadbfa912f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50568/WCF/ReceiveWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReceiveWCF2.xsd" MetadataType="Schema" ID="be843ba0-205e-4808-a952-bd319bed4e33" SourceId="1" SourceUrl="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReceiveWCF.xsd" MetadataType="Schema" ID="eecdfc4d-02cf-44b8-946a-2abf78da8ceb" SourceId="1" SourceUrl="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReceiveWCF.wsdl" MetadataType="Wsdl" ID="f38705f6-b66e-4e4b-98b4-f9d9da2adf4e" SourceId="1" SourceUrl="http://localhost:50568/WCF/ReceiveWCF.svc?wsdl" />
+    <MetadataFile FileName="ReceiveWCF1.xsd" MetadataType="Schema" ID="4c2002d2-dbc5-4c0f-be2d-69365c4dc373" SourceId="1" SourceUrl="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReceiveWCF.disco" MetadataType="Disco" ID="6d8377c5-a99e-41c7-98d2-46fac61e3c2e" SourceId="1" SourceUrl="http://localhost:50568/WCF/ReceiveWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

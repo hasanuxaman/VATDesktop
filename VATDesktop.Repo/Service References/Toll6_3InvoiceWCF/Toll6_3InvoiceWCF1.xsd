@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DetailVMswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDetailList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DetailVMswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDetailListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDetailListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Post">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PostResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dt" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAllResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TollNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="conditionFieldswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="conditionValueswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dt" type="xs:boolean" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TollSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TollSearchResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterVMwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DetailVMswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTollCompleted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tollNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMWCF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTollCompletedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTollCompletedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

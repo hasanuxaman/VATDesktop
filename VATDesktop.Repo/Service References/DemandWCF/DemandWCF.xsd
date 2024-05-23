@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="itemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BandProductID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BanderolStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolStockResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandInsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandInsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandInsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandPostResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandQty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="demandId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bandeProId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandQtyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandUpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnQty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="demandId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bandeProId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReturnQtyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDemandDetailDTNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDemandDetailDTNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDemandDetailDTNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDemandHeaderDTNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DemandDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DemandDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDemandHeaderDTNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDemandHeaderDTNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

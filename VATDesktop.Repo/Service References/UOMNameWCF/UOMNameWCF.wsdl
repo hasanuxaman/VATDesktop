@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UOMNameWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/UOMNameWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/UOMNameWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUOMNameWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_InsertToUOMName_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUOMName" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_InsertToUOMName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUOMNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_UpdateUOMName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUOMName" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_UpdateUOMName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUOMNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IUOMNameWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUOMNameWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/DoWork" message="tns:IUOMNameWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/DoWorkResponse" message="tns:IUOMNameWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/DropDownAll" message="tns:IUOMNameWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/DropDownAllResponse" message="tns:IUOMNameWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/DropDown" message="tns:IUOMNameWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/DropDownResponse" message="tns:IUOMNameWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/SelectAll" message="tns:IUOMNameWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/SelectAllResponse" message="tns:IUOMNameWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/Delete" message="tns:IUOMNameWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/DeleteResponse" message="tns:IUOMNameWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUOMName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/InsertToUOMName" message="tns:IUOMNameWCF_InsertToUOMName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/InsertToUOMNameResponse" message="tns:IUOMNameWCF_InsertToUOMName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUOMName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/UpdateUOMName" message="tns:IUOMNameWCF_UpdateUOMName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/UpdateUOMNameResponse" message="tns:IUOMNameWCF_UpdateUOMName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUOMNameWCF/SelectAllList" message="tns:IUOMNameWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUOMNameWCF/SelectAllListResponse" message="tns:IUOMNameWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUOMNameWCF" type="tns:IUOMNameWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUOMName">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/InsertToUOMName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUOMName">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/UpdateUOMName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IUOMNameWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UOMNameWCF">
+    <wsdl:port name="BasicHttpBinding_IUOMNameWCF" binding="tns:BasicHttpBinding_IUOMNameWCF">
+      <soap:address location="http://localhost:50568/WCF/UOMNameWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

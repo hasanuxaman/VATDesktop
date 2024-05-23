@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserInformationWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/UserInformationWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/UserInformationWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserInformationWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_UpdateUserPasswordNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPasswordNew" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_UpdateUserPasswordNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPasswordNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_UpdateUserInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInformation" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_UpdateUserInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SelectForLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectForLogin" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SelectForLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectForLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserHasNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserHasNew" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserHasNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserHasNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserDataTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserDataTable" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserDataTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertToUserInformationNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUserInformationNew" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertToUserInformationNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUserInformationNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertToUserRoll_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUserRoll" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertToUserRoll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToUserRollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserLogOutByList_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserLogOutByList" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserLogOutByList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserLogOutByListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserInformation" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserRoll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserRoll" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserRoll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserRollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserLogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserLogOut" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_InsertUserLogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserLogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserLog" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserHas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserHas" />
+  </wsdl:message>
+  <wsdl:message name="IUserInformationWCF_SearchUserHas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserHasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserInformationWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/DoWork" message="tns:IUserInformationWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/DoWorkResponse" message="tns:IUserInformationWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SelectAll" message="tns:IUserInformationWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SelectAllResponse" message="tns:IUserInformationWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPasswordNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/UpdateUserPasswordNew" message="tns:IUserInformationWCF_UpdateUserPasswordNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/UpdateUserPasswordNewResponse" message="tns:IUserInformationWCF_UpdateUserPasswordNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/UpdateUserInformation" message="tns:IUserInformationWCF_UpdateUserInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/UpdateUserInformationResponse" message="tns:IUserInformationWCF_UpdateUserInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/DropDown" message="tns:IUserInformationWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/DropDownResponse" message="tns:IUserInformationWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/GetExcelData" message="tns:IUserInformationWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/GetExcelDataResponse" message="tns:IUserInformationWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectForLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SelectForLogin" message="tns:IUserInformationWCF_SelectForLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SelectForLoginResponse" message="tns:IUserInformationWCF_SelectForLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserHasNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserHasNew" message="tns:IUserInformationWCF_SearchUserHasNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserHasNewResponse" message="tns:IUserInformationWCF_SearchUserHasNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserDataTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserDataTable" message="tns:IUserInformationWCF_SearchUserDataTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserDataTableResponse" message="tns:IUserInformationWCF_SearchUserDataTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUserInformationNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertToUserInformationNew" message="tns:IUserInformationWCF_InsertToUserInformationNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertToUserInformationNewResponse" message="tns:IUserInformationWCF_InsertToUserInformationNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUserRoll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertToUserRoll" message="tns:IUserInformationWCF_InsertToUserRoll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertToUserRollResponse" message="tns:IUserInformationWCF_InsertToUserRoll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserLogOutByList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserLogOutByList" message="tns:IUserInformationWCF_InsertUserLogOutByList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserLogOutByListResponse" message="tns:IUserInformationWCF_InsertUserLogOutByList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserInformation" message="tns:IUserInformationWCF_InsertUserInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserInformationResponse" message="tns:IUserInformationWCF_InsertUserInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserRoll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserRoll" message="tns:IUserInformationWCF_SearchUserRoll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserRollResponse" message="tns:IUserInformationWCF_SearchUserRoll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserLogOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserLogOut" message="tns:IUserInformationWCF_InsertUserLogOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/InsertUserLogOutResponse" message="tns:IUserInformationWCF_InsertUserLogOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserLog" message="tns:IUserInformationWCF_SearchUserLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserLogResponse" message="tns:IUserInformationWCF_SearchUserLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserHas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserHas" message="tns:IUserInformationWCF_SearchUserHas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInformationWCF/SearchUserHasResponse" message="tns:IUserInformationWCF_SearchUserHas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserInformationWCF" type="tns:IUserInformationWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPasswordNew">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/UpdateUserPasswordNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInformation">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/UpdateUserInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectForLogin">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SelectForLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserHasNew">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SearchUserHasNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserDataTable">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SearchUserDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUserInformationNew">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/InsertToUserInformationNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToUserRoll">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/InsertToUserRoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserLogOutByList">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/InsertUserLogOutByList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInformation">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/InsertUserInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserRoll">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SearchUserRoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserLogOut">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/InsertUserLogOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserLog">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SearchUserLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserHas">
+      <soap:operation soapAction="http://tempuri.org/IUserInformationWCF/SearchUserHas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserInformationWCF">
+    <wsdl:port name="BasicHttpBinding_IUserInformationWCF" binding="tns:BasicHttpBinding_IUserInformationWCF">
+      <soap:address location="http://localhost:50568/WCF/UserInformationWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBacknsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ddbSaleInvoiceswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBacknsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DutyDrawBacknsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBackPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBackPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DutyDrawBackPostResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBackUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterwcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Detailswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ddbSaleInvoiceswcf" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DutyDrawBackUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DutyDrawBackUpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Purchase_DDBQty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Purchase_DDBQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Purchase_DDBQtyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchddBackDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DDBackNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldSaleID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchddBackDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchddBackDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDDBackHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DDBackNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DDBackFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DDBackToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DDBackSaleFromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DDBackSaleToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SalesInvoicNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FinishGood" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDDBackHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDDBackHeaderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchddbSaleInvoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DDBackNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchddbSaleInvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchddbSaleInvoicesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT7_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ddbackno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesInvoice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VAT7_1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VAT7_1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

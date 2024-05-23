@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VehicleWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/VehicleWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/VehicleWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVehicleWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_SelectAllLst_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllLst" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_SelectAllLst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllLstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_InsertToVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_InsertToVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_UpdateToVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_UpdateToVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IVehicleWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVehicleWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/DoWork" message="tns:IVehicleWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/DoWorkResponse" message="tns:IVehicleWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/DropDown" message="tns:IVehicleWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/DropDownResponse" message="tns:IVehicleWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllLst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/SelectAllLst" message="tns:IVehicleWCF_SelectAllLst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/SelectAllLstResponse" message="tns:IVehicleWCF_SelectAllLst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/SelectAll" message="tns:IVehicleWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/SelectAllResponse" message="tns:IVehicleWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/InsertToVehicle" message="tns:IVehicleWCF_InsertToVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/InsertToVehicleResponse" message="tns:IVehicleWCF_InsertToVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/UpdateToVehicle" message="tns:IVehicleWCF_UpdateToVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/UpdateToVehicleResponse" message="tns:IVehicleWCF_UpdateToVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/Delete" message="tns:IVehicleWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/DeleteResponse" message="tns:IVehicleWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVehicleWCF/GetExcelData" message="tns:IVehicleWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVehicleWCF/GetExcelDataResponse" message="tns:IVehicleWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVehicleWCF" type="tns:IVehicleWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllLst">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/SelectAllLst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToVehicle">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/InsertToVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToVehicle">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/UpdateToVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IVehicleWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VehicleWCF">
+    <wsdl:port name="BasicHttpBinding_IVehicleWCF" binding="tns:BasicHttpBinding_IVehicleWCF">
+      <soap:address location="http://localhost:50568/WCF/VehicleWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

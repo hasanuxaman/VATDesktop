@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdjustmentWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/AdjustmentWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/AdjustmentWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdjustmentWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_DeleteAdjustmentName_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdjustmentName" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_DeleteAdjustmentName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdjustmentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_InsertAdjustmentName_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdjustmentName" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_InsertAdjustmentName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdjustmentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_UpdateAdjustmentName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustmentName" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_UpdateAdjustmentName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustmentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdjustmentWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/DoWork" message="tns:IAdjustmentWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/DoWorkResponse" message="tns:IAdjustmentWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdjustmentName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/DeleteAdjustmentName" message="tns:IAdjustmentWCF_DeleteAdjustmentName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/DeleteAdjustmentNameResponse" message="tns:IAdjustmentWCF_DeleteAdjustmentName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/DropDown" message="tns:IAdjustmentWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/DropDownResponse" message="tns:IAdjustmentWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdjustmentName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/InsertAdjustmentName" message="tns:IAdjustmentWCF_InsertAdjustmentName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/InsertAdjustmentNameResponse" message="tns:IAdjustmentWCF_InsertAdjustmentName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustmentName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/UpdateAdjustmentName" message="tns:IAdjustmentWCF_UpdateAdjustmentName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/UpdateAdjustmentNameResponse" message="tns:IAdjustmentWCF_UpdateAdjustmentName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/SelectAllList" message="tns:IAdjustmentWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/SelectAllListResponse" message="tns:IAdjustmentWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentWCF/SelectAll" message="tns:IAdjustmentWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentWCF/SelectAllResponse" message="tns:IAdjustmentWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdjustmentWCF" type="tns:IAdjustmentWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdjustmentName">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/DeleteAdjustmentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdjustmentName">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/InsertAdjustmentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustmentName">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/UpdateAdjustmentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdjustmentWCF">
+    <wsdl:port name="BasicHttpBinding_IAdjustmentWCF" binding="tns:BasicHttpBinding_IAdjustmentWCF">
+      <soap:address location="http://localhost:50568/WCF/AdjustmentWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

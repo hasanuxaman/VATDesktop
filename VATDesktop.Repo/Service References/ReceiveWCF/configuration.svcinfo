@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;BasicHttpBinding_IReceiveWCF&quot; /&gt;" bindingType="basicHttpBinding" name="BasicHttpBinding_IReceiveWCF" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:50568/WCF/ReceiveWCF.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_IReceiveWCF&quot; contract=&quot;ReceiveWCF.IReceiveWCF&quot; name=&quot;BasicHttpBinding_IReceiveWCF&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://localhost:50568/WCF/ReceiveWCF.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_IReceiveWCF&quot; contract=&quot;ReceiveWCF.IReceiveWCF&quot; name=&quot;BasicHttpBinding_IReceiveWCF&quot; /&gt;" contractName="ReceiveWCF.IReceiveWCF" name="BasicHttpBinding_IReceiveWCF" />
+  </endpoints>
+</configurationSnapshot>

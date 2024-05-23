@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingsDesktop_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsDesktop" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingsDesktop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsed_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingValue" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_Settings_InputMessage">
+    <wsdl:part name="parameters" element="tns:Settings" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_Settings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DoWork" message="tns:ICommonWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DoWorkResponse" message="tns:ICommonWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingsDesktop">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SettingsDesktop" message="tns:ICommonWCF_SettingsDesktop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingsDesktopResponse" message="tns:ICommonWCF_SettingsDesktop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsed" message="tns:ICommonWCF_DataAlreadyUsed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsedResponse" message="tns:ICommonWCF_DataAlreadyUsed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SettingValue" message="tns:ICommonWCF_SettingValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingValueResponse" message="tns:ICommonWCF_SettingValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Settings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/Settings" message="tns:ICommonWCF_Settings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingsResponse" message="tns:ICommonWCF_Settings_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonWCF" type="tns:ICommonWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingsDesktop">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SettingsDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsed">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DataAlreadyUsed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingValue">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SettingValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Settings">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/Settings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonWCF">
+    <wsdl:port name="BasicHttpBinding_ICommonWCF" binding="tns:BasicHttpBinding_ICommonWCF">
+      <soap:address location="http://localhost:50568/WCF/CommonWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

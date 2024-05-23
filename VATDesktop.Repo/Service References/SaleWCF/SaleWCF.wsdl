@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SaleWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISaleWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetCategoryName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryName" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetCategoryName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsert" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesPost" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_CurrencyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_CurrencyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSalesHeaderDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSalesHeaderDTNew" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSalesHeaderDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSalesHeaderDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSaleDetailDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleDetailDTNew" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSaleDetailDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleDetailDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ReturnSaleQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSaleQty" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ReturnSaleQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSaleQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSaleExportDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleExportDTNew" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SearchSaleExportDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleExportDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SetDeliveryChallanNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDeliveryChallanNo" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SetDeliveryChallanNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDeliveryChallanNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SetGatePass_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetGatePass" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SetGatePass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetGatePassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetSaleExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleExcelData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetSaleExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_MultiplePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePost" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_MultiplePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_PostSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostSales" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_PostSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_UpdatePrintNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintNew" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_UpdatePrintNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcess" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetInvoiceNoFromTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceNoFromTemp" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetInvoiceNoFromTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceNoFromTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedTempData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedTempData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedTempData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedTempDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetOldDbList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldDbList" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetOldDbList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldDbListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaleTempNoBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaleTempNoBranch" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaleTempNoBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaleTempNoBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_CheckInvoiceNoExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInvoiceNoExist" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_CheckInvoiceNoExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckInvoiceNoExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetMasterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetMasterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetSaleJoin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleJoin" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetSaleJoin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleJoinResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCount" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedCount_tempTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCount_tempTable" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetUnProcessedCount_tempTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCount_tempTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetTopUnProcessed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopUnProcessed" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetTopUnProcessed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopUnProcessedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ProccessTempData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProccessTempData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ProccessTempData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProccessTempDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveSalesToLink3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSalesToLink3" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveSalesToLink3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSalesToLink3Response" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveSalesToKohinoor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSalesToKohinoor" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveSalesToKohinoor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSalesToKohinoorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveTempTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTest" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveTempTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_UpdateIsProcessed_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsProcessed" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_UpdateIsProcessed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsProcessedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetFisrtInvoiceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFisrtInvoiceId" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetFisrtInvoiceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFisrtInvoiceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportBigData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportBigData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportSalesBigData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportSalesBigData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ImportSalesBigData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportSalesBigDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcessOtherDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcessOtherDb" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcessOtherDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcessOtherDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcessTempData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcessTempData" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveAndProcessTempData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAndProcessTempDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveInvoiceIdSaleTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInvoiceIdSaleTemp" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SaveInvoiceIdSaleTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInvoiceIdSaleTempResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISaleWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/DoWork" message="tns:ISaleWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/DoWorkResponse" message="tns:ISaleWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetCategoryName" message="tns:ISaleWCF_GetCategoryName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetCategoryNameResponse" message="tns:ISaleWCF_GetCategoryName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SalesInsert" message="tns:ISaleWCF_SalesInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SalesInsertResponse" message="tns:ISaleWCF_SalesInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SalesUpdate" message="tns:ISaleWCF_SalesUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SalesUpdateResponse" message="tns:ISaleWCF_SalesUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SalesPost" message="tns:ISaleWCF_SalesPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SalesPostResponse" message="tns:ISaleWCF_SalesPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/CurrencyInfo" message="tns:ISaleWCF_CurrencyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/CurrencyInfoResponse" message="tns:ISaleWCF_CurrencyInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSalesHeaderDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SearchSalesHeaderDTNew" message="tns:ISaleWCF_SearchSalesHeaderDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SearchSalesHeaderDTNewResponse" message="tns:ISaleWCF_SearchSalesHeaderDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleDetailDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SearchSaleDetailDTNew" message="tns:ISaleWCF_SearchSaleDetailDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SearchSaleDetailDTNewResponse" message="tns:ISaleWCF_SearchSaleDetailDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSaleQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ReturnSaleQty" message="tns:ISaleWCF_ReturnSaleQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ReturnSaleQtyResponse" message="tns:ISaleWCF_ReturnSaleQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleExportDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SearchSaleExportDTNew" message="tns:ISaleWCF_SearchSaleExportDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SearchSaleExportDTNewResponse" message="tns:ISaleWCF_SearchSaleExportDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ImportData" message="tns:ISaleWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ImportDataResponse" message="tns:ISaleWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDeliveryChallanNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SetDeliveryChallanNo" message="tns:ISaleWCF_SetDeliveryChallanNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SetDeliveryChallanNoResponse" message="tns:ISaleWCF_SetDeliveryChallanNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGatePass">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SetGatePass" message="tns:ISaleWCF_SetGatePass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SetGatePassResponse" message="tns:ISaleWCF_SetGatePass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SelectAllList" message="tns:ISaleWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SelectAllListResponse" message="tns:ISaleWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SelectAll" message="tns:ISaleWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SelectAllResponse" message="tns:ISaleWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetSaleExcelData" message="tns:ISaleWCF_GetSaleExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetSaleExcelDataResponse" message="tns:ISaleWCF_GetSaleExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/MultiplePost" message="tns:ISaleWCF_MultiplePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/MultiplePostResponse" message="tns:ISaleWCF_MultiplePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/PostSales" message="tns:ISaleWCF_PostSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/PostSalesResponse" message="tns:ISaleWCF_PostSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/UpdatePrintNew" message="tns:ISaleWCF_UpdatePrintNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/UpdatePrintNewResponse" message="tns:ISaleWCF_UpdatePrintNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcess" message="tns:ISaleWCF_SaveAndProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcessResponse" message="tns:ISaleWCF_SaveAndProcess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetById" message="tns:ISaleWCF_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetByIdResponse" message="tns:ISaleWCF_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceNoFromTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetInvoiceNoFromTemp" message="tns:ISaleWCF_GetInvoiceNoFromTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetInvoiceNoFromTempResponse" message="tns:ISaleWCF_GetInvoiceNoFromTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedTempData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedTempData" message="tns:ISaleWCF_GetUnProcessedTempData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedTempDataResponse" message="tns:ISaleWCF_GetUnProcessedTempData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldDbList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetOldDbList" message="tns:ISaleWCF_GetOldDbList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetOldDbListResponse" message="tns:ISaleWCF_GetOldDbList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleTempNoBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaleTempNoBranch" message="tns:ISaleWCF_SaleTempNoBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaleTempNoBranchResponse" message="tns:ISaleWCF_SaleTempNoBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckInvoiceNoExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/CheckInvoiceNoExist" message="tns:ISaleWCF_CheckInvoiceNoExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/CheckInvoiceNoExistResponse" message="tns:ISaleWCF_CheckInvoiceNoExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetMasterData" message="tns:ISaleWCF_GetMasterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetMasterDataResponse" message="tns:ISaleWCF_GetMasterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleJoin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetSaleJoin" message="tns:ISaleWCF_GetSaleJoin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetSaleJoinResponse" message="tns:ISaleWCF_GetSaleJoin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedCount" message="tns:ISaleWCF_GetUnProcessedCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedCountResponse" message="tns:ISaleWCF_GetUnProcessedCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount_tempTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedCount_tempTable" message="tns:ISaleWCF_GetUnProcessedCount_tempTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetUnProcessedCount_tempTableResponse" message="tns:ISaleWCF_GetUnProcessedCount_tempTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopUnProcessed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetTopUnProcessed" message="tns:ISaleWCF_GetTopUnProcessed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetTopUnProcessedResponse" message="tns:ISaleWCF_GetTopUnProcessed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProccessTempData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ProccessTempData" message="tns:ISaleWCF_ProccessTempData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ProccessTempDataResponse" message="tns:ISaleWCF_ProccessTempData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesToLink3">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveSalesToLink3" message="tns:ISaleWCF_SaveSalesToLink3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveSalesToLink3Response" message="tns:ISaleWCF_SaveSalesToLink3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesToKohinoor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveSalesToKohinoor" message="tns:ISaleWCF_SaveSalesToKohinoor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveSalesToKohinoorResponse" message="tns:ISaleWCF_SaveSalesToKohinoor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveTempTest" message="tns:ISaleWCF_SaveTempTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveTempTestResponse" message="tns:ISaleWCF_SaveTempTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsProcessed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/UpdateIsProcessed" message="tns:ISaleWCF_UpdateIsProcessed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/UpdateIsProcessedResponse" message="tns:ISaleWCF_UpdateIsProcessed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFisrtInvoiceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetFisrtInvoiceId" message="tns:ISaleWCF_GetFisrtInvoiceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetFisrtInvoiceIdResponse" message="tns:ISaleWCF_GetFisrtInvoiceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ImportBigData" message="tns:ISaleWCF_ImportBigData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ImportBigDataResponse" message="tns:ISaleWCF_ImportBigData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportSalesBigData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ImportSalesBigData" message="tns:ISaleWCF_ImportSalesBigData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ImportSalesBigDataResponse" message="tns:ISaleWCF_ImportSalesBigData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcessOtherDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcessOtherDb" message="tns:ISaleWCF_SaveAndProcessOtherDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcessOtherDbResponse" message="tns:ISaleWCF_SaveAndProcessOtherDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcessTempData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcessTempData" message="tns:ISaleWCF_SaveAndProcessTempData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveAndProcessTempDataResponse" message="tns:ISaleWCF_SaveAndProcessTempData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInvoiceIdSaleTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SaveInvoiceIdSaleTemp" message="tns:ISaleWCF_SaveInvoiceIdSaleTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SaveInvoiceIdSaleTempResponse" message="tns:ISaleWCF_SaveInvoiceIdSaleTemp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISaleWCF" type="tns:ISaleWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetCategoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SalesInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesUpdate">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SalesUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesPost">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SalesPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyInfo">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/CurrencyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSalesHeaderDTNew">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SearchSalesHeaderDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleDetailDTNew">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SearchSaleDetailDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSaleQty">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ReturnSaleQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleExportDTNew">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SearchSaleExportDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDeliveryChallanNo">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SetDeliveryChallanNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGatePass">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SetGatePass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleExcelData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetSaleExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/MultiplePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostSales">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/PostSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintNew">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/UpdatePrintNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcess">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveAndProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceNoFromTemp">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetInvoiceNoFromTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedTempData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetUnProcessedTempData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldDbList">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetOldDbList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleTempNoBranch">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaleTempNoBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInvoiceNoExist">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/CheckInvoiceNoExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleJoin">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetSaleJoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetUnProcessedCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount_tempTable">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetUnProcessedCount_tempTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopUnProcessed">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetTopUnProcessed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProccessTempData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ProccessTempData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesToLink3">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveSalesToLink3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSalesToKohinoor">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveSalesToKohinoor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTest">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveTempTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsProcessed">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/UpdateIsProcessed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFisrtInvoiceId">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetFisrtInvoiceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ImportBigData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportSalesBigData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ImportSalesBigData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcessOtherDb">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveAndProcessOtherDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAndProcessTempData">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveAndProcessTempData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInvoiceIdSaleTemp">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SaveInvoiceIdSaleTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaleWCF">
+    <wsdl:port name="BasicHttpBinding_ISaleWCF" binding="tns:BasicHttpBinding_ISaleWCF">
+      <soap:address location="http://localhost:50568/WCF/SaleWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

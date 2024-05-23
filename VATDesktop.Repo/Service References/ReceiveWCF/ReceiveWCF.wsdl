@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReceiveWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ReceiveWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReceiveWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchByReferenceNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByReferenceNo" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchByReferenceNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByReferenceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_FormatingNumeric_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatingNumeric" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_FormatingNumeric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatingNumericResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_GetUSDCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUSDCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_GetUSDCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUSDCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportData_Sanofi_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData_Sanofi" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportData_Sanofi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData_SanofiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ImportExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_MultiplePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePost" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_MultiplePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceiveInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveInsert" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceiveInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceivePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivePost" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceivePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceiveUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReceiveUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReturnReceiveQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnReceiveQty" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_ReturnReceiveQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnReceiveQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SaveTempReceive_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempReceive" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SaveTempReceive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchReceiveDetailNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveDetailNew" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchReceiveDetailNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveDetailNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchReceiveHeaderDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveHeaderDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SearchReceiveHeaderDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveHeaderDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectReceiveDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectReceiveDetail" />
+  </wsdl:message>
+  <wsdl:message name="IReceiveWCF_SelectReceiveDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectReceiveDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReceiveWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/DoWork" message="tns:IReceiveWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/DoWorkResponse" message="tns:IReceiveWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByReferenceNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SearchByReferenceNo" message="tns:IReceiveWCF_SearchByReferenceNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SearchByReferenceNoResponse" message="tns:IReceiveWCF_SearchByReferenceNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatingNumeric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/FormatingNumeric" message="tns:IReceiveWCF_FormatingNumeric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/FormatingNumericResponse" message="tns:IReceiveWCF_FormatingNumeric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/GetExcelData" message="tns:IReceiveWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/GetExcelDataResponse" message="tns:IReceiveWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUSDCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/GetUSDCurrency" message="tns:IReceiveWCF_GetUSDCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/GetUSDCurrencyResponse" message="tns:IReceiveWCF_GetUSDCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ImportData" message="tns:IReceiveWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ImportDataResponse" message="tns:IReceiveWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData_Sanofi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ImportData_Sanofi" message="tns:IReceiveWCF_ImportData_Sanofi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ImportData_SanofiResponse" message="tns:IReceiveWCF_ImportData_Sanofi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ImportExcelFile" message="tns:IReceiveWCF_ImportExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ImportExcelFileResponse" message="tns:IReceiveWCF_ImportExcelFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/MultiplePost" message="tns:IReceiveWCF_MultiplePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/MultiplePostResponse" message="tns:IReceiveWCF_MultiplePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ReceiveInsert" message="tns:IReceiveWCF_ReceiveInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ReceiveInsertResponse" message="tns:IReceiveWCF_ReceiveInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ReceivePost" message="tns:IReceiveWCF_ReceivePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ReceivePostResponse" message="tns:IReceiveWCF_ReceivePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ReceiveUpdate" message="tns:IReceiveWCF_ReceiveUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ReceiveUpdateResponse" message="tns:IReceiveWCF_ReceiveUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnReceiveQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/ReturnReceiveQty" message="tns:IReceiveWCF_ReturnReceiveQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/ReturnReceiveQtyResponse" message="tns:IReceiveWCF_ReturnReceiveQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempReceive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SaveTempReceive" message="tns:IReceiveWCF_SaveTempReceive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SaveTempReceiveResponse" message="tns:IReceiveWCF_SaveTempReceive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveDetailNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SearchReceiveDetailNew" message="tns:IReceiveWCF_SearchReceiveDetailNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SearchReceiveDetailNewResponse" message="tns:IReceiveWCF_SearchReceiveDetailNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveHeaderDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SearchReceiveHeaderDTNew" message="tns:IReceiveWCF_SearchReceiveHeaderDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SearchReceiveHeaderDTNewResponse" message="tns:IReceiveWCF_SearchReceiveHeaderDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SelectAll" message="tns:IReceiveWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SelectAllResponse" message="tns:IReceiveWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SelectAllList" message="tns:IReceiveWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SelectAllListResponse" message="tns:IReceiveWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectReceiveDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceiveWCF/SelectReceiveDetail" message="tns:IReceiveWCF_SelectReceiveDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceiveWCF/SelectReceiveDetailResponse" message="tns:IReceiveWCF_SelectReceiveDetail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReceiveWCF" type="tns:IReceiveWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByReferenceNo">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SearchByReferenceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatingNumeric">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/FormatingNumeric" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUSDCurrency">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/GetUSDCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData_Sanofi">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ImportData_Sanofi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ImportExcelFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/MultiplePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveInsert">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ReceiveInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePost">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ReceivePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveUpdate">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ReceiveUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnReceiveQty">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/ReturnReceiveQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempReceive">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SaveTempReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveDetailNew">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SearchReceiveDetailNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveHeaderDTNew">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SearchReceiveHeaderDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectReceiveDetail">
+      <soap:operation soapAction="http://tempuri.org/IReceiveWCF/SelectReceiveDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveWCF">
+    <wsdl:port name="BasicHttpBinding_IReceiveWCF" binding="tns:BasicHttpBinding_IReceiveWCF">
+      <soap:address location="http://localhost:50568/WCF/ReceiveWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

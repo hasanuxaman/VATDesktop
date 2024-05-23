@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransferIssueWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TransferIssueWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TransferIssueWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransferIssueWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Post_InputMessage">
+    <wsdl:part name="parameters" element="tns:Post" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_Post_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_MultiplePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePost" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_MultiplePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_PostTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_PostTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransferIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransferIssue" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransferIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransferIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransferDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransferDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SearchTransferDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransferDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_FormLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormLoad" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_FormLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_GetExcelTransferData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelTransferData" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_GetExcelTransferData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelTransferDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_UpdateTransferIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransferIssue" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_UpdateTransferIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransferIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SelectDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_ImportTransferData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTransferData" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_ImportTransferData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTransferDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SaveTempTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_SaveTempTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_TransferMovement_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMovement" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_TransferMovement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMovementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_TransferStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferStock" />
+  </wsdl:message>
+  <wsdl:message name="ITransferIssueWCF_TransferStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferStockResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransferIssueWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/DoWork" message="tns:ITransferIssueWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/DoWorkResponse" message="tns:ITransferIssueWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/Insert" message="tns:ITransferIssueWCF_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/InsertResponse" message="tns:ITransferIssueWCF_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/Update" message="tns:ITransferIssueWCF_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/UpdateResponse" message="tns:ITransferIssueWCF_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Post">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/Post" message="tns:ITransferIssueWCF_Post_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/PostResponse" message="tns:ITransferIssueWCF_Post_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/MultiplePost" message="tns:ITransferIssueWCF_MultiplePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/MultiplePostResponse" message="tns:ITransferIssueWCF_MultiplePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/PostTransfer" message="tns:ITransferIssueWCF_PostTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/PostTransferResponse" message="tns:ITransferIssueWCF_PostTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransferIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransferIssue" message="tns:ITransferIssueWCF_SearchTransferIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransferIssueResponse" message="tns:ITransferIssueWCF_SearchTransferIssue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransfer" message="tns:ITransferIssueWCF_SearchTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransferResponse" message="tns:ITransferIssueWCF_SearchTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransferDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransferDetail" message="tns:ITransferIssueWCF_SearchTransferDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SearchTransferDetailResponse" message="tns:ITransferIssueWCF_SearchTransferDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/FormLoad" message="tns:ITransferIssueWCF_FormLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/FormLoadResponse" message="tns:ITransferIssueWCF_FormLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/GetExcelData" message="tns:ITransferIssueWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/GetExcelDataResponse" message="tns:ITransferIssueWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelTransferData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/GetExcelTransferData" message="tns:ITransferIssueWCF_GetExcelTransferData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/GetExcelTransferDataResponse" message="tns:ITransferIssueWCF_GetExcelTransferData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/UpdateTransferIssue" message="tns:ITransferIssueWCF_UpdateTransferIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/UpdateTransferIssueResponse" message="tns:ITransferIssueWCF_UpdateTransferIssue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectAllList" message="tns:ITransferIssueWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectAllListResponse" message="tns:ITransferIssueWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectAll" message="tns:ITransferIssueWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectAllResponse" message="tns:ITransferIssueWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectDetail" message="tns:ITransferIssueWCF_SelectDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SelectDetailResponse" message="tns:ITransferIssueWCF_SelectDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/ImportData" message="tns:ITransferIssueWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/ImportDataResponse" message="tns:ITransferIssueWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportTransferData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/ImportTransferData" message="tns:ITransferIssueWCF_ImportTransferData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/ImportTransferDataResponse" message="tns:ITransferIssueWCF_ImportTransferData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/SaveTempTransfer" message="tns:ITransferIssueWCF_SaveTempTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/SaveTempTransferResponse" message="tns:ITransferIssueWCF_SaveTempTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMovement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/TransferMovement" message="tns:ITransferIssueWCF_TransferMovement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/TransferMovementResponse" message="tns:ITransferIssueWCF_TransferMovement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferIssueWCF/TransferStock" message="tns:ITransferIssueWCF_TransferStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferIssueWCF/TransferStockResponse" message="tns:ITransferIssueWCF_TransferStock_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransferIssueWCF" type="tns:ITransferIssueWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Post">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/Post" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/MultiplePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTransfer">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/PostTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransferIssue">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SearchTransferIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransfer">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SearchTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransferDetail">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SearchTransferDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormLoad">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/FormLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelTransferData">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/GetExcelTransferData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferIssue">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/UpdateTransferIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDetail">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SelectDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTransferData">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/ImportTransferData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTransfer">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/SaveTempTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMovement">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/TransferMovement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferStock">
+      <soap:operation soapAction="http://tempuri.org/ITransferIssueWCF/TransferStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransferIssueWCF">
+    <wsdl:port name="BasicHttpBinding_ITransferIssueWCF" binding="tns:BasicHttpBinding_ITransferIssueWCF">
+      <soap:address location="http://localhost:50568/WCF/TransferIssueWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

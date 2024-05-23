@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BankInformationWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BankInformationWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BankInformationWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBankInformationWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_InsertToBankInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBankInformation" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_InsertToBankInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBankInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_UpdateBankInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBankInformation" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_UpdateBankInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBankInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IBankInformationWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBankInformationWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/DoWork" message="tns:IBankInformationWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/DoWorkResponse" message="tns:IBankInformationWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBankInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/InsertToBankInformation" message="tns:IBankInformationWCF_InsertToBankInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/InsertToBankInformationResponse" message="tns:IBankInformationWCF_InsertToBankInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBankInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/UpdateBankInformation" message="tns:IBankInformationWCF_UpdateBankInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/UpdateBankInformationResponse" message="tns:IBankInformationWCF_UpdateBankInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/Delete" message="tns:IBankInformationWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/DeleteResponse" message="tns:IBankInformationWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/SelectAll" message="tns:IBankInformationWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/SelectAllResponse" message="tns:IBankInformationWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/GetExcelData" message="tns:IBankInformationWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/GetExcelDataResponse" message="tns:IBankInformationWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/DropDownAll" message="tns:IBankInformationWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/DropDownAllResponse" message="tns:IBankInformationWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/DropDown" message="tns:IBankInformationWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/DropDownResponse" message="tns:IBankInformationWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankInformationWCF/SelectAllList" message="tns:IBankInformationWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankInformationWCF/SelectAllListResponse" message="tns:IBankInformationWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBankInformationWCF" type="tns:IBankInformationWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBankInformation">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/InsertToBankInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBankInformation">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/UpdateBankInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IBankInformationWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BankInformationWCF">
+    <wsdl:port name="BasicHttpBinding_IBankInformationWCF" binding="tns:BasicHttpBinding_IBankInformationWCF">
+      <soap:address location="http://localhost:50568/WCF/BankInformationWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

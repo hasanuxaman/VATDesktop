@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBanderolProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BandProductId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackagingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BUsedQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WastageQty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OpeningQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="OpeningDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBanderolProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertToBanderolProductsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBanderolProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BandProductId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackagingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BUsedQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WastageQty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OpeningQty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="OpeningDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBanderolProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBanderolProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBanderolProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BandProductId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBanderolProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteBanderolProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackagingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackagingNature" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchBanderolProductsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BandProductId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchBanderolResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

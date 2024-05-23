@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59C2521F-549A-4906-A3E4-ADDB9BE584BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VATViewModel</RootNamespace>
+    <AssemblyName>VATViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnregisterVersion|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnregisterVersion\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugUnregisterVersion|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugUnregisterVersion\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Alpha|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Alpha\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Beta\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BureauDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\BureauDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\AdjustmentHistoryVM.cs" />
+    <Compile Include="DTOs\AdjustmentMISViewModel.cs" />
+    <Compile Include="DTOs\AdjustmentVM.cs" />
+    <Compile Include="DTOs\AuditVM.cs" />
+    <Compile Include="DTOs\Auth.cs" />
+    <Compile Include="DTOs\BanderolProductVM.cs" />
+    <Compile Include="DTOs\BanderolVM.cs" />
+    <Compile Include="DTOs\BankChannelPaymentVM.cs" />
+    <Compile Include="DTOs\BaseAPiParam.cs" />
+    <Compile Include="DTOs\BaseAPIResult.cs" />
+    <Compile Include="DTOs\Body.cs" />
+    <Compile Include="DTOs\BOMMaster.cs" />
+    <Compile Include="DTOs\StaticCodeVM.cs" />
+    <Compile Include="DTOs\BranchReportVM.cs" />
+    <Compile Include="DTOs\BranchVM.cs" />
+    <Compile Include="DTOs\MPLIN89VM.cs" />
+    <Compile Include="DTOs\PurchaseAPIVM_Bollore.cs" />
+    <Compile Include="DTOs\TollClientInOutDetailVM.cs" />
+    <Compile Include="DTOs\TollClientInOutVM.cs" />
+    <Compile Include="DTOs\TollContInOutDetailVM.cs" />
+    <Compile Include="DTOs\TollContInOutVM.cs" />
+    <Compile Include="DTOs\TollProductionConsumptionDetailVM.cs" />
+    <Compile Include="DTOs\TollProductionConsumptionVM.cs" />
+    <Compile Include="DTOs\VAT9_1NBRApi_Attachment.cs" />
+    <Compile Include="DTOs\CustomerBillProcessVM.cs" />
+    <Compile Include="DTOs\BillInvoiceMasterVM.cs" />
+    <Compile Include="DTOs\EnumModeOfPaymentVM.cs" />
+    <Compile Include="DTOs\MeghnaMISViewModel.cs" />
+    <Compile Include="DTOs\MPLBankPaymentVM.cs" />
+    <Compile Include="DTOs\MPLBankDepositSlipVM.cs" />
+    <Compile Include="DTOs\MPLDayEndClosingVM.cs" />
+    <Compile Include="DTOs\MPLTradeChallanVM.cs" />
+    <Compile Include="DTOs\District.cs" />
+    <Compile Include="DTOs\Division.cs" />
+    <Compile Include="DTOs\Sectors.cs" />
+    <Compile Include="DTOs\MPLZoneVM.cs" />
+    <Compile Include="DTOs\MPLBankInformationVM.cs" />
+    <Compile Include="DTOs\MailSettings.cs" />
+    <Compile Include="DTOs\ErrorLogVM.cs" />
+    <Compile Include="DTOs\PurchaseMPLMaster.cs" />
+    <Compile Include="DTOs\MPLSaleInvoiceSA4VM.cs" />
+    <Compile Include="DTOs\TankMPLsVM.cs" />
+    <Compile Include="DTOs\TransferMPLReceiveVM.cs" />
+    <Compile Include="DTOs\TransferMPLIssueVM.cs" />
+    <Compile Include="DTOs\SalesInvoiceMPLHeaderVM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTOs\NbrApi.cs" />
+    <Compile Include="DTOs\Item.cs" />
+    <Compile Include="DTOs\List.cs" />
+    <Compile Include="DTOs\Parameter.cs" />
+    <Compile Include="DTOs\ProductMapVM.cs" />
+    <Compile Include="DTOs\ProductPriceHistoryVM.cs" />
+    <Compile Include="DTOs\PurchaseTDSsVM.cs" />
+    <Compile Include="DTOs\Response.cs" />
+    <Compile Include="DTOs\SaleAPIVM_Bollore.cs" />
+    <Compile Include="DTOs\TransferIMISViewModel.cs" />
+    <Compile Include="DTOs\VATCalculationVM.cs" />
+    <Compile Include="DTOs\VendorAddressVM.cs" />
+    <Compile Include="DTOs\TrakingSaleVM.cs" />
+    <Compile Include="DTOs\CodeVM.cs" />
+    <Compile Include="DTOs\CoEfficientMISViewModel.cs" />
+    <Compile Include="DTOs\CommonMaster.cs" />
+    <Compile Include="DTOs\CompanyOverheadVM.cs" />
+    <Compile Include="DTOs\BranchProfile.cs" />
+    <Compile Include="DTOs\CompanyProfile.cs" />
+    <Compile Include="DTOs\CPCDetailsVM.cs" />
+    <Compile Include="DTOs\CStatementMISViewModel.cs" />
+    <Compile Include="DTOs\CustomerGroupVM.cs" />
+    <Compile Include="DTOs\CustomerItemVM.cs" />
+    <Compile Include="DTOs\CustomsHouseVM.cs" />
+    <Compile Include="DTOs\DBUpdateViewModel.cs" />
+    <Compile Include="DTOs\DepositMISViewModel.cs" />
+    <Compile Include="DTOs\Client6_3VM.cs" />
+    <Compile Include="DTOs\DisposeFinishMasterVM.cs" />
+    <Compile Include="DTOs\DisposeRawsMasterVM.cs" />
+    <Compile Include="DTOs\EnumVM.cs" />
+    <Compile Include="DTOs\FiscalYearPeriodVM.cs" />
+    <Compile Include="DTOs\HSCodeVM.cs" />
+    <Compile Include="DTOs\IASChargeCodeVM.cs" />
+    <Compile Include="DTOs\IdNameVM.cs" />
+    <Compile Include="DTOs\ImportVM.cs" />
+    <Compile Include="DTOs\IntegrationParam.cs" />
+    <Compile Include="DTOs\JQueryDataTableParamModel.cs" />
+    <Compile Include="DTOs\JQueryDataTableParamVM.cs" />
+    <Compile Include="DTOs\LoginInfo.cs" />
+    <Compile Include="DTOs\MISCVM.cs" />
+    <Compile Include="DTOs\MISExcelVM.cs" />
+    <Compile Include="DTOs\NavigationVM.cs" />
+    <Compile Include="DTOs\NBRVAT9_1ViewModel.cs" />
+    <Compile Include="DTOs\PackagingInformationVM.cs" />
+    <Compile Include="DTOs\ParameterVM.cs" />
+    <Compile Include="DTOs\PopUpViewModel.cs" />
+    <Compile Include="DTOs\PostVM.cs" />
+    <Compile Include="DTOs\PrinterParam.cs" />
+    <Compile Include="DTOs\PrinterVM.cs" />
+    <Compile Include="DTOs\ProcessConfig.cs" />
+    <Compile Include="DTOs\ProductCategoryVM.cs" />
+    <Compile Include="DTOs\ProductionMISViewModel.cs" />
+    <Compile Include="DTOs\ProductNameVM.cs" />
+    <Compile Include="DTOs\ProductStockVM.cs" />
+    <Compile Include="DTOs\ProductTransfersVM.cs" />
+    <Compile Include="DTOs\PurchaseMISViewModel.cs" />
+    <Compile Include="DTOs\ReportParameterVM.cs" />
+    <Compile Include="DTOs\ResultVM.cs" />
+    <Compile Include="DTOs\SaleAPIVM.cs" />
+    <Compile Include="DTOs\SaleEngineChassisVM.cs" />
+    <Compile Include="DTOs\SaleIntegrationViewModel.cs" />
+    <Compile Include="DTOs\SalesInvoiceExpVM.cs" />
+    <Compile Include="DTOs\SaleTempVM.cs" />
+    <Compile Include="DTOs\CustomerDiscountVM.cs" />
+    <Compile Include="DTOs\TDSCalcVM.cs" />
+    <Compile Include="DTOs\Toll6_3InvoiceVM.cs" />
+    <Compile Include="DTOs\SaleMISViewModel.cs" />
+    <Compile Include="DTOs\ShiftVM.cs" />
+    <Compile Include="DTOs\CurrencyVM.cs" />
+    <Compile Include="DTOs\CustomerAddressVM.cs" />
+    <Compile Include="DTOs\DemandMaster.cs" />
+    <Compile Include="DTOs\DepositMaster.cs" />
+    <Compile Include="DTOs\DisposeMasterVM.cs" />
+    <Compile Include="DTOs\DutyDrawBacks.cs" />
+    <Compile Include="DTOs\FiscalYear.cs" />
+    <Compile Include="DTOs\ImportMaster.cs" />
+    <Compile Include="DTOs\IssueMaster.cs" />
+    <Compile Include="DTOs\Message.cs" />
+    <Compile Include="DTOs\PurchaseMaster.cs" />
+    <Compile Include="DTOs\ReceiveMaster.cs" />
+    <Compile Include="DTOs\SaleExport.cs" />
+    <Compile Include="DTOs\SaleMaster.cs" />
+    <Compile Include="DTOs\SDDepositVM.cs" />
+    <Compile Include="DTOs\SettingMaster.cs" />
+    <Compile Include="DTOs\SettingsVM.cs" />
+    <Compile Include="DTOs\SetupMaster.cs" />
+    <Compile Include="DTOs\StockMISViewModel.cs" />
+    <Compile Include="DTOs\SymphonyVATSysCompanyInformationVM.cs" />
+    <Compile Include="DTOs\TableFieldAlterVM.cs" />
+    <Compile Include="DTOs\TDSsVM.cs" />
+    <Compile Include="DTOs\TenderMaster.cs" />
+    <Compile Include="DTOs\TicketVM.cs" />
+    <Compile Include="DTOs\TollRegisterMISViewModel.cs" />
+    <Compile Include="DTOs\TransferIssueVM.cs" />
+    <Compile Include="DTOs\TransferRawMaster.cs" />
+    <Compile Include="DTOs\TransferReceiveVM.cs" />
+    <Compile Include="DTOs\TransferVM.cs" />
+    <Compile Include="DTOs\UserBranchDetailVM.cs" />
+    <Compile Include="DTOs\UserGroupVM.cs" />
+    <Compile Include="DTOs\UserInformationMaster.cs" />
+    <Compile Include="DTOs\UserLogsVM.cs" />
+    <Compile Include="DTOs\UserMenuSettingsVM.cs" />
+    <Compile Include="DTOs\VAT19header.cs" />
+    <Compile Include="DTOs\Vat19ViewModel.cs" />
+    <Compile Include="DTOs\VAT9_1ConsolateVM.cs" />
+    <Compile Include="DTOs\VatNbrReports.cs" />
+    <Compile Include="DTOs\VATReturnHeaderVM.cs" />
+    <Compile Include="DTOs\VATReturnSubFormVM.cs" />
+    <Compile Include="DTOs\VATReturnVM.cs" />
+    <Compile Include="DTOs\VAT_16VM.cs" />
+    <Compile Include="DTOs\VAT_17VM.cs" />
+    <Compile Include="DTOs\VDSMaster.cs" />
+    <Compile Include="DTOs\VendorGroupVM.cs" />
+    <Compile Include="DTOs\WastageMISViewModel.cs" />
+    <Compile Include="Integration\JsonModels\JsonModels.cs" />
+    <Compile Include="Integration\JsonModels\JsonModels_Bollore.cs" />
+    <Compile Include="Integration\JsonModels\JsonModels_decathlon.cs" />
+    <Compile Include="Integration\JsonModels\JsonModels_Berger.cs" />
+    <Compile Include="Integration\JsonModels\JsonModels_Ernst.cs" />
+    <Compile Include="Integration\JsonModels\JsonModel_NBRAPI.cs" />
+    <Compile Include="Integration\JsonModels\JsonModel_ShumiHotCake.cs" />
+    <Compile Include="Integration\NBRAPI\NBRAPI_paramVM.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_Header.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_MainFull.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_adjustSet.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_att_fileSet.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_challanSet.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_goservSet.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_otherSet.cs" />
+    <Compile Include="Integration\NBRAPI\Return_9_1_SF_vdsSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserSecurityLogVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

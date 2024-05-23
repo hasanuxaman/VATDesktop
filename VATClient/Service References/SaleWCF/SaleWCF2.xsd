@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+  <xs:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SysDBInfoVMTemp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SysDatabaseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysdataSource" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SysDBInfoVMTemp" nillable="true" type="tns:SysDBInfoVMTemp" />
+  <xs:complexType name="SaleMasterVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlReadyPrint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConversionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyRateFromBDT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CustomerGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeductionAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DeliveryAddress1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryAddress2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryAddress3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryChallanNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfSaleDetailVM" />
+      <xs:element minOccurs="0" name="DollerRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EXPFormDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXPFormNo" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Web" minOccurs="0" name="File" nillable="true" type="q1:HttpPostedFileBase" />
+      <xs:element minOccurs="0" name="FiscalYear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GetVDSCertificate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HPSTotalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImportID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDateTimeFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDateTimeTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeemedExport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsGatePass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPrint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsVDS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PINo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreviousSalesInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleInvoiceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShiftId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignatoryDesig" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SignatoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalSubtotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalVATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Trading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VDSAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VDSCertificateDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueOnly" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vehicleSaveInDB" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleMasterVM" nillable="true" type="tns:SaleMasterVM" />
+  <xs:complexType name="ArrayOfSaleDetailVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleDetailVM" nillable="true" type="tns:SaleDetailVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleDetailVM" nillable="true" type="tns:ArrayOfSaleDetailVM" />
+  <xs:complexType name="SaleDetailVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATVAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATVRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATVablePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AvgRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BDTValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BENumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BOMId" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="CConversionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CDNSDAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CDNSubtotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CDNVATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CommentsD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiscountAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiscountedNBRPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DollerValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FixedVATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HPSAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HPSRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceLineNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCommercialImporter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedVAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSample" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NBRPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NonStockD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreviousSalesInvoiceNoD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromotionalQuantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReturnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnTransactionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SD" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SDAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SaleTypeD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeVATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeVATRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradeVATableValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradingD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradingMarkUp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOMPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UOMQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UOMc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UOMn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VATRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VDSAmountD" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValueOnly" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WareHouseRent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WareHouseVAT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleDetailVM" nillable="true" type="tns:SaleDetailVM" />
+  <xs:complexType name="ArrayOfSaleExportVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleExportVM" nillable="true" type="tns:SaleExportVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleExportVM" nillable="true" type="tns:ArrayOfSaleExportVM" />
+  <xs:complexType name="SaleExportVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommentsE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrossWeight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetWeight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleExportDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleExportNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleLineNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleExportVM" nillable="true" type="tns:SaleExportVM" />
+  <xs:complexType name="ArrayOfTrackingVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingVM" nillable="true" type="tns:TrackingVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackingVM" nillable="true" type="tns:ArrayOfTrackingVM" />
+  <xs:complexType name="TrackingVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="FinishItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Heading1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Heading2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPurchase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsReceive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReceiveDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnPurDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnPurchase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnPurchaseID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnReceive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnReceiveDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnReceiveID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnSale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnSaleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaleInvoiceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingLineNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="transactionType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingVM" nillable="true" type="tns:TrackingVM" />
+  <xs:complexType name="ArrayOfProductVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductVM" nillable="true" type="tns:ProductVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductVM" nillable="true" type="tns:ArrayOfProductVM" />
+  <xs:complexType name="ProductVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AITRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATVRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Banderol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="CDRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CnFRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfProductNameVM" />
+      <xs:element minOccurs="0" name="FixedVATAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HPSRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HSCodeNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsExempted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedAIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedAITChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedATChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedCDChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedOtherSD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedRD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedRDChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedSD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedSDChecked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedVAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedVAT1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFixedVAT1Checked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHouseRent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRaw" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTransport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsVDS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsZeroVAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NBRPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NonStock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpeningBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OpeningDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpeningTotalCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Packetprice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RDRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RebatePercent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SD" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SDRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SearchField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stock" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TDSCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TVARate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TVBRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TargetId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TollCharge" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TollProduct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradingMarkUp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VATRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VATRate2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VATRate3" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VDSRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="isActive" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="retResult" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductVM" nillable="true" type="tns:ProductVM" />
+  <xs:complexType name="ArrayOfProductNameVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductNameVM" nillable="true" type="tns:ProductNameVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductNameVM" nillable="true" type="tns:ArrayOfProductNameVM" />
+  <xs:complexType name="ProductNameVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductNameVM" nillable="true" type="tns:ProductNameVM" />
+</xs:schema>

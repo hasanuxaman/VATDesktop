@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VATServer.Library.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VATServer_Library_NBRWebService_SI_RET_SENDERService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ivaspxapp1:55000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SOAP_BIDA_TO_IVAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_RET_SENDER&amp;interfaceNamespace=http%3A%2F%2Fnbr.gov.bd%2Fregist91</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

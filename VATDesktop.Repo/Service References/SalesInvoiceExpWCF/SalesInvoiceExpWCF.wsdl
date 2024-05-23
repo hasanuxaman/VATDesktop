@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SalesInvoiceExpWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SalesInvoiceExpWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SalesInvoiceExpWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISalesInvoiceExpWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_InsertToSalesInvoiceExp_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToSalesInvoiceExp" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_InsertToSalesInvoiceExp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToSalesInvoiceExpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_UpdateSalesInvoiceExps_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSalesInvoiceExps" />
+  </wsdl:message>
+  <wsdl:message name="ISalesInvoiceExpWCF_UpdateSalesInvoiceExps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSalesInvoiceExpsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISalesInvoiceExpWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/DoWork" message="tns:ISalesInvoiceExpWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/DoWorkResponse" message="tns:ISalesInvoiceExpWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/SelectAllList" message="tns:ISalesInvoiceExpWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/SelectAllListResponse" message="tns:ISalesInvoiceExpWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/Delete" message="tns:ISalesInvoiceExpWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/DeleteResponse" message="tns:ISalesInvoiceExpWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToSalesInvoiceExp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/InsertToSalesInvoiceExp" message="tns:ISalesInvoiceExpWCF_InsertToSalesInvoiceExp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/InsertToSalesInvoiceExpResponse" message="tns:ISalesInvoiceExpWCF_InsertToSalesInvoiceExp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/SelectAll" message="tns:ISalesInvoiceExpWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/SelectAllResponse" message="tns:ISalesInvoiceExpWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesInvoiceExps">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/UpdateSalesInvoiceExps" message="tns:ISalesInvoiceExpWCF_UpdateSalesInvoiceExps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesInvoiceExpWCF/UpdateSalesInvoiceExpsResponse" message="tns:ISalesInvoiceExpWCF_UpdateSalesInvoiceExps_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISalesInvoiceExpWCF" type="tns:ISalesInvoiceExpWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToSalesInvoiceExp">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/InsertToSalesInvoiceExp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesInvoiceExps">
+      <soap:operation soapAction="http://tempuri.org/ISalesInvoiceExpWCF/UpdateSalesInvoiceExps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SalesInvoiceExpWCF">
+    <wsdl:port name="BasicHttpBinding_ISalesInvoiceExpWCF" binding="tns:BasicHttpBinding_ISalesInvoiceExpWCF">
+      <soap:address location="http://localhost:50568/WCF/SalesInvoiceExpWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

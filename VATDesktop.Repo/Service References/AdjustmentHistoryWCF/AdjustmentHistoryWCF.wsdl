@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdjustmentHistoryWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/AdjustmentHistoryWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/AdjustmentHistoryWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdjustmentHistoryWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_InsertAdjustmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdjustmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_InsertAdjustmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdjustmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_UpdateAdjustmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_UpdateAdjustmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_PostAdjustmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostAdjustmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_PostAdjustmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostAdjustmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SearchAdjustmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAdjustmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SearchAdjustmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAdjustmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SearchAdjustmentHistoryForDeposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAdjustmentHistoryForDeposit" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SearchAdjustmentHistoryForDeposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAdjustmentHistoryForDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SelectAllCashPayable_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCashPayable" />
+  </wsdl:message>
+  <wsdl:message name="IAdjustmentHistoryWCF_SelectAllCashPayable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCashPayableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdjustmentHistoryWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/DoWork" message="tns:IAdjustmentHistoryWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/DoWorkResponse" message="tns:IAdjustmentHistoryWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdjustmentHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/InsertAdjustmentHistory" message="tns:IAdjustmentHistoryWCF_InsertAdjustmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/InsertAdjustmentHistoryResponse" message="tns:IAdjustmentHistoryWCF_InsertAdjustmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustmentHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/UpdateAdjustmentHistory" message="tns:IAdjustmentHistoryWCF_UpdateAdjustmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/UpdateAdjustmentHistoryResponse" message="tns:IAdjustmentHistoryWCF_UpdateAdjustmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostAdjustmentHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/PostAdjustmentHistory" message="tns:IAdjustmentHistoryWCF_PostAdjustmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/PostAdjustmentHistoryResponse" message="tns:IAdjustmentHistoryWCF_PostAdjustmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdjustmentHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistory" message="tns:IAdjustmentHistoryWCF_SearchAdjustmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistoryResponse" message="tns:IAdjustmentHistoryWCF_SearchAdjustmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdjustmentHistoryForDeposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistoryForDeposit" message="tns:IAdjustmentHistoryWCF_SearchAdjustmentHistoryForDeposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistoryForDepositResponse" message="tns:IAdjustmentHistoryWCF_SearchAdjustmentHistoryForDeposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SelectAll" message="tns:IAdjustmentHistoryWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SelectAllResponse" message="tns:IAdjustmentHistoryWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCashPayable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SelectAllCashPayable" message="tns:IAdjustmentHistoryWCF_SelectAllCashPayable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdjustmentHistoryWCF/SelectAllCashPayableResponse" message="tns:IAdjustmentHistoryWCF_SelectAllCashPayable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdjustmentHistoryWCF" type="tns:IAdjustmentHistoryWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdjustmentHistory">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/InsertAdjustmentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustmentHistory">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/UpdateAdjustmentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostAdjustmentHistory">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/PostAdjustmentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdjustmentHistory">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdjustmentHistoryForDeposit">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/SearchAdjustmentHistoryForDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCashPayable">
+      <soap:operation soapAction="http://tempuri.org/IAdjustmentHistoryWCF/SelectAllCashPayable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdjustmentHistoryWCF">
+    <wsdl:port name="BasicHttpBinding_IAdjustmentHistoryWCF" binding="tns:BasicHttpBinding_IAdjustmentHistoryWCF">
+      <soap:address location="http://localhost:50568/WCF/AdjustmentHistoryWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PurchaseWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/PurchaseWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/PurchaseWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPurchaseWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseDutyDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseDutyDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseDutyDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseDutyDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseInvoiceTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseInvoiceTracking" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseInvoiceTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseInvoiceTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectPurchaseDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPurchaseDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectPurchaseDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPurchaseDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectPurchaseDetailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPurchaseDetailList" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectPurchaseDetailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPurchaseDetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseInsert" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchasePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchasePost" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchasePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchasePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ReturnQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnQty" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ReturnQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_UpdateTDSAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTDSAmount" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_UpdateTDSAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTDSAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_FindItemIdFromPurchase_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindItemIdFromPurchase" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_FindItemIdFromPurchase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindItemIdFromPurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_FormatingNumeric_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatingNumeric" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_FormatingNumeric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatingNumericResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_GetUnProcessedCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCount" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_GetUnProcessedCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportBigData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigData" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportBigData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_ImportExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_MultiplePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePost" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_MultiplePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseSearch" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseUpdateDuty_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseUpdateDuty" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_PurchaseUpdateDuty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurchaseUpdateDutyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_RateChangePercent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RateChangePercent" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_RateChangePercent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RateChangePercentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_RateCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:RateCheck" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_RateCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RateCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SaveTempPurchase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempPurchase" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SaveTempPurchase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempPurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchProductbyPurchaseInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductbyPurchaseInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchProductbyPurchaseInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchProductbyPurchaseInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseDutyDTDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseDutyDTDownload" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseDutyDTDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseDutyDTDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseHeaderDTNew2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseHeaderDTNew2" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SearchPurchaseHeaderDTNew2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseHeaderDTNew2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IPurchaseWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPurchaseWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/DoWork" message="tns:IPurchaseWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/DoWorkResponse" message="tns:IPurchaseWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseDutyDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTNew" message="tns:IPurchaseWCF_SearchPurchaseDutyDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTNewResponse" message="tns:IPurchaseWCF_SearchPurchaseDutyDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseInvoiceTracking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseInvoiceTracking" message="tns:IPurchaseWCF_SearchPurchaseInvoiceTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseInvoiceTrackingResponse" message="tns:IPurchaseWCF_SearchPurchaseInvoiceTracking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectAll" message="tns:IPurchaseWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectAllResponse" message="tns:IPurchaseWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPurchaseDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetail" message="tns:IPurchaseWCF_SelectPurchaseDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetailResponse" message="tns:IPurchaseWCF_SelectPurchaseDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPurchaseDetailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetailList" message="tns:IPurchaseWCF_SelectPurchaseDetailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetailListResponse" message="tns:IPurchaseWCF_SelectPurchaseDetailList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseInsert" message="tns:IPurchaseWCF_PurchaseInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseInsertResponse" message="tns:IPurchaseWCF_PurchaseInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseUpdate" message="tns:IPurchaseWCF_PurchaseUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseUpdateResponse" message="tns:IPurchaseWCF_PurchaseUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchasePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchasePost" message="tns:IPurchaseWCF_PurchasePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchasePostResponse" message="tns:IPurchaseWCF_PurchasePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/ReturnQty" message="tns:IPurchaseWCF_ReturnQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/ReturnQtyResponse" message="tns:IPurchaseWCF_ReturnQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTDSAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/UpdateTDSAmount" message="tns:IPurchaseWCF_UpdateTDSAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/UpdateTDSAmountResponse" message="tns:IPurchaseWCF_UpdateTDSAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportData" message="tns:IPurchaseWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportDataResponse" message="tns:IPurchaseWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/DropDown" message="tns:IPurchaseWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/DropDownResponse" message="tns:IPurchaseWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindItemIdFromPurchase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/FindItemIdFromPurchase" message="tns:IPurchaseWCF_FindItemIdFromPurchase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/FindItemIdFromPurchaseResponse" message="tns:IPurchaseWCF_FindItemIdFromPurchase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatingNumeric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/FormatingNumeric" message="tns:IPurchaseWCF_FormatingNumeric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/FormatingNumericResponse" message="tns:IPurchaseWCF_FormatingNumeric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/GetExcelData" message="tns:IPurchaseWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/GetExcelDataResponse" message="tns:IPurchaseWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/GetUnProcessedCount" message="tns:IPurchaseWCF_GetUnProcessedCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/GetUnProcessedCountResponse" message="tns:IPurchaseWCF_GetUnProcessedCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportBigData" message="tns:IPurchaseWCF_ImportBigData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportBigDataResponse" message="tns:IPurchaseWCF_ImportBigData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportExcelFile" message="tns:IPurchaseWCF_ImportExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/ImportExcelFileResponse" message="tns:IPurchaseWCF_ImportExcelFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/MultiplePost" message="tns:IPurchaseWCF_MultiplePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/MultiplePostResponse" message="tns:IPurchaseWCF_MultiplePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseSearch" message="tns:IPurchaseWCF_PurchaseSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseSearchResponse" message="tns:IPurchaseWCF_PurchaseSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseUpdateDuty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseUpdateDuty" message="tns:IPurchaseWCF_PurchaseUpdateDuty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/PurchaseUpdateDutyResponse" message="tns:IPurchaseWCF_PurchaseUpdateDuty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RateChangePercent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/RateChangePercent" message="tns:IPurchaseWCF_RateChangePercent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/RateChangePercentResponse" message="tns:IPurchaseWCF_RateChangePercent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RateCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/RateCheck" message="tns:IPurchaseWCF_RateCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/RateCheckResponse" message="tns:IPurchaseWCF_RateCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempPurchase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SaveTempPurchase" message="tns:IPurchaseWCF_SaveTempPurchase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SaveTempPurchaseResponse" message="tns:IPurchaseWCF_SaveTempPurchase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductbyPurchaseInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchProductbyPurchaseInvoice" message="tns:IPurchaseWCF_SearchProductbyPurchaseInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchProductbyPurchaseInvoiceResponse" message="tns:IPurchaseWCF_SearchProductbyPurchaseInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseDutyDTDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTDownload" message="tns:IPurchaseWCF_SearchPurchaseDutyDTDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTDownloadResponse" message="tns:IPurchaseWCF_SearchPurchaseDutyDTDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseHeaderDTNew2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseHeaderDTNew2" message="tns:IPurchaseWCF_SearchPurchaseHeaderDTNew2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SearchPurchaseHeaderDTNew2Response" message="tns:IPurchaseWCF_SearchPurchaseHeaderDTNew2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectAllList" message="tns:IPurchaseWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPurchaseWCF/SelectAllListResponse" message="tns:IPurchaseWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPurchaseWCF" type="tns:IPurchaseWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseDutyDTNew">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseInvoiceTracking">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SearchPurchaseInvoiceTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPurchaseDetail">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPurchaseDetailList">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SelectPurchaseDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseInsert">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/PurchaseInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseUpdate">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/PurchaseUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchasePost">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/PurchasePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnQty">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/ReturnQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTDSAmount">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/UpdateTDSAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindItemIdFromPurchase">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/FindItemIdFromPurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatingNumeric">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/FormatingNumeric" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/GetUnProcessedCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/ImportBigData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/ImportExcelFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/MultiplePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseSearch">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/PurchaseSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseUpdateDuty">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/PurchaseUpdateDuty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RateChangePercent">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/RateChangePercent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RateCheck">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/RateCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempPurchase">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SaveTempPurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductbyPurchaseInvoice">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SearchProductbyPurchaseInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseDutyDTDownload">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SearchPurchaseDutyDTDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseHeaderDTNew2">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SearchPurchaseHeaderDTNew2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IPurchaseWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PurchaseWCF">
+    <wsdl:port name="BasicHttpBinding_IPurchaseWCF" binding="tns:BasicHttpBinding_IPurchaseWCF">
+      <soap:address location="http://localhost:50568/WCF/PurchaseWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

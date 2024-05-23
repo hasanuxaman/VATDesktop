@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBanderol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToBanderolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertToBanderolResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBanderol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BanderolSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBanderolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBanderolResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBanderolInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBanderolInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteBanderolInformationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderols">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BanderolName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BandeSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OpeningDateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OpeningDateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBanderolsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchBanderolsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

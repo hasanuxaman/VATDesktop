@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CommonWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICommonWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingsDesktop_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsDesktop" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingsDesktop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsDesktopResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsed_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsed" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingValue" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_Settings_InputMessage">
+    <wsdl:part name="parameters" element="tns:Settings" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_Settings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_MultipleSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_MultipleSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_MultipleSearchSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleSearchSQL" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_MultipleSearchSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleSearchSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_NextId_InputMessage">
+    <wsdl:part name="parameters" element="tns:NextId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_NextId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NextIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_BulkInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:BulkInsert" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_BulkInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BulkInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GenericSelection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenericSelection" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GenericSelection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenericSelectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GenericSelectionNotSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenericSelectionNotSync" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GenericSelectionNotSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenericSelectionNotSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SearchTransanctionHistoryNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransanctionHistoryNew" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SearchTransanctionHistoryNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTransanctionHistoryNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ExecuteQuerySelect_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuerySelect" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ExecuteQuerySelect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuerySelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_CompanyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyList" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_CompanyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperDBInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDBInformation" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperDBInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDBInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_UpdateIsVATComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsVATComplete" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_UpdateIsVATComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIsVATCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_BomSynchronize_InputMessage">
+    <wsdl:part name="parameters" element="tns:BomSynchronize" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_BomSynchronize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BomSynchronizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_TransactionSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSync" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_TransactionSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_NewDBCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewDBCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_NewDBCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewDBCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperAdministratorUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperAdministratorUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SuperAdministratorUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperAdministratorUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DatabaseInformationUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DatabaseInformationUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DatabaseInformationUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DatabaseInformationUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ExecuteQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuery" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ExecuteQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SaveTempTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTest" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SaveTempTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GetHardwareID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHardwareID" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GetHardwareID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHardwareIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GetServerHardwareId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerHardwareId" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_GetServerHardwareId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerHardwareIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ServerDateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServerDateTime" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_ServerDateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServerDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_UpdateSystemData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemData" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_UpdateSystemData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingChange" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_SettingChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_AddBranchInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBranchInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_AddBranchInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBranchInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsedWithoutThis_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsedWithoutThis" />
+  </wsdl:message>
+  <wsdl:message name="ICommonWCF_DataAlreadyUsedWithoutThis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataAlreadyUsedWithoutThisResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICommonWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DoWork" message="tns:ICommonWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DoWorkResponse" message="tns:ICommonWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingsDesktop">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SettingsDesktop" message="tns:ICommonWCF_SettingsDesktop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingsDesktopResponse" message="tns:ICommonWCF_SettingsDesktop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsed">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsed" message="tns:ICommonWCF_DataAlreadyUsed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsedResponse" message="tns:ICommonWCF_DataAlreadyUsed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SettingValue" message="tns:ICommonWCF_SettingValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingValueResponse" message="tns:ICommonWCF_SettingValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Settings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/Settings" message="tns:ICommonWCF_Settings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingsResponse" message="tns:ICommonWCF_Settings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/MultipleSearch" message="tns:ICommonWCF_MultipleSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/MultipleSearchResponse" message="tns:ICommonWCF_MultipleSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSearchSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/MultipleSearchSQL" message="tns:ICommonWCF_MultipleSearchSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/MultipleSearchSQLResponse" message="tns:ICommonWCF_MultipleSearchSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NextId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/NextId" message="tns:ICommonWCF_NextId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/NextIdResponse" message="tns:ICommonWCF_NextId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BulkInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/BulkInsert" message="tns:ICommonWCF_BulkInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/BulkInsertResponse" message="tns:ICommonWCF_BulkInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenericSelection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/GenericSelection" message="tns:ICommonWCF_GenericSelection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/GenericSelectionResponse" message="tns:ICommonWCF_GenericSelection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenericSelectionNotSync">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/GenericSelectionNotSync" message="tns:ICommonWCF_GenericSelectionNotSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/GenericSelectionNotSyncResponse" message="tns:ICommonWCF_GenericSelectionNotSync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransanctionHistoryNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SearchTransanctionHistoryNew" message="tns:ICommonWCF_SearchTransanctionHistoryNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SearchTransanctionHistoryNewResponse" message="tns:ICommonWCF_SearchTransanctionHistoryNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuerySelect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/ExecuteQuerySelect" message="tns:ICommonWCF_ExecuteQuerySelect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/ExecuteQuerySelectResponse" message="tns:ICommonWCF_ExecuteQuerySelect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SuperAdministrator" message="tns:ICommonWCF_SuperAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SuperAdministratorResponse" message="tns:ICommonWCF_SuperAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/CompanyList" message="tns:ICommonWCF_CompanyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/CompanyListResponse" message="tns:ICommonWCF_CompanyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperDBInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SuperDBInformation" message="tns:ICommonWCF_SuperDBInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SuperDBInformationResponse" message="tns:ICommonWCF_SuperDBInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsVATComplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/UpdateIsVATComplete" message="tns:ICommonWCF_UpdateIsVATComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/UpdateIsVATCompleteResponse" message="tns:ICommonWCF_UpdateIsVATComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BomSynchronize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/BomSynchronize" message="tns:ICommonWCF_BomSynchronize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/BomSynchronizeResponse" message="tns:ICommonWCF_BomSynchronize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSync">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/TransactionSync" message="tns:ICommonWCF_TransactionSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/TransactionSyncResponse" message="tns:ICommonWCF_TransactionSync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewDBCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/NewDBCreate" message="tns:ICommonWCF_NewDBCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/NewDBCreateResponse" message="tns:ICommonWCF_NewDBCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperAdministratorUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SuperAdministratorUpdate" message="tns:ICommonWCF_SuperAdministratorUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SuperAdministratorUpdateResponse" message="tns:ICommonWCF_SuperAdministratorUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DatabaseInformationUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DatabaseInformationUpdate" message="tns:ICommonWCF_DatabaseInformationUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DatabaseInformationUpdateResponse" message="tns:ICommonWCF_DatabaseInformationUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/ExecuteQuery" message="tns:ICommonWCF_ExecuteQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/ExecuteQueryResponse" message="tns:ICommonWCF_ExecuteQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SaveTempTest" message="tns:ICommonWCF_SaveTempTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SaveTempTestResponse" message="tns:ICommonWCF_SaveTempTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHardwareID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/GetHardwareID" message="tns:ICommonWCF_GetHardwareID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/GetHardwareIDResponse" message="tns:ICommonWCF_GetHardwareID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerHardwareId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/GetServerHardwareId" message="tns:ICommonWCF_GetServerHardwareId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/GetServerHardwareIdResponse" message="tns:ICommonWCF_GetServerHardwareId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerDateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/ServerDateTime" message="tns:ICommonWCF_ServerDateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/ServerDateTimeResponse" message="tns:ICommonWCF_ServerDateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/TestConnection" message="tns:ICommonWCF_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/TestConnectionResponse" message="tns:ICommonWCF_TestConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/UpdateSystemData" message="tns:ICommonWCF_UpdateSystemData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/UpdateSystemDataResponse" message="tns:ICommonWCF_UpdateSystemData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/SettingChange" message="tns:ICommonWCF_SettingChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/SettingChangeResponse" message="tns:ICommonWCF_SettingChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBranchInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/AddBranchInfo" message="tns:ICommonWCF_AddBranchInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/AddBranchInfoResponse" message="tns:ICommonWCF_AddBranchInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsedWithoutThis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsedWithoutThis" message="tns:ICommonWCF_DataAlreadyUsedWithoutThis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommonWCF/DataAlreadyUsedWithoutThisResponse" message="tns:ICommonWCF_DataAlreadyUsedWithoutThis_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICommonWCF" type="tns:ICommonWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingsDesktop">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SettingsDesktop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsed">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DataAlreadyUsed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingValue">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SettingValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Settings">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/Settings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSearch">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/MultipleSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSearchSQL">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/MultipleSearchSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NextId">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/NextId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BulkInsert">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/BulkInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenericSelection">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/GenericSelection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenericSelectionNotSync">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/GenericSelectionNotSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTransanctionHistoryNew">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SearchTransanctionHistoryNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuerySelect">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/ExecuteQuerySelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperAdministrator">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SuperAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyList">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/CompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperDBInformation">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SuperDBInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsVATComplete">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/UpdateIsVATComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BomSynchronize">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/BomSynchronize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSync">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/TransactionSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewDBCreate">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/NewDBCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperAdministratorUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SuperAdministratorUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatabaseInformationUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DatabaseInformationUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuery">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/ExecuteQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempTest">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SaveTempTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHardwareID">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/GetHardwareID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerHardwareId">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/GetServerHardwareId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerDateTime">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/ServerDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystemData">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/UpdateSystemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettingChange">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/SettingChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBranchInfo">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/AddBranchInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataAlreadyUsedWithoutThis">
+      <soap:operation soapAction="http://tempuri.org/ICommonWCF/DataAlreadyUsedWithoutThis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonWCF">
+    <wsdl:port name="BasicHttpBinding_ICommonWCF" binding="tns:BasicHttpBinding_ICommonWCF">
+      <soap:address location="http://localhost:50568/WCF/CommonWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductCategoryWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ProductCategoryWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ProductCategoryWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductCategoryWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDownProductType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownProductType" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_DropDownProductType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownProductTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_InsertToProductCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductCategory" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_InsertToProductCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_UpdateProductCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductCategory" />
+  </wsdl:message>
+  <wsdl:message name="IProductCategoryWCF_UpdateProductCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductCategoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductCategoryWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/DoWork" message="tns:IProductCategoryWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/DoWorkResponse" message="tns:IProductCategoryWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/Delete" message="tns:IProductCategoryWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/DeleteResponse" message="tns:IProductCategoryWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDown" message="tns:IProductCategoryWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDownResponse" message="tns:IProductCategoryWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDownAll" message="tns:IProductCategoryWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDownAllResponse" message="tns:IProductCategoryWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownProductType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDownProductType" message="tns:IProductCategoryWCF_DropDownProductType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/DropDownProductTypeResponse" message="tns:IProductCategoryWCF_DropDownProductType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/InsertToProductCategory" message="tns:IProductCategoryWCF_InsertToProductCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/InsertToProductCategoryResponse" message="tns:IProductCategoryWCF_InsertToProductCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/SelectAll" message="tns:IProductCategoryWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/SelectAllResponse" message="tns:IProductCategoryWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/SelectAllList" message="tns:IProductCategoryWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/SelectAllListResponse" message="tns:IProductCategoryWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductCategoryWCF/UpdateProductCategory" message="tns:IProductCategoryWCF_UpdateProductCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductCategoryWCF/UpdateProductCategoryResponse" message="tns:IProductCategoryWCF_UpdateProductCategory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductCategoryWCF" type="tns:IProductCategoryWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownProductType">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/DropDownProductType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductCategory">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/InsertToProductCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductCategory">
+      <soap:operation soapAction="http://tempuri.org/IProductCategoryWCF/UpdateProductCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductCategoryWCF">
+    <wsdl:port name="BasicHttpBinding_IProductCategoryWCF" binding="tns:BasicHttpBinding_IProductCategoryWCF">
+      <soap:address location="http://localhost:50568/WCF/ProductCategoryWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

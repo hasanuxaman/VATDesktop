@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TrackingWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TrackingWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TrackingWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITrackingWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchExistingTrackingItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchExistingTrackingItems" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchExistingTrackingItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchExistingTrackingItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingDelete" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackingItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackingItems" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackingItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackingItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_FindTrackingItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTrackingItems" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_FindTrackingItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTrackingItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchReceiveTrackItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveTrackItems" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchReceiveTrackItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchReceiveTrackItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackingForReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackingForReturn" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackingForReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackingForReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackings_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackings" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_SearchTrackings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTrackingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingInsert" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ITrackingWCF_TrackingUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITrackingWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/DoWork" message="tns:ITrackingWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/DoWorkResponse" message="tns:ITrackingWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchExistingTrackingItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/SearchExistingTrackingItems" message="tns:ITrackingWCF_SearchExistingTrackingItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/SearchExistingTrackingItemsResponse" message="tns:ITrackingWCF_SearchExistingTrackingItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingDelete" message="tns:ITrackingWCF_TrackingDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingDeleteResponse" message="tns:ITrackingWCF_TrackingDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackingItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackingItems" message="tns:ITrackingWCF_SearchTrackingItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackingItemsResponse" message="tns:ITrackingWCF_SearchTrackingItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTrackingItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/FindTrackingItems" message="tns:ITrackingWCF_FindTrackingItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/FindTrackingItemsResponse" message="tns:ITrackingWCF_FindTrackingItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveTrackItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/SearchReceiveTrackItems" message="tns:ITrackingWCF_SearchReceiveTrackItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/SearchReceiveTrackItemsResponse" message="tns:ITrackingWCF_SearchReceiveTrackItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackingForReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackingForReturn" message="tns:ITrackingWCF_SearchTrackingForReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackingForReturnResponse" message="tns:ITrackingWCF_SearchTrackingForReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackings" message="tns:ITrackingWCF_SearchTrackings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/SearchTrackingsResponse" message="tns:ITrackingWCF_SearchTrackings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingInsert" message="tns:ITrackingWCF_TrackingInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingInsertResponse" message="tns:ITrackingWCF_TrackingInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingUpdate" message="tns:ITrackingWCF_TrackingUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrackingWCF/TrackingUpdateResponse" message="tns:ITrackingWCF_TrackingUpdate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITrackingWCF" type="tns:ITrackingWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchExistingTrackingItems">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/SearchExistingTrackingItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingDelete">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/TrackingDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackingItems">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/SearchTrackingItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTrackingItems">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/FindTrackingItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReceiveTrackItems">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/SearchReceiveTrackItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackingForReturn">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/SearchTrackingForReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTrackings">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/SearchTrackings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingInsert">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/TrackingInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingUpdate">
+      <soap:operation soapAction="http://tempuri.org/ITrackingWCF/TrackingUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrackingWCF">
+    <wsdl:port name="BasicHttpBinding_ITrackingWCF" binding="tns:BasicHttpBinding_ITrackingWCF">
+      <soap:address location="http://localhost:50568/WCF/TrackingWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

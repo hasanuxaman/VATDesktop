@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ShiftWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ShiftWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ShiftWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IShiftWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SearchForTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchForTime" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SearchForTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchForTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_DeleteShiftNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftNew" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_DeleteShiftNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShiftNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_DropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDown" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_DropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_InsertToShiftNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToShiftNew" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_InsertToShiftNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToShiftNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SearchShift_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchShift" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SearchShift_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchShiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_UpdateToShiftNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToShiftNew" />
+  </wsdl:message>
+  <wsdl:message name="IShiftWCF_UpdateToShiftNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToShiftNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShiftWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/DoWork" message="tns:IShiftWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/DoWorkResponse" message="tns:IShiftWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchForTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/SearchForTime" message="tns:IShiftWCF_SearchForTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/SearchForTimeResponse" message="tns:IShiftWCF_SearchForTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/DeleteShiftNew" message="tns:IShiftWCF_DeleteShiftNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/DeleteShiftNewResponse" message="tns:IShiftWCF_DeleteShiftNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/DropDown" message="tns:IShiftWCF_DropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/DropDownResponse" message="tns:IShiftWCF_DropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToShiftNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/InsertToShiftNew" message="tns:IShiftWCF_InsertToShiftNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/InsertToShiftNewResponse" message="tns:IShiftWCF_InsertToShiftNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchShift">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/SearchShift" message="tns:IShiftWCF_SearchShift_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/SearchShiftResponse" message="tns:IShiftWCF_SearchShift_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/SelectAll" message="tns:IShiftWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/SelectAllResponse" message="tns:IShiftWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToShiftNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShiftWCF/UpdateToShiftNew" message="tns:IShiftWCF_UpdateToShiftNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShiftWCF/UpdateToShiftNewResponse" message="tns:IShiftWCF_UpdateToShiftNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IShiftWCF" type="tns:IShiftWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchForTime">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/SearchForTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShiftNew">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/DeleteShiftNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDown">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/DropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToShiftNew">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/InsertToShiftNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchShift">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/SearchShift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToShiftNew">
+      <soap:operation soapAction="http://tempuri.org/IShiftWCF/UpdateToShiftNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShiftWCF">
+    <wsdl:port name="BasicHttpBinding_IShiftWCF" binding="tns:BasicHttpBinding_IShiftWCF">
+      <soap:address location="http://localhost:50568/WCF/ShiftWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

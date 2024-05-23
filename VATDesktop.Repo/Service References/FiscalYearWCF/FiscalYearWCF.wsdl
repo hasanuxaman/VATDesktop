@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FiscalYearWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/FiscalYearWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/FiscalYearWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFiscalYearWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_DropDownAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAll" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_DropDownAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DropDownAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearInsert" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearUpDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearUpDate" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearUpDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearUpDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_FiscalYearUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FiscalYearUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_LoadYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadYear" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_LoadYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_LockChek_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockChek" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_LockChek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockChekResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_MaxDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:MaxDate" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_MaxDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MaxDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_SearchYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchYear" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_SearchYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_StartEndPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartEndPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IFiscalYearWCF_StartEndPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartEndPeriodResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFiscalYearWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/DoWork" message="tns:IFiscalYearWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/DoWorkResponse" message="tns:IFiscalYearWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/DropDownAll" message="tns:IFiscalYearWCF_DropDownAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/DropDownAllResponse" message="tns:IFiscalYearWCF_DropDownAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearInsert" message="tns:IFiscalYearWCF_FiscalYearInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearInsertResponse" message="tns:IFiscalYearWCF_FiscalYearInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearUpDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearUpDate" message="tns:IFiscalYearWCF_FiscalYearUpDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearUpDateResponse" message="tns:IFiscalYearWCF_FiscalYearUpDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearUpdate" message="tns:IFiscalYearWCF_FiscalYearUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/FiscalYearUpdateResponse" message="tns:IFiscalYearWCF_FiscalYearUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/LoadYear" message="tns:IFiscalYearWCF_LoadYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/LoadYearResponse" message="tns:IFiscalYearWCF_LoadYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockChek">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/LockChek" message="tns:IFiscalYearWCF_LockChek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/LockChekResponse" message="tns:IFiscalYearWCF_LockChek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MaxDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/MaxDate" message="tns:IFiscalYearWCF_MaxDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/MaxDateResponse" message="tns:IFiscalYearWCF_MaxDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/SearchYear" message="tns:IFiscalYearWCF_SearchYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/SearchYearResponse" message="tns:IFiscalYearWCF_SearchYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/SelectAll" message="tns:IFiscalYearWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/SelectAllResponse" message="tns:IFiscalYearWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartEndPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFiscalYearWCF/StartEndPeriod" message="tns:IFiscalYearWCF_StartEndPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFiscalYearWCF/StartEndPeriodResponse" message="tns:IFiscalYearWCF_StartEndPeriod_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFiscalYearWCF" type="tns:IFiscalYearWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropDownAll">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/DropDownAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearInsert">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/FiscalYearInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearUpDate">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/FiscalYearUpDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FiscalYearUpdate">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/FiscalYearUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadYear">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/LoadYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockChek">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/LockChek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaxDate">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/MaxDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchYear">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/SearchYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartEndPeriod">
+      <soap:operation soapAction="http://tempuri.org/IFiscalYearWCF/StartEndPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FiscalYearWCF">
+    <wsdl:port name="BasicHttpBinding_IFiscalYearWCF" binding="tns:BasicHttpBinding_IFiscalYearWCF">
+      <soap:address location="http://localhost:50568/WCF/FiscalYearWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

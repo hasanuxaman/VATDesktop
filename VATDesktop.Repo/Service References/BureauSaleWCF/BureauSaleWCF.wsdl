@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BureauSaleWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BureauSaleWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BureauSaleWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBureauSaleWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_CurrencyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_CurrencyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CurrencyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_GetCategoryName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryName" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_GetCategoryName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_GetProductInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_GetProductInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_ImportInspectionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportInspectionData" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_ImportInspectionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportInspectionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_InsertCreditInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCreditInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_InsertCreditInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCreditInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_LoadIssueItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIssueItems" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_LoadIssueItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIssueItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_ReturnSaleQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSaleQty" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_ReturnSaleQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSaleQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsert" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesInsertImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsertImport" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesInsertImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsertImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesPost" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SalesUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSaleDetailDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleDetailDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSaleDetailDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleDetailDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSaleExportDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleExportDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSaleExportDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSaleExportDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSalesHeaderDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSalesHeaderDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchSalesHeaderDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSalesHeaderDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchType_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchType" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_SearchType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_UpdateCreditNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditNo" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_UpdateCreditNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_UpdatePrintNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintNew" />
+  </wsdl:message>
+  <wsdl:message name="IBureauSaleWCF_UpdatePrintNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBureauSaleWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/DoWork" message="tns:IBureauSaleWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/DoWorkResponse" message="tns:IBureauSaleWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/CurrencyInfo" message="tns:IBureauSaleWCF_CurrencyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/CurrencyInfoResponse" message="tns:IBureauSaleWCF_CurrencyInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/GetCategoryName" message="tns:IBureauSaleWCF_GetCategoryName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/GetCategoryNameResponse" message="tns:IBureauSaleWCF_GetCategoryName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/GetProductInfo" message="tns:IBureauSaleWCF_GetProductInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/GetProductInfoResponse" message="tns:IBureauSaleWCF_GetProductInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportInspectionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/ImportInspectionData" message="tns:IBureauSaleWCF_ImportInspectionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/ImportInspectionDataResponse" message="tns:IBureauSaleWCF_ImportInspectionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCreditInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/InsertCreditInfo" message="tns:IBureauSaleWCF_InsertCreditInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/InsertCreditInfoResponse" message="tns:IBureauSaleWCF_InsertCreditInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadIssueItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/LoadIssueItems" message="tns:IBureauSaleWCF_LoadIssueItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/LoadIssueItemsResponse" message="tns:IBureauSaleWCF_LoadIssueItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSaleQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/ReturnSaleQty" message="tns:IBureauSaleWCF_ReturnSaleQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/ReturnSaleQtyResponse" message="tns:IBureauSaleWCF_ReturnSaleQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesInsert" message="tns:IBureauSaleWCF_SalesInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesInsertResponse" message="tns:IBureauSaleWCF_SalesInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsertImport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesInsertImport" message="tns:IBureauSaleWCF_SalesInsertImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesInsertImportResponse" message="tns:IBureauSaleWCF_SalesInsertImport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesPost" message="tns:IBureauSaleWCF_SalesPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesPostResponse" message="tns:IBureauSaleWCF_SalesPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesUpdate" message="tns:IBureauSaleWCF_SalesUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SalesUpdateResponse" message="tns:IBureauSaleWCF_SalesUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleDetailDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSaleDetailDTNew" message="tns:IBureauSaleWCF_SearchSaleDetailDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSaleDetailDTNewResponse" message="tns:IBureauSaleWCF_SearchSaleDetailDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleExportDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSaleExportDTNew" message="tns:IBureauSaleWCF_SearchSaleExportDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSaleExportDTNewResponse" message="tns:IBureauSaleWCF_SearchSaleExportDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSalesHeaderDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSalesHeaderDTNew" message="tns:IBureauSaleWCF_SearchSalesHeaderDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchSalesHeaderDTNewResponse" message="tns:IBureauSaleWCF_SearchSalesHeaderDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchType" message="tns:IBureauSaleWCF_SearchType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/SearchTypeResponse" message="tns:IBureauSaleWCF_SearchType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/UpdateCreditNo" message="tns:IBureauSaleWCF_UpdateCreditNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/UpdateCreditNoResponse" message="tns:IBureauSaleWCF_UpdateCreditNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBureauSaleWCF/UpdatePrintNew" message="tns:IBureauSaleWCF_UpdatePrintNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBureauSaleWCF/UpdatePrintNewResponse" message="tns:IBureauSaleWCF_UpdatePrintNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBureauSaleWCF" type="tns:IBureauSaleWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrencyInfo">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/CurrencyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/GetCategoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfo">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/GetProductInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportInspectionData">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/ImportInspectionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCreditInfo">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/InsertCreditInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIssueItems">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/LoadIssueItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSaleQty">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/ReturnSaleQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SalesInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsertImport">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SalesInsertImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesPost">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SalesPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesUpdate">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SalesUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleDetailDTNew">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SearchSaleDetailDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSaleExportDTNew">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SearchSaleExportDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSalesHeaderDTNew">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SearchSalesHeaderDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchType">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/SearchType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditNo">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/UpdateCreditNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintNew">
+      <soap:operation soapAction="http://tempuri.org/IBureauSaleWCF/UpdatePrintNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BureauSaleWCF">
+    <wsdl:port name="BasicHttpBinding_IBureauSaleWCF" binding="tns:BasicHttpBinding_IBureauSaleWCF">
+      <soap:address location="http://localhost:50568/WCF/BureauSaleWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

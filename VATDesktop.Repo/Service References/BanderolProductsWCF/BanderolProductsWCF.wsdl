@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BanderolProductsWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BanderolProductsWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/BanderolProductsWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBanderolProductsWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_InsertToBanderolProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBanderolProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_InsertToBanderolProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToBanderolProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_UpdateBanderolProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBanderolProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_UpdateBanderolProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBanderolProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_DeleteBanderolProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBanderolProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_DeleteBanderolProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBanderolProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_SearchBanderolProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderolProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_SearchBanderolProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderolProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_SearchBanderol_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderol" />
+  </wsdl:message>
+  <wsdl:message name="IBanderolProductsWCF_SearchBanderol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBanderolResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBanderolProductsWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/DoWork" message="tns:IBanderolProductsWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/DoWorkResponse" message="tns:IBanderolProductsWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBanderolProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/InsertToBanderolProducts" message="tns:IBanderolProductsWCF_InsertToBanderolProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/InsertToBanderolProductsResponse" message="tns:IBanderolProductsWCF_InsertToBanderolProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBanderolProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/UpdateBanderolProduct" message="tns:IBanderolProductsWCF_UpdateBanderolProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/UpdateBanderolProductResponse" message="tns:IBanderolProductsWCF_UpdateBanderolProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBanderolProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/DeleteBanderolProduct" message="tns:IBanderolProductsWCF_DeleteBanderolProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/DeleteBanderolProductResponse" message="tns:IBanderolProductsWCF_DeleteBanderolProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderolProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/SearchBanderolProducts" message="tns:IBanderolProductsWCF_SearchBanderolProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/SearchBanderolProductsResponse" message="tns:IBanderolProductsWCF_SearchBanderolProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBanderolProductsWCF/SearchBanderol" message="tns:IBanderolProductsWCF_SearchBanderol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBanderolProductsWCF/SearchBanderolResponse" message="tns:IBanderolProductsWCF_SearchBanderol_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBanderolProductsWCF" type="tns:IBanderolProductsWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToBanderolProducts">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/InsertToBanderolProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBanderolProduct">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/UpdateBanderolProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBanderolProduct">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/DeleteBanderolProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderolProducts">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/SearchBanderolProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBanderol">
+      <soap:operation soapAction="http://tempuri.org/IBanderolProductsWCF/SearchBanderol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BanderolProductsWCF">
+    <wsdl:port name="BasicHttpBinding_IBanderolProductsWCF" binding="tns:BasicHttpBinding_IBanderolProductsWCF">
+      <soap:address location="http://localhost:50568/WCF/BanderolProductsWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DemandWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DemandWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/DemandWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDemandWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_BanderolStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolStock" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_BanderolStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BanderolStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandInsert" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandPost" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandQty" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_DemandUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_ReturnQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnQty" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_ReturnQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_SearchDemandDetailDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDemandDetailDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_SearchDemandDetailDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDemandDetailDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_SearchDemandHeaderDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDemandHeaderDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IDemandWCF_SearchDemandHeaderDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDemandHeaderDTNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDemandWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/DoWork" message="tns:IDemandWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/DoWorkResponse" message="tns:IDemandWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BanderolStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/BanderolStock" message="tns:IDemandWCF_BanderolStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/BanderolStockResponse" message="tns:IDemandWCF_BanderolStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/DemandInsert" message="tns:IDemandWCF_DemandInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/DemandInsertResponse" message="tns:IDemandWCF_DemandInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/DemandPost" message="tns:IDemandWCF_DemandPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/DemandPostResponse" message="tns:IDemandWCF_DemandPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/DemandQty" message="tns:IDemandWCF_DemandQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/DemandQtyResponse" message="tns:IDemandWCF_DemandQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/DemandUpdate" message="tns:IDemandWCF_DemandUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/DemandUpdateResponse" message="tns:IDemandWCF_DemandUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/ReturnQty" message="tns:IDemandWCF_ReturnQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/ReturnQtyResponse" message="tns:IDemandWCF_ReturnQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDemandDetailDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/SearchDemandDetailDTNew" message="tns:IDemandWCF_SearchDemandDetailDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/SearchDemandDetailDTNewResponse" message="tns:IDemandWCF_SearchDemandDetailDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDemandHeaderDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDemandWCF/SearchDemandHeaderDTNew" message="tns:IDemandWCF_SearchDemandHeaderDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDemandWCF/SearchDemandHeaderDTNewResponse" message="tns:IDemandWCF_SearchDemandHeaderDTNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDemandWCF" type="tns:IDemandWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BanderolStock">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/BanderolStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandInsert">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/DemandInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandPost">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/DemandPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandQty">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/DemandQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandUpdate">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/DemandUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnQty">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/ReturnQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDemandDetailDTNew">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/SearchDemandDetailDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDemandHeaderDTNew">
+      <soap:operation soapAction="http://tempuri.org/IDemandWCF/SearchDemandHeaderDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DemandWCF">
+    <wsdl:port name="BasicHttpBinding_IDemandWCF" binding="tns:BasicHttpBinding_IDemandWCF">
+      <soap:address location="http://localhost:50568/WCF/DemandWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

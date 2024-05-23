@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///D:/VAT Import Files/Integration/NBR/22-Dec-2020/11.11.2020_M9.1_XML.wsdl" filename="SI_RET_SENDER.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

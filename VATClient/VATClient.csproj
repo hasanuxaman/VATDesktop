@@ -1,0 +1,3682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{783CF358-D5AE-437C-853D-3F0C488731C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VATClient</RootNamespace>
+    <AssemblyName>ShampanVAT-2012</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>E:\deploy\VAT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>2019.11.02.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>54848173E3594C47341377116469628855A74586</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VATClient_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VATIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnregisterVersion|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\UnregisterVersion\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UnregisterVersion</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugUnregisterVersion|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugUnregisterVersion\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UnregisterVersion</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Alpha|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Alpha\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Alpha</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Beta\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Beta</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BureauDebug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\BureauDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BureauDebug</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ICSharpCode\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SQL\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SQL\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SQL\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SQL\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Vbe.Interop\14.0.0.0__71e9bce111e9429c\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SymphonySofttech.Decrypt">
+      <HintPath>..\packages\Utilities\SymphonySofttech.Decrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="SymphonySofttech.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Utilities\SymphonySofttech.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ribbon\2\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFormMethod.cs" />
+    <Compile Include="Form9_1Statement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9_1Statement.Designer.cs">
+      <DependentUpon>Form9_1Statement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBureauVeritasDN_CNAdjustment .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBureauVeritasDN_CNAdjustment .Designer.cs">
+      <DependentUpon>FormBureauVeritasDN_CNAdjustment .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChart.Designer.cs">
+      <DependentUpon>FormChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportProductPriceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportProductPriceHistory.Designer.cs">
+      <DependentUpon>FormImportProductPriceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginIVAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginIVAS.Designer.cs">
+      <DependentUpon>FormLoginIVAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNegativeDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNegativeDownload.Designer.cs">
+      <DependentUpon>FormNegativeDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseAdjustment.Designer.cs">
+      <DependentUpon>FormPurchaseAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseOtherTDSPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseOtherTDSPopUp.Designer.cs">
+      <DependentUpon>FormPurchaseOtherTDSPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportBSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportBSL.Designer.cs">
+      <DependentUpon>FormSaleImportBSL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollClientInOuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollClientInOuts.Designer.cs">
+      <DependentUpon>FormTollClientInOuts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollClientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollClientSearch.Designer.cs">
+      <DependentUpon>FormTollClientSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollContInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollContInOut.Designer.cs">
+      <DependentUpon>FormTollContInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollContSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollContSearch.Designer.cs">
+      <DependentUpon>FormTollContSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollProductionConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollProductionConsumption.Designer.cs">
+      <DependentUpon>FormTollProductionConsumption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTollSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTollSearch.Designer.cs">
+      <DependentUpon>FormTollSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferIssueTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferIssueTracking.Designer.cs">
+      <DependentUpon>FormTransferIssueTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraking.designer.cs">
+      <DependentUpon>FormTraking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportStock.Designer.cs">
+      <DependentUpon>FormImportStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserCreateIVAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserCreateIVAS.Designer.cs">
+      <DependentUpon>FormUserCreateIVAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserSearchIVAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserSearchIVAS.Designer.cs">
+      <DependentUpon>FormUserSearchIVAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVAT9_1FileUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVAT9_1FileUpload.Designer.cs">
+      <DependentUpon>FormVAT9_1FileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormYearEndProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYearEndProcess.Designer.cs">
+      <DependentUpon>FormYearEndProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIntegrationRecon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIntegrationRecon.Designer.cs">
+      <DependentUpon>FormIntegrationRecon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormButtonPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormButtonPane.Designer.cs">
+      <DependentUpon>FormButtonPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCPCDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCPCDetails.Designer.cs">
+      <DependentUpon>FormCPCDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCPCDetailsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCPCDetailsSearch.Designer.cs">
+      <DependentUpon>FormCPCDetailsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseOtherPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseOtherPopUp.Designer.cs">
+      <DependentUpon>FormPurchaseOtherPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNestleReconsile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNestleReconsile.Designer.cs">
+      <DependentUpon>FormNestleReconsile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegularProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegularProcess.Designer.cs">
+      <DependentUpon>FormRegularProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleBombaydetailsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleBombaydetailsSearch.Designer.cs">
+      <DependentUpon>FormSaleBombaydetailsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleBombaySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleBombaySearch.Designer.cs">
+      <DependentUpon>FormSaleBombaySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleOtherPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleOtherPopUp.Designer.cs">
+      <DependentUpon>FormSaleOtherPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingMaster.Designer.cs">
+      <DependentUpon>FormSettingMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStockProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStockProcess.Designer.cs">
+      <DependentUpon>FormStockProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPermanentProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPermanentProcess.Designer.cs">
+      <DependentUpon>FormPermanentProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6_2Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_2Process.Designer.cs">
+      <DependentUpon>Form6_2Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAVGPriceDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAVGPriceDownload.Designer.cs">
+      <DependentUpon>FormAVGPriceDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBankChannelPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBankChannelPayment.Designer.cs">
+      <DependentUpon>FormBankChannelPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBOMEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBOMEC.Designer.cs">
+      <DependentUpon>FormBOMEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient6_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient6_3.Designer.cs">
+      <DependentUpon>FormClient6_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDBMigration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDBMigration.Designer.cs">
+      <DependentUpon>FormDBMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeFinishNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeFinishNew.Designer.cs">
+      <DependentUpon>FormDisposeFinishNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeFinishNewSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeFinishNewSearch.Designer.cs">
+      <DependentUpon>FormDisposeFinishNewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBranchImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBranchImport.Designer.cs">
+      <DependentUpon>FormBranchImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormErrorMessageIntegration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormErrorMessageIntegration.Designer.cs">
+      <DependentUpon>FormErrorMessageIntegration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6_1Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_1Process.Designer.cs">
+      <DependentUpon>Form6_1Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeaderPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeaderPolicy.Designer.cs">
+      <DependentUpon>FormLeaderPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIASChargeCodeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIASChargeCodeSearch.Designer.cs">
+      <DependentUpon>FormIASChargeCodeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIASChargeCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIASChargeCode.Designer.cs">
+      <DependentUpon>FormIASChargeCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeFinish.Designer.cs">
+      <DependentUpon>FormDisposeFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDN_CNAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDN_CNAdjustment.Designer.cs">
+      <DependentUpon>FormDN_CNAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDBBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDBBackupRestore.Designer.cs">
+      <DependentUpon>FormDBBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepositTDSSearch .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepositTDSSearch .designer.cs">
+      <DependentUpon>FormDepositTDSSearch .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepositTDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepositTDS.designer.cs">
+      <DependentUpon>FormDepositTDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeRaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeRaw.Designer.cs">
+      <DependentUpon>FormDisposeRaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeRawSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeRawSearch.Designer.cs">
+      <DependentUpon>FormDisposeRawSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIsPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIsPrinting.Designer.cs">
+      <DependentUpon>FormIsPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMultipleVAT6_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMultipleVAT6_5.designer.cs">
+      <DependentUpon>FormMultipleVAT6_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssueMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueMultiple.Designer.cs">
+      <DependentUpon>FormIssueMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNestleSaleReturnDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNestleSaleReturnDetail.Designer.cs">
+      <DependentUpon>FormNestleSaleReturnDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNestleSaleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNestleSaleDetails.Designer.cs">
+      <DependentUpon>FormNestleSaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNestlePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNestlePurchase.Designer.cs">
+      <DependentUpon>FormNestlePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseMultiples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseMultiples.Designer.cs">
+      <DependentUpon>FormPurchaseMultiples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReceiveMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceiveMultiple.Designer.cs">
+      <DependentUpon>FormReceiveMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormErrorMessage.Designer.cs">
+      <DependentUpon>FormErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReleaseNotesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReleaseNotesDetails.Designer.cs">
+      <DependentUpon>FormReleaseNotesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseImportSMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseImportSMC.Designer.cs">
+      <DependentUpon>FormPurchaseImportSMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportBombay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportBombay.Designer.cs">
+      <DependentUpon>FormSaleImportBombay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleNestle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleNestle.Designer.cs">
+      <DependentUpon>FormSaleNestle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportBTSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportBTSL.Designer.cs">
+      <DependentUpon>FormSaleImportBTSL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportIntertek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportIntertek.Designer.cs">
+      <DependentUpon>FormSaleImportIntertek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageShow.Designer.cs">
+      <DependentUpon>FormMessageShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient6_3Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient6_3Search.Designer.cs">
+      <DependentUpon>FormClient6_3Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductTransfer.Designer.cs">
+      <DependentUpon>FormProductTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductTransferSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductTransferSearch.Designer.cs">
+      <DependentUpon>FormProductTransferSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegrationComp.Designer.cs">
+      <DependentUpon>IntegrationComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\BSL\FormPurchaseImportBSL .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\BSL\FormPurchaseImportBSL .Designer.cs">
+      <DependentUpon>FormPurchaseImportBSL .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormPriceDeclarationBata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormPriceDeclarationBata.Designer.cs">
+      <DependentUpon>FormPriceDeclarationBata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTollissueGatePassNoSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTollissueGatePassNoSearch.Designer.cs">
+      <DependentUpon>FormTollissueGatePassNoSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTollissueImportBata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTollissueImportBata.Designer.cs">
+      <DependentUpon>FormTollissueImportBata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTransferIssueDataTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTransferIssueDataTransfer.Designer.cs">
+      <DependentUpon>FormTransferIssueDataTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormDataTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormDataTransfer.Designer.cs">
+      <DependentUpon>FormDataTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Berger\FormPReceiveImportBerger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Berger\FormPReceiveImportBerger.Designer.cs">
+      <DependentUpon>FormPReceiveImportBerger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Berger\FormSaleImportBerger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Berger\FormSaleImportBerger.Designer.cs">
+      <DependentUpon>FormSaleImportBerger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Berger\FormTransferIssueImportBerger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Berger\FormTransferIssueImportBerger.Designer.cs">
+      <DependentUpon>FormTransferIssueImportBerger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bollore\FormSaleImportBollore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bollore\FormSaleImportBollore.Designer.cs">
+      <DependentUpon>FormSaleImportBollore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\BritishCouncil\FormSaleImportBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\BritishCouncil\FormSaleImportBC.Designer.cs">
+      <DependentUpon>FormSaleImportBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\CPB\FormSaleDataCheckMiddleware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\CPB\FormSaleDataCheckMiddleware.Designer.cs">
+      <DependentUpon>FormSaleDataCheckMiddleware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\DBH\FormPurchaseImportDBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\DBH\FormPurchaseImportDBH.Designer.cs">
+      <DependentUpon>FormPurchaseImportDBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\DBH\FormSaleImportDBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\DBH\FormSaleImportDBH.Designer.cs">
+      <DependentUpon>FormSaleImportDBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\DBH\FormSaleImportDBH_AutoPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\DBH\FormSaleImportDBH_AutoPrint.Designer.cs">
+      <DependentUpon>FormSaleImportDBH_AutoPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Decathlon\FormPurchaseImportDecathlon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Decathlon\FormPurchaseImportDecathlon.Designer.cs">
+      <DependentUpon>FormPurchaseImportDecathlon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Decathlon\FormSaleImportDecathlon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Decathlon\FormSaleImportDecathlon.Designer.cs">
+      <DependentUpon>FormSaleImportDecathlon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\DHL\FormSaleImportDHLAirport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\DHL\FormSaleImportDHLAirport.Designer.cs">
+      <DependentUpon>FormSaleImportDHLAirport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\EON\FormPurchaseImportEON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\EON\FormPurchaseImportEON.Designer.cs">
+      <DependentUpon>FormPurchaseImportEON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\EON\FormPReceiveImportEON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\EON\FormPReceiveImportEON.Designer.cs">
+      <DependentUpon>FormPReceiveImportEON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\EON\FormPIssueImportEON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\EON\FormPIssueImportEON.Designer.cs">
+      <DependentUpon>FormPIssueImportEON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\EON\FormSaleImportEON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\EON\FormSaleImportEON.Designer.cs">
+      <DependentUpon>FormSaleImportEON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\EON\FormTransferIssueImportEON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\EON\FormTransferIssueImportEON.Designer.cs">
+      <DependentUpon>FormTransferIssueImportEON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Ernst\FormSaleImportErnst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Ernst\FormSaleImportErnst.Designer.cs">
+      <DependentUpon>FormSaleImportErnst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Japha\FormSaleImportJapha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Japha\FormSaleImportJapha.Designer.cs">
+      <DependentUpon>FormSaleImportJapha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Link3\FormSaleImportLink3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Link3\FormSaleImportLink3.Designer.cs">
+      <DependentUpon>FormSaleImportLink3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\MARICO\FormSaleImportmMarico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\MARICO\FormSaleImportmMarico.Designer.cs">
+      <DependentUpon>FormSaleImportmMarico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\NBR\FormNBRAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\NBR\FormNBRAPI.Designer.cs">
+      <DependentUpon>FormNBRAPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormPurchaseReturnsImportNESTLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormPurchaseReturnsImportNESTLE.Designer.cs">
+      <DependentUpon>FormPurchaseReturnsImportNESTLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormPurchaseImportNESTLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormPurchaseImportNESTLE.Designer.cs">
+      <DependentUpon>FormPurchaseImportNESTLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormSaleCNImportNESTLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormSaleCNImportNESTLE.Designer.cs">
+      <DependentUpon>FormSaleCNImportNESTLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormSaleImportNESTLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\NESTLE\FormSaleImportNESTLE.Designer.cs">
+      <DependentUpon>FormSaleImportNESTLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormDetails.Designer.cs">
+      <DependentUpon>FormDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormReceiveImportNourish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormReceiveImportNourish.Designer.cs">
+      <DependentUpon>FormReceiveImportNourish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormIssueImportNourish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormIssueImportNourish.Designer.cs">
+      <DependentUpon>FormIssueImportNourish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormPurchaseImportNourish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormPurchaseImportNourish.Designer.cs">
+      <DependentUpon>FormPurchaseImportNourish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormTransferImportNourish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormTransferImportNourish.Designer.cs">
+      <DependentUpon>FormTransferImportNourish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormSaleImportNourish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Nourish\FormSaleImportNourish.Designer.cs">
+      <DependentUpon>FormSaleImportNourish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ShumiHotCake\FormSaleImportShumiHotCake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ShumiHotCake\FormSaleImportShumiHotCake.Designer.cs">
+      <DependentUpon>FormSaleImportShumiHotCake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\SMC\FormSaleImportSMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\SMC\FormSaleImportSMC.Designer.cs">
+      <DependentUpon>FormSaleImportSMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportSQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportSQR.Designer.cs">
+      <DependentUpon>FormSaleImportSQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesInvoiceExpSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesInvoiceExpSearch.Designer.cs">
+      <DependentUpon>FormSalesInvoiceExpSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalesInvoiceExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesInvoiceExp.Designer.cs">
+      <DependentUpon>FormSalesInvoiceExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHsCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHsCode.Designer.cs">
+      <DependentUpon>FormHsCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHSCodeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHSCodeSearch.Designer.cs">
+      <DependentUpon>FormHSCodeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginBranch.Designer.cs">
+      <DependentUpon>FormLoginBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportKCCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportKCCL.Designer.cs">
+      <DependentUpon>FormSaleImportKCCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportKCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportKCL.Designer.cs">
+      <DependentUpon>FormSaleImportKCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImportDHL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImportDHL.Designer.cs">
+      <DependentUpon>FormSaleImportDHL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleImport.Designer.cs">
+      <DependentUpon>FormSaleImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductSearch.Designer.cs">
+      <DependentUpon>FormProductSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleTempProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleTempProcess.Designer.cs">
+      <DependentUpon>FormSaleTempProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerDiscount.Designer.cs">
+      <DependentUpon>FormCustomerDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReleaseNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReleaseNotes.Designer.cs">
+      <DependentUpon>FormReleaseNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferImportSQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferImportSQR.Designer.cs">
+      <DependentUpon>FormTransferImportSQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserMenuRolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserMenuRolls.Designer.cs">
+      <DependentUpon>FormUserMenuRolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserMenuAllRolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserMenuAllRolls.Designer.cs">
+      <DependentUpon>FormUserMenuAllRolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTDSs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTDSs.Designer.cs">
+      <DependentUpon>FormTDSs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerDiscountSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerDiscountSearch.Designer.cs">
+      <DependentUpon>FormCustomerDiscountSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTDSsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTDSsSearch.Designer.cs">
+      <DependentUpon>FormTDSsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormToll6_3Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormToll6_3Invoice.Designer.cs">
+      <DependentUpon>FormToll6_3Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormToll6_3InvoiceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormToll6_3InvoiceSearch.Designer.cs">
+      <DependentUpon>FormToll6_3InvoiceSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferImportKCCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferImportKCCL.Designer.cs">
+      <DependentUpon>FormTransferImportKCCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomsHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomsHouse.Designer.cs">
+      <DependentUpon>FormCustomsHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomsHouseSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomsHouseSearch.designer.cs">
+      <DependentUpon>FormCustomsHouseSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBranchProfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBranchProfiles.Designer.cs">
+      <DependentUpon>FormBranchProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12Law.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12Law.Designer.cs">
+      <DependentUpon>Form12Law.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBranchName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBranchName.Designer.cs">
+      <DependentUpon>FormBranchName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBranchReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBranchReport.Designer.cs">
+      <DependentUpon>FormBranchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDBAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDBAccess.Designer.cs">
+      <DependentUpon>FormDBAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterImport.Designer.cs">
+      <DependentUpon>FormMasterImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSync.Designer.cs">
+      <DependentUpon>FormSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShiftSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShiftSearch.designer.cs">
+      <DependentUpon>FormShiftSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShifts.Designer.cs">
+      <DependentUpon>FormShifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckStock.Designer.cs">
+      <DependentUpon>FormCheckStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerAddressFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerAddressFinder.Designer.cs">
+      <DependentUpon>FormCustomerAddressFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMultipleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMultipleSearch.Designer.cs">
+      <DependentUpon>FormMultipleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleExport.Designer.cs">
+      <DependentUpon>FormSaleExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleExportSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleExportSearch.Designer.cs">
+      <DependentUpon>FormSaleExportSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleOld.Designer.cs">
+      <DependentUpon>FormSaleOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductFinder.Designer.cs">
+      <DependentUpon>FormProductFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="FormAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdjustment.Designer.cs">
+      <DependentUpon>FormAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdjustmentName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdjustmentName.Designer.cs">
+      <DependentUpon>FormAdjustmentName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdjustmentNameSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdjustmentNameSearch.Designer.cs">
+      <DependentUpon>FormAdjustmentNameSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdjustmentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdjustmentSearch.Designer.cs">
+      <DependentUpon>FormAdjustmentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanderolProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanderolProduct.designer.cs">
+      <DependentUpon>FormBanderolProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanderolProductSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanderolProductSearch.designer.cs">
+      <DependentUpon>FormBanderolProductSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanderolReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanderolReceive.designer.cs">
+      <DependentUpon>FormBanderolReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBureauSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBureauSale.designer.cs">
+      <DependentUpon>FormBureauSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCode.Designer.cs">
+      <DependentUpon>FormCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfigChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigChange.Designer.cs">
+      <DependentUpon>FormConfigChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCurrency.Designer.cs">
+      <DependentUpon>FormCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCurrencyConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCurrencyConversion.Designer.cs">
+      <DependentUpon>FormCurrencyConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCurrencyConversionSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCurrencyConversionSearch.Designer.cs">
+      <DependentUpon>FormCurrencyConversionSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCurrencySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCurrencySearch.Designer.cs">
+      <DependentUpon>FormCurrencySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerFinder.Designer.cs">
+      <DependentUpon>FormCustomerFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeposit.designer.cs">
+      <DependentUpon>FormDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepositReverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepositReverse.designer.cs">
+      <DependentUpon>FormDepositReverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisposeFinishSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisposeFinishSearch.Designer.cs">
+      <DependentUpon>FormDisposeFinishSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDutyDrawBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDutyDrawBack.Designer.cs">
+      <DependentUpon>FormDutyDrawBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDutyDrawBackSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDutyDrawBackSearch.Designer.cs">
+      <DependentUpon>FormDutyDrawBackSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImport.Designer.cs">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputValueChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputValueChanges.designer.cs">
+      <DependentUpon>FormInputValueChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDemand.designer.cs">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDemandSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDemandSearch.designer.cs">
+      <DependentUpon>FormDemandSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMultipleVAT11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMultipleVAT11.designer.cs">
+      <DependentUpon>FormMultipleVAT11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPackaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPackaging.designer.cs">
+      <DependentUpon>FormPackaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPackagingSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPackagingSearch.designer.cs">
+      <DependentUpon>FormPackagingSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductSearchMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductSearchMultiple.Designer.cs">
+      <DependentUpon>FormProductSearchMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReverseAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReverseAdjustment.Designer.cs">
+      <DependentUpon>FormReverseAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTracking.Designer.cs">
+      <DependentUpon>FormTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferIssue.Designer.cs">
+      <DependentUpon>FormTransferIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferIssueSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferIssueSearch.Designer.cs">
+      <DependentUpon>FormTransferIssueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferRaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferRaw.designer.cs">
+      <DependentUpon>FormTransferRaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleInvoice.Designer.cs">
+      <DependentUpon>FormSaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSalePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalePrint.Designer.cs">
+      <DependentUpon>FormSalePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleVAT20Multiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleVAT20Multiple.designer.cs">
+      <DependentUpon>FormSaleVAT20Multiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSDDepositSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSDDepositSearch.Designer.cs">
+      <DependentUpon>FormSDDepositSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchUserLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchUserLog.Designer.cs">
+      <DependentUpon>FormSearchUserLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanderolName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanderolName.designer.cs">
+      <DependentUpon>FormBanderolName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanderolNameSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanderolNameSearch.designer.cs">
+      <DependentUpon>FormBanderolNameSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuperInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuperInfo.Designer.cs">
+      <DependentUpon>FormSuperInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTenderPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTenderPrice.Designer.cs">
+      <DependentUpon>FormTenderPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTenderSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTenderSearch.Designer.cs">
+      <DependentUpon>FormTenderSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferRawSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferRawSearch.designer.cs">
+      <DependentUpon>FormTransferRawSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferReceive.Designer.cs">
+      <DependentUpon>FormTransferReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferReceiveFromSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferReceiveFromSearch.Designer.cs">
+      <DependentUpon>FormTransferReceiveFromSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferReceiveSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferReceiveSearch.Designer.cs">
+      <DependentUpon>FormTransferReceiveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUOMName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUOMName.Designer.cs">
+      <DependentUpon>FormUOMName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUOMNameSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUOMNameSearch.Designer.cs">
+      <DependentUpon>FormUOMNameSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUOMNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUOMNew.designer.cs">
+      <DependentUpon>FormUOMNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUOMSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUOMSearch.designer.cs">
+      <DependentUpon>FormUOMSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClearing.cs" />
+    <Compile Include="FormUpdatePurchaseDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePurchaseDuty.Designer.cs">
+      <DependentUpon>FormUpdatePurchaseDuty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserBranchDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserBranchDetail.Designer.cs">
+      <DependentUpon>FormUserBranchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserGroup.Designer.cs">
+      <DependentUpon>FormUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserGroupSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserGroupSearch.Designer.cs">
+      <DependentUpon>FormUserGroupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVAT7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVAT7.designer.cs">
+      <DependentUpon>FormVAT7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVAT7Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVAT7Search.designer.cs">
+      <DependentUpon>FormVAT7Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBranchProfilesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBranchProfilesSearch.Designer.cs">
+      <DependentUpon>FormBranchProfilesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPurchaseImportACI .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPurchaseImportACI .Designer.cs">
+      <DependentUpon>FormPurchaseImportACI .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPReceiveImportACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPReceiveImportACI.Designer.cs">
+      <DependentUpon>FormPReceiveImportACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPIssueImportACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ACI\FormPIssueImportACI.Designer.cs">
+      <DependentUpon>FormPIssueImportACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ACI\FormTransferImportACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ACI\FormTransferImportACI.Designer.cs">
+      <DependentUpon>FormTransferImportACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\ACI\FormSaleImportACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\ACI\FormSaleImportACI.Designer.cs">
+      <DependentUpon>FormSaleImportACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTransferImportBata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormTransferImportBata.Designer.cs">
+      <DependentUpon>FormTransferImportBata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Bata\FormSaleImportBata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Bata\FormSaleImportBata.Designer.cs">
+      <DependentUpon>FormSaleImportBata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\BCL\FormSaleImportBCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\BCL\FormSaleImportBCL.Designer.cs">
+      <DependentUpon>FormSaleImportBCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\GDIC\FormSaleImportGDIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\GDIC\FormSaleImportGDIC.Designer.cs">
+      <DependentUpon>FormSaleImportGDIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\SMC\FormReceiveImportSMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\SMC\FormReceiveImportSMC.Designer.cs">
+      <DependentUpon>FormReceiveImportSMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\SMC\FormTransferImportSMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\SMC\FormTransferImportSMC.Designer.cs">
+      <DependentUpon>FormTransferImportSMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Square\FormIssueImportSQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Square\FormIssueImportSQR.Designer.cs">
+      <DependentUpon>FormIssueImportSQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Square\FormReceiveImportSQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Square\FormReceiveImportSQR.Designer.cs">
+      <DependentUpon>FormReceiveImportSQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\Square\FormPurchaseImportSQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\Square\FormPurchaseImportSQR.Designer.cs">
+      <DependentUpon>FormPurchaseImportSQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\SSDTech\FormSaleImportSSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\SSDTech\FormSaleImportSSD.Designer.cs">
+      <DependentUpon>FormSaleImportSSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integration\TestProcess\FormSaleImportNewProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integration\TestProcess\FormSaleImportNewProc.Designer.cs">
+      <DependentUpon>FormSaleImportNewProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMainInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMainInterface.designer.cs">
+      <DependentUpon>MDIMainInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDTO\BomOhDTO.cs" />
+    <Compile Include="ModelDTO\BranchDTO.cs" />
+    <Compile Include="ModelDTO\UOMNameDTO.cs" />
+    <Compile Include="ModelDTO\CurrencyDTO.cs" />
+    <Compile Include="ModelDTO\CustomerDTO.cs" />
+    <Compile Include="ModelDTO\DutyDTO.cs" />
+    <Compile Include="ModelDTO\ProductDTO.cs" />
+    <Compile Include="ModelDTO\ProductTypeDTO.cs" />
+    <Compile Include="ModelDTO\TenderDTO.cs" />
+    <Compile Include="ModelDTO\UomDTO.cs" />
+    <Compile Include="ModelDTO\VehicleDTO.cs" />
+    <Compile Include="ModelDTO\VendorDTO.cs" />
+    <Compile Include="ReportPreview\FormReport6_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport6_3.Designer.cs">
+      <DependentUpon>FormReport6_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport9_1Comp_Monthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport9_1Comp_Monthly.Designer.cs">
+      <DependentUpon>FormReport9_1Comp_Monthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport9_1Comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport9_1Comp.Designer.cs">
+      <DependentUpon>FormReport9_1Comp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormReportSCBL_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReportSCBL_Production.Designer.cs">
+      <DependentUpon>FormReportSCBL_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormReportSCBL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReportSCBL.Designer.cs">
+      <DependentUpon>FormReportSCBL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormBranchStockMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormBranchStockMovement.Designer.cs">
+      <DependentUpon>FormBranchStockMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBankChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBankChannel.Designer.cs">
+      <DependentUpon>FormRptBankChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDepositTDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDepositTDS.designer.cs">
+      <DependentUpon>FormRptDepositTDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormQuaziStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormQuaziStock.Designer.cs">
+      <DependentUpon>FormQuaziStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCentral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCentral.Designer.cs">
+      <DependentUpon>FormRptCentral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTollStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTollStock.Designer.cs">
+      <DependentUpon>FormRptTollStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTransferReceiveInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTransferReceiveInformation.designer.cs">
+      <DependentUpon>FormRptTransferReceiveInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTransferIssueInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptTransferIssueInformation.designer.cs">
+      <DependentUpon>FormRptTransferIssueInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSaleReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSaleReceive.designer.cs">
+      <DependentUpon>FormRptSaleReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormMIS19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormMIS19.Designer.cs">
+      <DependentUpon>FormMIS19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBandrolProductInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBandrolProductInformation.designer.cs">
+      <DependentUpon>FormRptBandrolProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm5.Designer.cs">
+      <DependentUpon>FormRptForm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptAdjustment.Designer.cs">
+      <DependentUpon>FormRptAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBatchTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBatchTracking.Designer.cs">
+      <DependentUpon>FormRptBatchTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCurrencyConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCurrencyConversion.Designer.cs">
+      <DependentUpon>FormRptCurrencyConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptFinishProductInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptFinishProductInformation.designer.cs">
+      <DependentUpon>FormRptFinishProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm3.designer.cs">
+      <DependentUpon>FormRptForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptForm4.designer.cs">
+      <DependentUpon>FormRptForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptInputOutputCoEfficientReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptInputOutputCoEfficientReport.Designer.cs">
+      <DependentUpon>FormRptInputOutputCoEfficientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCurrentVAT18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCurrentVAT18.Designer.cs">
+      <DependentUpon>FormRptCurrentVAT18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptPurchaseWithLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptPurchaseWithLC.designer.cs">
+      <DependentUpon>FormRptPurchaseWithLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSD.Designer.cs">
+      <DependentUpon>FormRptSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCustomerGroup.Designer.cs">
+      <DependentUpon>FormRptCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDispose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDispose.Designer.cs">
+      <DependentUpon>FormRptDispose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT16.Designer.cs">
+      <DependentUpon>FormRptMISVAT16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT17.designer.cs">
+      <DependentUpon>FormRptMISVAT17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptMISVAT18.Designer.cs">
+      <DependentUpon>FormRptMISVAT18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\DBConstant.cs" />
+    <Compile Include="FormBankInformationSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBankInformationSearch.designer.cs">
+      <DependentUpon>FormBankInformationSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDBLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDBLogin.Designer.cs">
+      <DependentUpon>FormDBLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFiscalYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiscalYear.Designer.cs">
+      <DependentUpon>FormFiscalYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogIn.designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupperAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupperAdministrator.Designer.cs">
+      <DependentUpon>FormSupperAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserRoll.Designer.cs">
+      <DependentUpon>FormUserRoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBOM.Designer.cs">
+      <DependentUpon>FormBOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBOMSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBOMSearch.Designer.cs">
+      <DependentUpon>FormBOMSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerGroupSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerGroupSearch.Designer.cs">
+      <DependentUpon>FormCustomerGroupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerSearch.designer.cs">
+      <DependentUpon>FormCustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepositSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepositSearch.designer.cs">
+      <DependentUpon>FormDepositSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssue.Designer.cs">
+      <DependentUpon>FormIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIssueSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueSearch.Designer.cs">
+      <DependentUpon>FormIssueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserPasswordChange.designer.cs">
+      <DependentUpon>FormUserPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductCategorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductCategorySearch.designer.cs">
+      <DependentUpon>FormProductCategorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchaseSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseSearch.Designer.cs">
+      <DependentUpon>FormPurchaseSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceive.Designer.cs">
+      <DependentUpon>FormReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReceiveSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceiveSearch.Designer.cs">
+      <DependentUpon>FormReceiveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSale.Designer.cs">
+      <DependentUpon>FormSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleSearch.Designer.cs">
+      <DependentUpon>FormSaleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBankInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBankInformation.Designer.cs">
+      <DependentUpon>FormBankInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompanyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompanyProfile.Designer.cs">
+      <DependentUpon>FormCompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerGroup.Designer.cs">
+      <DependentUpon>FormCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomer.Designer.cs">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductCategory.Designer.cs">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchase.Designer.cs">
+      <DependentUpon>FormPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSplash.designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserSearch.designer.cs">
+      <DependentUpon>FormUserSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransactionHistorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransactionHistorySearch.designer.cs">
+      <DependentUpon>FormTransactionHistorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserCreate.designer.cs">
+      <DependentUpon>FormUserCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVehicle.Designer.cs">
+      <DependentUpon>FormVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVehicleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVehicleSearch.designer.cs">
+      <DependentUpon>FormVehicleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendor.Designer.cs">
+      <DependentUpon>FormVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorGroup.Designer.cs">
+      <DependentUpon>FormVendorGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorGroupSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorGroupSearch.designer.cs">
+      <DependentUpon>FormVendorGroupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorSearch.designer.cs">
+      <DependentUpon>FormVendorSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportPreview\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBankInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptBankInformation.designer.cs">
+      <DependentUpon>FormRptBankInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCreditNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCreditNote.Designer.cs">
+      <DependentUpon>FormRptCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCustomerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptCustomerInformation.designer.cs">
+      <DependentUpon>FormRptCustomerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDebitNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDebitNote.Designer.cs">
+      <DependentUpon>FormRptDebitNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDepositTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptDepositTransaction.designer.cs">
+      <DependentUpon>FormRptDepositTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptIssueInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptIssueInformation.designer.cs">
+      <DependentUpon>FormRptIssueInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductCategoryInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductCategoryInformation.designer.cs">
+      <DependentUpon>FormRptProductCategoryInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductInformation.designer.cs">
+      <DependentUpon>FormRptProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptProductType.Designer.cs">
+      <DependentUpon>FormRptProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptPurchaseInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptPurchaseInformation.designer.cs">
+      <DependentUpon>FormRptPurchaseInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptReceiveInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptReceiveInformation.designer.cs">
+      <DependentUpon>FormRptReceiveInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSalesInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSalesInformation.designer.cs">
+      <DependentUpon>FormRptSalesInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSerialStockInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptSerialStockInformation.Designer.cs">
+      <DependentUpon>FormRptSerialStockInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptStock.Designer.cs">
+      <DependentUpon>FormRptStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT11.Designer.cs">
+      <DependentUpon>FormRptVAT11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT16Toll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT16Toll.Designer.cs">
+      <DependentUpon>FormRptVAT16Toll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT16.Designer.cs">
+      <DependentUpon>FormRptVAT16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT17Toll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT17Toll.designer.cs">
+      <DependentUpon>FormRptVAT17Toll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT17.designer.cs">
+      <DependentUpon>FormRptVAT17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT18.Designer.cs">
+      <DependentUpon>FormRptVAT18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT18Breakdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT18Breakdown.Designer.cs">
+      <DependentUpon>FormRptVAT18Breakdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT24.Designer.cs">
+      <DependentUpon>FormRptVAT24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT6_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT6_5.Designer.cs">
+      <DependentUpon>FormRptVAT6_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVATKa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVATKa.Designer.cs">
+      <DependentUpon>FormRptVATKa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVDS.Designer.cs">
+      <DependentUpon>FormRptVDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVDS12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVDS12.Designer.cs">
+      <DependentUpon>FormRptVDS12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVehicle.Designer.cs">
+      <DependentUpon>FormRptVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVendorGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVendorGroup.Designer.cs">
+      <DependentUpon>FormRptVendorGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVendorInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVendorInformation.designer.cs">
+      <DependentUpon>FormRptVendorInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptVAT1.Designer.cs">
+      <DependentUpon>FormRptVAT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormSaleSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormSaleSummary.Designer.cs">
+      <DependentUpon>FormSaleSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormSubForm.Designer.cs">
+      <DependentUpon>FormSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT19.Designer.cs">
+      <DependentUpon>FormVAT19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="FormSDDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSDDeposit.Designer.cs">
+      <DependentUpon>FormSDDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptReconsciliation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormRptReconsciliation.Designer.cs">
+      <DependentUpon>FormRptReconsciliation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT6_10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT6_10.Designer.cs">
+      <DependentUpon>FormVAT6_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT9_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\FormVAT9_1.Designer.cs">
+      <DependentUpon>FormVAT9_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSCBLMIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSCBLMIS.Designer.cs">
+      <DependentUpon>FormSCBLMIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommonWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SaleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VechicleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form9_1Statement.resx">
+      <DependentUpon>Form9_1Statement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBureauVeritasDN_CNAdjustment .resx">
+      <DependentUpon>FormBureauVeritasDN_CNAdjustment .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChart.resx">
+      <DependentUpon>FormChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportProductPriceHistory.resx">
+      <DependentUpon>FormImportProductPriceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginIVAS.resx">
+      <DependentUpon>FormLoginIVAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNegativeDownload.resx">
+      <DependentUpon>FormNegativeDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseAdjustment.resx">
+      <DependentUpon>FormPurchaseAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseOtherTDSPopUp.resx">
+      <DependentUpon>FormPurchaseOtherTDSPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportBSL.resx">
+      <DependentUpon>FormSaleImportBSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollClientInOuts.resx">
+      <DependentUpon>FormTollClientInOuts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollClientSearch.resx">
+      <DependentUpon>FormTollClientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollContInOut.resx">
+      <DependentUpon>FormTollContInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollContSearch.resx">
+      <DependentUpon>FormTollContSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollProductionConsumption.resx">
+      <DependentUpon>FormTollProductionConsumption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTollSearch.resx">
+      <DependentUpon>FormTollSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferIssueTracking.resx">
+      <DependentUpon>FormTransferIssueTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraking.resx">
+      <DependentUpon>FormTraking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportStock.resx">
+      <DependentUpon>FormImportStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserCreateIVAS.resx">
+      <DependentUpon>FormUserCreateIVAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserSearchIVAS.resx">
+      <DependentUpon>FormUserSearchIVAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVAT9_1FileUpload.resx">
+      <DependentUpon>FormVAT9_1FileUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYearEndProcess.resx">
+      <DependentUpon>FormYearEndProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIntegrationRecon.resx">
+      <DependentUpon>FormIntegrationRecon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormButtonPane.resx">
+      <DependentUpon>FormButtonPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCPCDetails.resx">
+      <DependentUpon>FormCPCDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCPCDetailsSearch.resx">
+      <DependentUpon>FormCPCDetailsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseOtherPopUp.resx">
+      <DependentUpon>FormPurchaseOtherPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNestleReconsile.resx">
+      <DependentUpon>FormNestleReconsile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegularProcess.resx">
+      <DependentUpon>FormRegularProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleBombaydetailsSearch.resx">
+      <DependentUpon>FormSaleBombaydetailsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleBombaySearch.resx">
+      <DependentUpon>FormSaleBombaySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleOtherPopUp.resx">
+      <DependentUpon>FormSaleOtherPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingMaster.resx">
+      <DependentUpon>FormSettingMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStockProcess.resx">
+      <DependentUpon>FormStockProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPermanentProcess.resx">
+      <DependentUpon>FormPermanentProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_2Process.resx">
+      <DependentUpon>Form6_2Process.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAVGPriceDownload.resx">
+      <DependentUpon>FormAVGPriceDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBankChannelPayment.resx">
+      <DependentUpon>FormBankChannelPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBOMEC.resx">
+      <DependentUpon>FormBOMEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient6_3.resx">
+      <DependentUpon>FormClient6_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDBMigration.resx">
+      <DependentUpon>FormDBMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeFinishNew.resx">
+      <DependentUpon>FormDisposeFinishNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeFinishNewSearch.resx">
+      <DependentUpon>FormDisposeFinishNewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBranchImport.resx">
+      <DependentUpon>FormBranchImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErrorMessageIntegration.resx">
+      <DependentUpon>FormErrorMessageIntegration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_1Process.resx">
+      <DependentUpon>Form6_1Process.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeaderPolicy.resx">
+      <DependentUpon>FormLeaderPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIASChargeCodeSearch.resx">
+      <DependentUpon>FormIASChargeCodeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIASChargeCode.resx">
+      <DependentUpon>FormIASChargeCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeFinish.resx">
+      <DependentUpon>FormDisposeFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDN_CNAdjustment.resx">
+      <DependentUpon>FormDN_CNAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDBBackupRestore.resx">
+      <DependentUpon>FormDBBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepositTDSSearch .resx">
+      <DependentUpon>FormDepositTDSSearch .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepositTDS.resx">
+      <DependentUpon>FormDepositTDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeRaw.resx">
+      <DependentUpon>FormDisposeRaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeRawSearch.resx">
+      <DependentUpon>FormDisposeRawSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIsPrinting.resx">
+      <DependentUpon>FormIsPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMultipleVAT6_5.resx">
+      <DependentUpon>FormMultipleVAT6_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueMultiple.resx">
+      <DependentUpon>FormIssueMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNestleSaleReturnDetail.resx">
+      <DependentUpon>FormNestleSaleReturnDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNestleSaleDetails.resx">
+      <DependentUpon>FormNestleSaleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNestlePurchase.resx">
+      <DependentUpon>FormNestlePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseMultiples.resx">
+      <DependentUpon>FormPurchaseMultiples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceiveMultiple.resx">
+      <DependentUpon>FormReceiveMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErrorMessage.resx">
+      <DependentUpon>FormErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReleaseNotesDetails.resx">
+      <DependentUpon>FormReleaseNotesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseImportSMC.resx">
+      <DependentUpon>FormPurchaseImportSMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportBombay.resx">
+      <DependentUpon>FormSaleImportBombay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleNestle.resx">
+      <DependentUpon>FormSaleNestle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportBTSL.resx">
+      <DependentUpon>FormSaleImportBTSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportIntertek.resx">
+      <DependentUpon>FormSaleImportIntertek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageShow.resx">
+      <DependentUpon>FormMessageShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient6_3Search.resx">
+      <DependentUpon>FormClient6_3Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductTransfer.resx">
+      <DependentUpon>FormProductTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductTransferSearch.resx">
+      <DependentUpon>FormProductTransferSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationComp.resx">
+      <DependentUpon>IntegrationComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\BSL\FormPurchaseImportBSL .resx">
+      <DependentUpon>FormPurchaseImportBSL .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormPriceDeclarationBata.resx">
+      <DependentUpon>FormPriceDeclarationBata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormTollissueGatePassNoSearch.resx">
+      <DependentUpon>FormTollissueGatePassNoSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormTollissueImportBata.resx">
+      <DependentUpon>FormTollissueImportBata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormTransferIssueDataTransfer.resx">
+      <DependentUpon>FormTransferIssueDataTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormDataTransfer.resx">
+      <DependentUpon>FormDataTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Berger\FormPReceiveImportBerger.resx">
+      <DependentUpon>FormPReceiveImportBerger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Berger\FormSaleImportBerger.resx">
+      <DependentUpon>FormSaleImportBerger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Berger\FormTransferIssueImportBerger.resx">
+      <DependentUpon>FormTransferIssueImportBerger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bollore\FormSaleImportBollore.resx">
+      <DependentUpon>FormSaleImportBollore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\BritishCouncil\FormSaleImportBC.resx">
+      <DependentUpon>FormSaleImportBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\CPB\FormSaleDataCheckMiddleware.resx">
+      <DependentUpon>FormSaleDataCheckMiddleware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\DBH\FormPurchaseImportDBH.resx">
+      <DependentUpon>FormPurchaseImportDBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\DBH\FormSaleImportDBH.resx">
+      <DependentUpon>FormSaleImportDBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\DBH\FormSaleImportDBH_AutoPrint.resx">
+      <DependentUpon>FormSaleImportDBH_AutoPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Decathlon\FormPurchaseImportDecathlon.resx">
+      <DependentUpon>FormPurchaseImportDecathlon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Decathlon\FormSaleImportDecathlon.resx">
+      <DependentUpon>FormSaleImportDecathlon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\DHL\FormSaleImportDHLAirport.resx">
+      <DependentUpon>FormSaleImportDHLAirport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\EON\FormPurchaseImportEON.resx">
+      <DependentUpon>FormPurchaseImportEON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\EON\FormPReceiveImportEON.resx">
+      <DependentUpon>FormPReceiveImportEON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\EON\FormPIssueImportEON.resx">
+      <DependentUpon>FormPIssueImportEON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\EON\FormSaleImportEON.resx">
+      <DependentUpon>FormSaleImportEON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\EON\FormTransferIssueImportEON.resx">
+      <DependentUpon>FormTransferIssueImportEON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Ernst\FormSaleImportErnst.resx">
+      <DependentUpon>FormSaleImportErnst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Japha\FormSaleImportJapha.resx">
+      <DependentUpon>FormSaleImportJapha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Link3\FormSaleImportLink3.resx">
+      <DependentUpon>FormSaleImportLink3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\MARICO\FormSaleImportmMarico.resx">
+      <DependentUpon>FormSaleImportmMarico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\NBR\FormNBRAPI.resx">
+      <DependentUpon>FormNBRAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\NESTLE\FormPurchaseReturnsImportNESTLE.resx">
+      <DependentUpon>FormPurchaseReturnsImportNESTLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\NESTLE\FormPurchaseImportNESTLE.resx">
+      <DependentUpon>FormPurchaseImportNESTLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\NESTLE\FormSaleCNImportNESTLE.resx">
+      <DependentUpon>FormSaleCNImportNESTLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\NESTLE\FormSaleImportNESTLE.resx">
+      <DependentUpon>FormSaleImportNESTLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormDetails.resx">
+      <DependentUpon>FormDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormReceiveImportNourish.resx">
+      <DependentUpon>FormReceiveImportNourish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormIssueImportNourish.resx">
+      <DependentUpon>FormIssueImportNourish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormPurchaseImportNourish.resx">
+      <DependentUpon>FormPurchaseImportNourish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormTransferImportNourish.resx">
+      <DependentUpon>FormTransferImportNourish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Nourish\FormSaleImportNourish.resx">
+      <DependentUpon>FormSaleImportNourish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ShumiHotCake\FormSaleImportShumiHotCake.resx">
+      <DependentUpon>FormSaleImportShumiHotCake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\SMC\FormSaleImportSMC.resx">
+      <DependentUpon>FormSaleImportSMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportSQR.resx">
+      <DependentUpon>FormSaleImportSQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesInvoiceExpSearch.resx">
+      <DependentUpon>FormSalesInvoiceExpSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesInvoiceExp.resx">
+      <DependentUpon>FormSalesInvoiceExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHsCode.resx">
+      <DependentUpon>FormHsCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHSCodeSearch.resx">
+      <DependentUpon>FormHSCodeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginBranch.resx">
+      <DependentUpon>FormLoginBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportKCCL.resx">
+      <DependentUpon>FormSaleImportKCCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportKCL.resx">
+      <DependentUpon>FormSaleImportKCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImportDHL.resx">
+      <DependentUpon>FormSaleImportDHL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleImport.resx">
+      <DependentUpon>FormSaleImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductSearch.resx">
+      <DependentUpon>FormProductSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleTempProcess.resx">
+      <DependentUpon>FormSaleTempProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerDiscount.resx">
+      <DependentUpon>FormCustomerDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReleaseNotes.resx">
+      <DependentUpon>FormReleaseNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferImportSQR.resx">
+      <DependentUpon>FormTransferImportSQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserMenuRolls.resx">
+      <DependentUpon>FormUserMenuRolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserMenuAllRolls.resx">
+      <DependentUpon>FormUserMenuAllRolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTDSs.resx">
+      <DependentUpon>FormTDSs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerDiscountSearch.resx">
+      <DependentUpon>FormCustomerDiscountSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTDSsSearch.resx">
+      <DependentUpon>FormTDSsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormToll6_3Invoice.resx">
+      <DependentUpon>FormToll6_3Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormToll6_3InvoiceSearch.resx">
+      <DependentUpon>FormToll6_3InvoiceSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferImportKCCL.resx">
+      <DependentUpon>FormTransferImportKCCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomsHouse.resx">
+      <DependentUpon>FormCustomsHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomsHouseSearch.resx">
+      <DependentUpon>FormCustomsHouseSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBranchProfiles.resx">
+      <DependentUpon>FormBranchProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12Law.resx">
+      <DependentUpon>Form12Law.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBranchName.resx">
+      <DependentUpon>FormBranchName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBranchReport.resx">
+      <DependentUpon>FormBranchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDBAccess.resx">
+      <DependentUpon>FormDBAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterImport.resx">
+      <DependentUpon>FormMasterImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSync.resx">
+      <DependentUpon>FormSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShiftSearch.resx">
+      <DependentUpon>FormShiftSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShifts.resx">
+      <DependentUpon>FormShifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckStock.resx">
+      <DependentUpon>FormCheckStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerAddressFinder.resx">
+      <DependentUpon>FormCustomerAddressFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMultipleSearch.resx">
+      <DependentUpon>FormMultipleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleExport.resx">
+      <DependentUpon>FormSaleExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleExportSearch.resx">
+      <DependentUpon>FormSaleExportSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleOld.resx">
+      <DependentUpon>FormSaleOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductFinder.resx">
+      <DependentUpon>FormProductFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdjustment.resx">
+      <DependentUpon>FormAdjustment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdjustmentName.resx">
+      <DependentUpon>FormAdjustmentName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdjustmentNameSearch.resx">
+      <DependentUpon>FormAdjustmentNameSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdjustmentSearch.resx">
+      <DependentUpon>FormAdjustmentSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanderolProduct.resx">
+      <DependentUpon>FormBanderolProduct.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanderolProductSearch.resx">
+      <DependentUpon>FormBanderolProductSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanderolReceive.resx">
+      <DependentUpon>FormBanderolReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBankInformationSearch.resx">
+      <DependentUpon>FormBankInformationSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBureauSale.resx">
+      <DependentUpon>FormBureauSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCode.resx">
+      <DependentUpon>FormCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigChange.resx">
+      <DependentUpon>FormConfigChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCurrency.resx">
+      <DependentUpon>FormCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCurrencyConversion.resx">
+      <DependentUpon>FormCurrencyConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCurrencyConversionSearch.resx">
+      <DependentUpon>FormCurrencyConversionSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCurrencySearch.resx">
+      <DependentUpon>FormCurrencySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerFinder.resx">
+      <DependentUpon>FormCustomerFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDBLogin.resx">
+      <DependentUpon>FormDBLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeposit.resx">
+      <DependentUpon>FormDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepositReverse.resx">
+      <DependentUpon>FormDepositReverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisposeFinishSearch.resx">
+      <DependentUpon>FormDisposeFinishSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDutyDrawBack.resx">
+      <DependentUpon>FormDutyDrawBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDutyDrawBackSearch.resx">
+      <DependentUpon>FormDutyDrawBackSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiscalYear.resx">
+      <DependentUpon>FormFiscalYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImport.resx">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputValueChanges.resx">
+      <DependentUpon>FormInputValueChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDemand.resx">
+      <DependentUpon>FormDemand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDemandSearch.resx">
+      <DependentUpon>FormDemandSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMultipleVAT11.resx">
+      <DependentUpon>FormMultipleVAT11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPackaging.resx">
+      <DependentUpon>FormPackaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPackagingSearch.resx">
+      <DependentUpon>FormPackagingSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductSearchMultiple.resx">
+      <DependentUpon>FormProductSearchMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReverseAdjustment.resx">
+      <DependentUpon>FormReverseAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTracking.resx">
+      <DependentUpon>FormTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferIssue.resx">
+      <DependentUpon>FormTransferIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferIssueSearch.resx">
+      <DependentUpon>FormTransferIssueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferRaw.resx">
+      <DependentUpon>FormTransferRaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleInvoice.resx">
+      <DependentUpon>FormSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalePrint.resx">
+      <DependentUpon>FormSalePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleVAT20Multiple.resx">
+      <DependentUpon>FormSaleVAT20Multiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSDDepositSearch.resx">
+      <DependentUpon>FormSDDepositSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchUserLog.resx">
+      <DependentUpon>FormSearchUserLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanderolName.resx">
+      <DependentUpon>FormBanderolName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanderolNameSearch.resx">
+      <DependentUpon>FormBanderolNameSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuperInfo.resx">
+      <DependentUpon>FormSuperInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupperAdministrator.resx">
+      <DependentUpon>FormSupperAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTenderPrice.resx">
+      <DependentUpon>FormTenderPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTenderSearch.resx">
+      <DependentUpon>FormTenderSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferRawSearch.resx">
+      <DependentUpon>FormTransferRawSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferReceive.resx">
+      <DependentUpon>FormTransferReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferReceiveFromSearch.resx">
+      <DependentUpon>FormTransferReceiveFromSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferReceiveSearch.resx">
+      <DependentUpon>FormTransferReceiveSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUOMName.resx">
+      <DependentUpon>FormUOMName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUOMNameSearch.resx">
+      <DependentUpon>FormUOMNameSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUOMNew.resx">
+      <DependentUpon>FormUOMNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUOMSearch.resx">
+      <DependentUpon>FormUOMSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePurchaseDuty.resx">
+      <DependentUpon>FormUpdatePurchaseDuty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserBranchDetail.resx">
+      <DependentUpon>FormUserBranchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserGroup.resx">
+      <DependentUpon>FormUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserGroupSearch.resx">
+      <DependentUpon>FormUserGroupSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserRoll.resx">
+      <DependentUpon>FormUserRoll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBOM.resx">
+      <DependentUpon>FormBOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBOMSearch.resx">
+      <DependentUpon>FormBOMSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerGroupSearch.resx">
+      <DependentUpon>FormCustomerGroupSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerSearch.resx">
+      <DependentUpon>FormCustomerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepositSearch.resx">
+      <DependentUpon>FormDepositSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssue.resx">
+      <DependentUpon>FormIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueSearch.resx">
+      <DependentUpon>FormIssueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserPasswordChange.resx">
+      <DependentUpon>FormUserPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductCategorySearch.resx">
+      <DependentUpon>FormProductCategorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseSearch.resx">
+      <DependentUpon>FormPurchaseSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceive.resx">
+      <DependentUpon>FormReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceiveSearch.resx">
+      <DependentUpon>FormReceiveSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSale.resx">
+      <DependentUpon>FormSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleSearch.resx">
+      <DependentUpon>FormSaleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBankInformation.resx">
+      <DependentUpon>FormBankInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompanyProfile.resx">
+      <DependentUpon>FormCompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerGroup.resx">
+      <DependentUpon>FormCustomerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomer.resx">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductCategory.resx">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchase.resx">
+      <DependentUpon>FormPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserSearch.resx">
+      <DependentUpon>FormUserSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransactionHistorySearch.resx">
+      <DependentUpon>FormTransactionHistorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserCreate.resx">
+      <DependentUpon>FormUserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVAT7.resx">
+      <DependentUpon>FormVAT7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVAT7Search.resx">
+      <DependentUpon>FormVAT7Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVehicle.resx">
+      <DependentUpon>FormVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVehicleSearch.resx">
+      <DependentUpon>FormVehicleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendor.resx">
+      <DependentUpon>FormVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorGroup.resx">
+      <DependentUpon>FormVendorGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorGroupSearch.resx">
+      <DependentUpon>FormVendorGroupSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorSearch.resx">
+      <DependentUpon>FormVendorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBranchProfilesSearch.resx">
+      <DependentUpon>FormBranchProfilesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ACI\FormPurchaseImportACI .resx">
+      <DependentUpon>FormPurchaseImportACI .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ACI\FormPReceiveImportACI.resx">
+      <DependentUpon>FormPReceiveImportACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ACI\FormPIssueImportACI.resx">
+      <DependentUpon>FormPIssueImportACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ACI\FormTransferImportACI.resx">
+      <DependentUpon>FormTransferImportACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\ACI\FormSaleImportACI.resx">
+      <DependentUpon>FormSaleImportACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormTransferImportBata.resx">
+      <DependentUpon>FormTransferImportBata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Bata\FormSaleImportBata.resx">
+      <DependentUpon>FormSaleImportBata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\BCL\FormSaleImportBCL.resx">
+      <DependentUpon>FormSaleImportBCL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\GDIC\FormSaleImportGDIC.resx">
+      <DependentUpon>FormSaleImportGDIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\SMC\FormReceiveImportSMC.resx">
+      <DependentUpon>FormReceiveImportSMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\SMC\FormTransferImportSMC.resx">
+      <DependentUpon>FormTransferImportSMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Square\FormIssueImportSQR.resx">
+      <DependentUpon>FormIssueImportSQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Square\FormReceiveImportSQR.resx">
+      <DependentUpon>FormReceiveImportSQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\Square\FormPurchaseImportSQR.resx">
+      <DependentUpon>FormPurchaseImportSQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\SSDTech\FormSaleImportSSD.resx">
+      <DependentUpon>FormSaleImportSSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integration\TestProcess\FormSaleImportNewProc.resx">
+      <DependentUpon>FormSaleImportNewProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMainInterface.resx">
+      <DependentUpon>MDIMainInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReport6_3.resx">
+      <DependentUpon>FormReport6_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReport9_1Comp_Monthly.resx">
+      <DependentUpon>FormReport9_1Comp_Monthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReport9_1Comp.resx">
+      <DependentUpon>FormReport9_1Comp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReportSCBL_Production.resx">
+      <DependentUpon>FormReportSCBL_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReportSCBL.resx">
+      <DependentUpon>FormReportSCBL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormBranchStockMovement.resx">
+      <DependentUpon>FormBranchStockMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptBankChannel.resx">
+      <DependentUpon>FormRptBankChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCurrencyConversion.resx">
+      <DependentUpon>FormRptCurrencyConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptDepositTDS.resx">
+      <DependentUpon>FormRptDepositTDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormQuaziStock.resx">
+      <DependentUpon>FormQuaziStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCentral.resx">
+      <DependentUpon>FormRptCentral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptTollStock.resx">
+      <DependentUpon>FormRptTollStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptTransferReceiveInformation.resx">
+      <DependentUpon>FormRptTransferReceiveInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptTransferIssueInformation.resx">
+      <DependentUpon>FormRptTransferIssueInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptSaleReceive.resx">
+      <DependentUpon>FormRptSaleReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormMIS19.resx">
+      <DependentUpon>FormMIS19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptBandrolProductInformation.resx">
+      <DependentUpon>FormRptBandrolProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptForm5.resx">
+      <DependentUpon>FormRptForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptAdjustment.resx">
+      <DependentUpon>FormRptAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptBatchTracking.resx">
+      <DependentUpon>FormRptBatchTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptFinishProductInformation.resx">
+      <DependentUpon>FormRptFinishProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptForm3.resx">
+      <DependentUpon>FormRptForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptForm4.resx">
+      <DependentUpon>FormRptForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptInputOutputCoEfficientReport.resx">
+      <DependentUpon>FormRptInputOutputCoEfficientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCurrentVAT18.resx">
+      <DependentUpon>FormRptCurrentVAT18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptPurchaseWithLC.resx">
+      <DependentUpon>FormRptPurchaseWithLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptSD.resx">
+      <DependentUpon>FormRptSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCustomerGroup.resx">
+      <DependentUpon>FormRptCustomerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptDispose.resx">
+      <DependentUpon>FormRptDispose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptMISVAT16.resx">
+      <DependentUpon>FormRptMISVAT16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptMISVAT17.resx">
+      <DependentUpon>FormRptMISVAT17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptMISVAT18.resx">
+      <DependentUpon>FormRptMISVAT18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptBankInformation.resx">
+      <DependentUpon>FormRptBankInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCreditNote.resx">
+      <DependentUpon>FormRptCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptCustomerInformation.resx">
+      <DependentUpon>FormRptCustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptDebitNote.resx">
+      <DependentUpon>FormRptDebitNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptDepositTransaction.resx">
+      <DependentUpon>FormRptDepositTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptIssueInformation.resx">
+      <DependentUpon>FormRptIssueInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptProductCategoryInformation.resx">
+      <DependentUpon>FormRptProductCategoryInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptProductInformation.resx">
+      <DependentUpon>FormRptProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptProductType.resx">
+      <DependentUpon>FormRptProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptPurchaseInformation.resx">
+      <DependentUpon>FormRptPurchaseInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptReceiveInformation.resx">
+      <DependentUpon>FormRptReceiveInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptSalesInformation.resx">
+      <DependentUpon>FormRptSalesInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptSerialStockInformation.resx">
+      <DependentUpon>FormRptSerialStockInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptStock.resx">
+      <DependentUpon>FormRptStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT11.resx">
+      <DependentUpon>FormRptVAT11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT16Toll.resx">
+      <DependentUpon>FormRptVAT16Toll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT16.resx">
+      <DependentUpon>FormRptVAT16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT17Toll.resx">
+      <DependentUpon>FormRptVAT17Toll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT17.resx">
+      <DependentUpon>FormRptVAT17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT18.resx">
+      <DependentUpon>FormRptVAT18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT18Breakdown.resx">
+      <DependentUpon>FormRptVAT18Breakdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT24.resx">
+      <DependentUpon>FormRptVAT24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT6_5.resx">
+      <DependentUpon>FormRptVAT6_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVATKa.resx">
+      <DependentUpon>FormRptVATKa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVDS.resx">
+      <DependentUpon>FormRptVDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVDS12.resx">
+      <DependentUpon>FormRptVDS12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVehicle.resx">
+      <DependentUpon>FormRptVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVendorGroup.resx">
+      <DependentUpon>FormRptVendorGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVendorInformation.resx">
+      <DependentUpon>FormRptVendorInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptVAT1.resx">
+      <DependentUpon>FormRptVAT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormSaleSummary.resx">
+      <DependentUpon>FormSaleSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormSubForm.resx">
+      <DependentUpon>FormSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormVAT19.resx">
+      <DependentUpon>FormVAT19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSDDeposit.resx">
+      <DependentUpon>FormSDDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormRptReconsciliation.resx">
+      <DependentUpon>FormRptReconsciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormVAT6_10.resx">
+      <DependentUpon>FormVAT6_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\FormVAT9_1.resx">
+      <DependentUpon>FormVAT9_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSCBLMIS.resx">
+      <DependentUpon>FormSCBLMIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\DataSources\VATViewModel.DTOs.ProductVM.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\CommonWCF\CommonWCF.wsdl" />
+    <None Include="Service References\CommonWCF\CommonWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonWCF\CommonWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonWCF\CommonWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF.wsdl" />
+    <None Include="Service References\SaleWCF\SaleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VechicleWCF\VehicleWCF.wsdl" />
+    <None Include="Service References\VechicleWCF\VehicleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VechicleWCF\VehicleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.png" />
+    <None Include="Resources\adjustmentHead.png" />
+    <None Include="Resources\Adjustment.png" />
+    <None Include="Resources\administrator.png" />
+    <Content Include="dev.xml" />
+    <Content Include="Resources\Back.jpg" />
+    <Content Include="Resources\Calendar.png" />
+    <None Include="Resources\code.png" />
+    <None Include="Resources\convert.png" />
+    <Content Include="Resources\currency.png" />
+    <Content Include="Resources\currency_converter.png" />
+    <Content Include="Resources\CustomerGroup.png" />
+    <None Include="Resources\Post.png" />
+    <None Include="Resources\PriceTender.png" />
+    <None Include="Resources\PriceService.png" />
+    <None Include="Resources\database_down.ico" />
+    <None Include="Resources\database_up.ico" />
+    <None Include="Resources\database_process.ico" />
+    <None Include="Resources\form-4.png" />
+    <Content Include="Resources\database_process.png" />
+    <Content Include="Resources\DDB.png" />
+    <None Include="Resources\First.png" />
+    <Content Include="Resources\form-5.png" />
+    <Content Include="Resources\form4.png" />
+    <Content Include="Resources\form5.png" />
+    <Content Include="Resources\GreenFooter.png" />
+    <None Include="Resources\LoginUser.png" />
+    <None Include="Resources\LoginPassword.png" />
+    <None Include="Resources\more.png" />
+    <Content Include="Resources\Horigental.png" />
+    <None Include="Resources\Last.png" />
+    <Content Include="Resources\login.jpg" />
+    <Content Include="Resources\Login.png" />
+    <Content Include="Resources\mesurement.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\Next-1.png" />
+    <None Include="Resources\Previous.png" />
+    <Content Include="Resources\Print.png" />
+    <Content Include="Resources\productName.png" />
+    <Content Include="Resources\Referesh.png" />
+    <Content Include="Resources\ReleaseNotepng.png" />
+    <Content Include="Resources\Return.png" />
+    <None Include="Resources\Save.png" />
+    <Content Include="Resources\search.png" />
+    <None Include="Resources\vat_26.png" />
+    <None Include="Resources\vat_27.png" />
+    <None Include="Resources\ShampoaLogin.jpg" />
+    <None Include="Resources\ShampanLogo.png" />
+    <Content Include="Resources\Submit.png" />
+    <Content Include="Resources\Trading.png" />
+    <None Include="Resources\UserLog.png" />
+    <Content Include="Resources\Upload.png" />
+    <Content Include="Resources\VAT11.png" />
+    <None Include="Resources\VAT7.png" />
+    <None Include="Service References\SaleWCF\SaleWCF.disco" />
+    <None Include="Service References\SaleWCF\configuration91.svcinfo" />
+    <None Include="Service References\SaleWCF\configuration.svcinfo" />
+    <None Include="Service References\SaleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CommonWCF\CommonWCF.disco" />
+    <None Include="Service References\CommonWCF\configuration91.svcinfo" />
+    <None Include="Service References\CommonWCF\configuration.svcinfo" />
+    <None Include="Service References\CommonWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\VechicleWCF\VehicleWCF.disco" />
+    <None Include="Service References\VechicleWCF\configuration91.svcinfo" />
+    <None Include="Service References\VechicleWCF\configuration.svcinfo" />
+    <None Include="Service References\VechicleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="VAT Icon 1.ico" />
+    <Content Include="VATIcon.ico" />
+    <Content Include="Resources\Sale.png" />
+    <None Include="Resources\TransactionHistory.png" />
+    <None Include="Resources\Setup.png" />
+    <None Include="Resources\Issue.png" />
+    <None Include="Resources\Load.png" />
+    <None Include="Resources\Print.gif" />
+    <None Include="Resources\ShampanVAT.jpg" />
+    <None Include="Resources\OHConsumption.png" />
+    <None Include="Resources\ProductType.png" />
+    <None Include="Resources\VAT17.png" />
+    <None Include="Resources\VAT16.png" />
+    <None Include="Resources\VAT19.png" />
+    <None Include="Resources\VAT18.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\Service.png" />
+    <None Include="Resources\OverHead.png" />
+    <None Include="Resources\UserRoll.png" />
+    <None Include="Resources\Purchase.png" />
+    <None Include="Resources\Receive.png" />
+    <None Include="Resources\PasswordChange.png" />
+    <None Include="Resources\VendorGroup.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Vendor.png" />
+    <None Include="Resources\ProductCategory.png" />
+    <None Include="Resources\Stock.png" />
+    <None Include="Resources\Vehicle.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\Add-New.jpg" />
+    <None Include="Resources\Deposit.png" />
+    <None Include="Resources\Customer.png" />
+    <None Include="Resources\Bank.png" />
+    <None Include="Resources\Company.png" />
+    <None Include="Resources\Debit.png" />
+    <None Include="Resources\Credit.png" />
+    <None Include="Resources\BOM.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SymphonySofttech.Reports\SymphonySofttech.Reports.csproj">
+      <Project>{4c0e2235-ec7b-4a73-9cd8-522367460923}</Project>
+      <Name>SymphonySofttech.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATDesktop.Repo\VATDesktop.Repo.csproj">
+      <Project>{08c3c12b-bc99-463c-b460-10ee04fe91f8}</Project>
+      <Name>VATDesktop.Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATLibrary\VATServer.Library\VATServer.Library.csproj">
+      <Project>{C01637E0-783E-4B1B-9701-45D1700ED399}</Project>
+      <Name>VATServer.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATServer.Interface\VATServer.Interface.csproj">
+      <Project>{31A02E04-EA0B-4AA6-BAC1-9EFCD3F9259F}</Project>
+      <Name>VATServer.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATServer.License\VATServer.License.csproj">
+      <Project>{b407547c-161f-4eba-b643-625fa2bbe5a1}</Project>
+      <Name>VATServer.License</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATServer.Ordinary\VATServer.Ordinary.csproj">
+      <Project>{5a796eb3-bd98-4d23-8d78-aceb4969c2e9}</Project>
+      <Name>VATServer.Ordinary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATViewModel\VATViewModel.csproj">
+      <Project>{59C2521F-549A-4906-A3E4-ADDB9BE584BA}</Project>
+      <Name>VATViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VMSAPI\VMSAPI.csproj">
+      <Project>{3cac1a5e-316a-4674-9427-94492efb5491}</Project>
+      <Name>VMSAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ReportPreview\CustomReports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CommonWCF\" />
+    <WCFMetadataStorage Include="Service References\SaleWCF\" />
+    <WCFMetadataStorage Include="Service References\VechicleWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,149 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using VATViewModel.DTOs;
+using VATDesktop.Repo.CustomerGroupWCF;
+using VATServer.Interface;
+using Newtonsoft.Json;
+
+namespace VATDesktop.Repo
+{
+    public class CustomerGroupRepo : ICustomerGroup
+    {
+
+        CustomerGroupWCFClient wcf = new CustomerGroupWCFClient();
+
+        public string[] Delete(CustomerGroupVM vm, string[] ids, SqlConnection VcurrConn = null, SqlTransaction Vtransaction = null, SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string vmwcf = JsonConvert.SerializeObject(vm);
+                string idswcf = JsonConvert.SerializeObject(ids);
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.Delete(vmwcf,idswcf, connVMwcf);
+
+                string[] results = JsonConvert.DeserializeObject<string[]>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public List<CustomerGroupVM> DropDown(SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.DropDown(connVMwcf);
+
+                List<CustomerGroupVM> results = JsonConvert.DeserializeObject<List<CustomerGroupVM>>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public List<CustomerGroupVM> DropDownAll(SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.DropDownAll(connVMwcf);
+
+                List<CustomerGroupVM> results = JsonConvert.DeserializeObject<List<CustomerGroupVM>>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public string[] InsertToCustomerGroupNew(CustomerGroupVM vm, SysDBInfoVMTemp connVM = null, SqlConnection VcurrConn = null, SqlTransaction Vtransaction = null)
+        {
+            try
+            {
+                string vmwcf = JsonConvert.SerializeObject(vm);
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.InsertToCustomerGroupNew(vmwcf, connVMwcf);
+
+                string[] results = JsonConvert.DeserializeObject<string[]>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public string[] UpdateToCustomerGroupNew(CustomerGroupVM vm, SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string vmwcf = JsonConvert.SerializeObject(vm);
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.UpdateToCustomerGroupNew(vmwcf, connVMwcf);
+
+                string[] results = JsonConvert.DeserializeObject<string[]>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public List<CustomerGroupVM> SelectAllList(int Id = 0, string[] conditionFields = null, string[] conditionValues = null, SqlConnection VcurrConn = null, SqlTransaction Vtransaction = null, SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string conditionFieldswcf = JsonConvert.SerializeObject(conditionFields);
+                string conditionValueswcf = JsonConvert.SerializeObject(conditionValues);
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.SelectAllList(Id, conditionFieldswcf, conditionValueswcf,connVMwcf);
+
+                List<CustomerGroupVM> results = JsonConvert.DeserializeObject<List<CustomerGroupVM>>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public DataTable SelectAll(int Id = 0, string[] conditionFields = null, string[] conditionValues = null, SqlConnection VcurrConn = null, SqlTransaction Vtransaction = null, bool Dt = true, SysDBInfoVMTemp connVM = null)
+        {
+            try
+            {
+                string conditionFieldswcf = JsonConvert.SerializeObject(conditionFields);
+                string conditionValueswcf = JsonConvert.SerializeObject(conditionValues);
+                string connVMwcf = JsonConvert.SerializeObject(connVM);
+
+                string table = wcf.SelectAll(Id, conditionFieldswcf, conditionValueswcf,Dt, connVMwcf);
+
+                DataTable results = JsonConvert.DeserializeObject<DataTable>(table);
+
+                return results;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+    }
+}

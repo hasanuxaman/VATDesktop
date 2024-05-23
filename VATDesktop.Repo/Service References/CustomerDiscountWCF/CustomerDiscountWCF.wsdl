@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomerDiscountWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CustomerDiscountWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/CustomerDiscountWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerDiscountWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_InsertToCustomerDiscountNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerDiscountNew" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_InsertToCustomerDiscountNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerDiscountNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_UpdateToCustomerDiscountNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerDiscountNew" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_UpdateToCustomerDiscountNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToCustomerDiscountNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SearchCustomerDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerDiscount" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_SearchCustomerDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCustomerDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_DeleteCustomerDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerDiscount" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerDiscountWCF_DeleteCustomerDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerDiscountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerDiscountWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/DoWork" message="tns:ICustomerDiscountWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/DoWorkResponse" message="tns:ICustomerDiscountWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SelectAll" message="tns:ICustomerDiscountWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SelectAllResponse" message="tns:ICustomerDiscountWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/Delete" message="tns:ICustomerDiscountWCF_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/DeleteResponse" message="tns:ICustomerDiscountWCF_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerDiscountNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/InsertToCustomerDiscountNew" message="tns:ICustomerDiscountWCF_InsertToCustomerDiscountNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/InsertToCustomerDiscountNewResponse" message="tns:ICustomerDiscountWCF_InsertToCustomerDiscountNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SelectAllList" message="tns:ICustomerDiscountWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SelectAllListResponse" message="tns:ICustomerDiscountWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerDiscountNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/UpdateToCustomerDiscountNew" message="tns:ICustomerDiscountWCF_UpdateToCustomerDiscountNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/UpdateToCustomerDiscountNewResponse" message="tns:ICustomerDiscountWCF_UpdateToCustomerDiscountNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SearchCustomerDiscount" message="tns:ICustomerDiscountWCF_SearchCustomerDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/SearchCustomerDiscountResponse" message="tns:ICustomerDiscountWCF_SearchCustomerDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/DeleteCustomerDiscount" message="tns:ICustomerDiscountWCF_DeleteCustomerDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerDiscountWCF/DeleteCustomerDiscountResponse" message="tns:ICustomerDiscountWCF_DeleteCustomerDiscount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomerDiscountWCF" type="tns:ICustomerDiscountWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerDiscountNew">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/InsertToCustomerDiscountNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToCustomerDiscountNew">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/UpdateToCustomerDiscountNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCustomerDiscount">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/SearchCustomerDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerDiscount">
+      <soap:operation soapAction="http://tempuri.org/ICustomerDiscountWCF/DeleteCustomerDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerDiscountWCF">
+    <wsdl:port name="BasicHttpBinding_ICustomerDiscountWCF" binding="tns:BasicHttpBinding_ICustomerDiscountWCF">
+      <soap:address location="http://localhost:50568/WCF/CustomerDiscountWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

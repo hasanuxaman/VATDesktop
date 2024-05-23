@@ -1,0 +1,1847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08C3C12B-BC99-463C-B460-10EE04FE91F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VATDesktop.Repo</RootNamespace>
+    <AssemblyName>VATDesktop.Repo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdjustmentHistoryRepo.cs" />
+    <Compile Include="AdjustmentRepo.cs" />
+    <Compile Include="BanderolProductsRepo.cs" />
+    <Compile Include="BanderolsRepo.cs" />
+    <Compile Include="BankInformationRepo.cs" />
+    <Compile Include="BOMRepo.cs" />
+    <Compile Include="BranchProfileRepo.cs" />
+    <Compile Include="BranchRepo.cs" />
+    <Compile Include="BureauSaleRepo.cs" />
+    <Compile Include="ChartRepo.cs" />
+    <Compile Include="CodeRepo.cs" />
+    <Compile Include="CommonImportRepo.cs" />
+    <Compile Include="CommonRepo.cs" />
+    <Compile Include="CompanyInformationRepo.cs" />
+    <Compile Include="CompanyprofileRepo.cs" />
+    <Compile Include="CurrenciesRepo.cs" />
+    <Compile Include="CurrencyConversionRepo.cs" />
+    <Compile Include="CustomerDiscountRepo.cs" />
+    <Compile Include="CustomerGroupRepo.cs" />
+    <Compile Include="CustomerRepo.cs" />
+    <Compile Include="DemandRepo.cs" />
+    <Compile Include="DepositRepo.cs" />
+    <Compile Include="DepositTDSRepo.cs" />
+    <Compile Include="DisposeRepo.cs" />
+    <Compile Include="DutyDrawBackRepo.cs" />
+    <Compile Include="FiscalYearRepo.cs" />
+    <Compile Include="CPCDetailsRepo.cs" />
+    <Compile Include="HSCodeRepo.cs" />
+    <Compile Include="ImportRepo.cs" />
+    <Compile Include="IssueBOMRepo.cs" />
+    <Compile Include="IssueRepo.cs" />
+    <Compile Include="PackagingRepo.cs" />
+    <Compile Include="PrefixRepo.cs" />
+    <Compile Include="ProductCategoryRepo.cs" />
+    <Compile Include="ProductRepo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseRepo.cs" />
+    <Compile Include="ReceiveRepo.cs" />
+    <Compile Include="ReportDSRepo.cs" />
+    <Compile Include="SaleExportRepo.cs" />
+    <Compile Include="SaleRepo.cs" />
+    <Compile Include="SalesInvoiceExpRepo.cs" />
+    <Compile Include="SDDepositRepo.cs" />
+    <Compile Include="Service References\AdjustmentHistoryWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdjustmentWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BanderolProductsWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BanderolsWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BankInformationWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BOMWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BranchProfileWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BranchWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BureauSaleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CodeWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommonImportWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommonWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CompanyInformationWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CompanyprofileWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CurrenciesWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CurrencyConversionWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerDiscountWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerGroupWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustomerWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DemandWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DepositTDSWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DepositWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DisposeWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DutyDrawBackWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FiscalYearWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HSCodeWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImportWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IssueBOMWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IssueWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PackagingWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PrefixWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductCategoryWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PurchaseWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReceiveWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReportWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SaleExportWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesInvoiceExpWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SaleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SDDepositWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SettingRoleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SettingWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SetupWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShiftWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TDSsWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TenderWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Toll6_3InvoiceWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TrackingWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransferIssueWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransferReceiveWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UOMNameWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UOMWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserBranchDetailWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserInformationWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserMenuAllRollWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserMenuRollsWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VDSWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VehicleWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VendorGroupWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VendorWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SettingRepo.cs" />
+    <Compile Include="SettingRoleRepo.cs" />
+    <Compile Include="SetupRepo.cs" />
+    <Compile Include="ShiftRepo.cs" />
+    <Compile Include="TDSsRepo.cs" />
+    <Compile Include="TenderRepo.cs" />
+    <Compile Include="Toll6_3InvoiceRepo.cs" />
+    <Compile Include="TrackingRepo.cs" />
+    <Compile Include="TransferIssueRepo.cs" />
+    <Compile Include="TransferReceiveRepo.cs" />
+    <Compile Include="UOMNameRepo.cs" />
+    <Compile Include="UOMRepo.cs" />
+    <Compile Include="UserBranchDetailRepo.cs" />
+    <Compile Include="UserGroupRepo.cs" />
+    <Compile Include="UserInformationRepo.cs" />
+    <Compile Include="UserMenuAllRollRepo.cs" />
+    <Compile Include="UserMenuRollsRepo.cs" />
+    <Compile Include="VDSRepo.cs" />
+    <Compile Include="VehicleRepo.cs" />
+    <Compile Include="VendorGroupRepo.cs" />
+    <Compile Include="VendorRepo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VATLibrary\VATServer.Library\VATServer.Library.csproj">
+      <Project>{c01637e0-783e-4b1b-9701-45d1700ed399}</Project>
+      <Name>VATServer.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATServer.Interface\VATServer.Interface.csproj">
+      <Project>{31A02E04-EA0B-4AA6-BAC1-9EFCD3F9259F}</Project>
+      <Name>VATServer.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATServer.Ordinary\VATServer.Ordinary.csproj">
+      <Project>{5a796eb3-bd98-4d23-8d78-aceb4969c2e9}</Project>
+      <Name>VATServer.Ordinary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VATViewModel\VATViewModel.csproj">
+      <Project>{59c2521f-549a-4906-a3e4-addb9be584ba}</Project>
+      <Name>VATViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustmentHistoryWCF\AdjustmentHistoryWCF.wsdl" />
+    <None Include="Service References\AdjustmentHistoryWCF\AdjustmentHistoryWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustmentHistoryWCF\AdjustmentHistoryWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustmentWCF\AdjustmentWCF.wsdl" />
+    <None Include="Service References\AdjustmentWCF\AdjustmentWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdjustmentWCF\AdjustmentWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanderolProductsWCF\BanderolProductsWCF.wsdl" />
+    <None Include="Service References\BanderolProductsWCF\BanderolProductsWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanderolProductsWCF\BanderolProductsWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanderolsWCF\BanderolsWCF.wsdl" />
+    <None Include="Service References\BanderolsWCF\BanderolsWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BanderolsWCF\BanderolsWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankInformationWCF\BankInformationWCF.wsdl" />
+    <None Include="Service References\BankInformationWCF\BankInformationWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankInformationWCF\BankInformationWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BOMWCF\BOMWCF.wsdl" />
+    <None Include="Service References\BOMWCF\BOMWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BOMWCF\BOMWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BranchProfileWCF\BranchProfileWCF.wsdl" />
+    <None Include="Service References\BranchProfileWCF\BranchProfileWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BranchProfileWCF\BranchProfileWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BranchWCF\BranchWCF.wsdl" />
+    <None Include="Service References\BranchWCF\BranchWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BranchWCF\BranchWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BureauSaleWCF\BureauSaleWCF.wsdl" />
+    <None Include="Service References\BureauSaleWCF\BureauSaleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BureauSaleWCF\BureauSaleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CodeWCF\CodeWCF.wsdl" />
+    <None Include="Service References\CodeWCF\CodeWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CodeWCF\CodeWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonImportWCF\CommonImportWCF.wsdl" />
+    <None Include="Service References\CommonImportWCF\CommonImportWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonImportWCF\CommonImportWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonWCF\CommonWCF.wsdl" />
+    <None Include="Service References\CommonWCF\CommonWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommonWCF\CommonWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyInformationWCF\CompanyInformationWCF.wsdl" />
+    <None Include="Service References\CompanyInformationWCF\CompanyInformationWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyInformationWCF\CompanyInformationWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyprofileWCF\CompanyprofileWCF.wsdl" />
+    <None Include="Service References\CompanyprofileWCF\CompanyprofileWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompanyprofileWCF\CompanyprofileWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrenciesWCF\CurrenciesWCF.wsdl" />
+    <None Include="Service References\CurrenciesWCF\CurrenciesWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrenciesWCF\CurrenciesWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrencyConversionWCF\CurrencyConversionWCF.wsdl" />
+    <None Include="Service References\CurrencyConversionWCF\CurrencyConversionWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrencyConversionWCF\CurrencyConversionWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerDiscountWCF\CustomerDiscountWCF.wsdl" />
+    <None Include="Service References\CustomerDiscountWCF\CustomerDiscountWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerDiscountWCF\CustomerDiscountWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerGroupWCF\CustomerGroupWCF.wsdl" />
+    <None Include="Service References\CustomerGroupWCF\CustomerGroupWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerGroupWCF\CustomerGroupWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerWCF\CustomerWCF.wsdl" />
+    <None Include="Service References\CustomerWCF\CustomerWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerWCF\CustomerWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DemandWCF\DemandWCF.wsdl" />
+    <None Include="Service References\DemandWCF\DemandWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DemandWCF\DemandWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DepositTDSWCF\DepositTDSWCF.wsdl" />
+    <None Include="Service References\DepositTDSWCF\DepositTDSWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DepositTDSWCF\DepositTDSWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DepositWCF\DepositWCF.wsdl" />
+    <None Include="Service References\DepositWCF\DepositWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DepositWCF\DepositWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DisposeWCF\DisposeWCF.wsdl" />
+    <None Include="Service References\DisposeWCF\DisposeWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DisposeWCF\DisposeWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DutyDrawBackWCF\DutyDrawBackWCF.wsdl" />
+    <None Include="Service References\DutyDrawBackWCF\DutyDrawBackWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DutyDrawBackWCF\DutyDrawBackWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FiscalYearWCF\FiscalYearWCF.wsdl" />
+    <None Include="Service References\FiscalYearWCF\FiscalYearWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FiscalYearWCF\FiscalYearWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FiscalYearWCF\VATDesktop.Repo.FiscalYearWCF.FiscalYearUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FiscalYearWCF\VATDesktop.Repo.FiscalYearWCF.FiscalYearUpdateResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HSCodeWCF\HSCodeWCF.wsdl" />
+    <None Include="Service References\HSCodeWCF\HSCodeWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HSCodeWCF\HSCodeWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImportWCF\ImportWCF.wsdl" />
+    <None Include="Service References\ImportWCF\ImportWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImportWCF\ImportWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IssueBOMWCF\IssueBOMWCF.wsdl" />
+    <None Include="Service References\IssueBOMWCF\IssueBOMWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IssueBOMWCF\IssueBOMWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IssueWCF\IssueWCF.wsdl" />
+    <None Include="Service References\IssueWCF\IssueWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IssueWCF\IssueWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PackagingWCF\PackagingWCF.wsdl" />
+    <None Include="Service References\PackagingWCF\PackagingWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PackagingWCF\PackagingWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefixWCF\PrefixWCF.wsdl" />
+    <None Include="Service References\PrefixWCF\PrefixWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefixWCF\PrefixWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCategoryWCF\ProductCategoryWCF.wsdl" />
+    <None Include="Service References\ProductCategoryWCF\ProductCategoryWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCategoryWCF\ProductCategoryWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductWCF\ProductWCF.wsdl" />
+    <None Include="Service References\ProductWCF\ProductWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductWCF\ProductWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseWCF\PurchaseWCF.wsdl" />
+    <None Include="Service References\PurchaseWCF\PurchaseWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PurchaseWCF\PurchaseWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiveWCF\ReceiveWCF.wsdl" />
+    <None Include="Service References\ReceiveWCF\ReceiveWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiveWCF\ReceiveWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiveWCF\ReceiveWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportWCF\ReportWCF.wsdl" />
+    <None Include="Service References\ReportWCF\ReportWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportWCF\ReportWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleExportWCF\SaleExportWCF.wsdl" />
+    <None Include="Service References\SaleExportWCF\SaleExportWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleExportWCF\SaleExportWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesInvoiceExpWCF\SalesInvoiceExpWCF.wsdl" />
+    <None Include="Service References\SalesInvoiceExpWCF\SalesInvoiceExpWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesInvoiceExpWCF\SalesInvoiceExpWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF.wsdl" />
+    <None Include="Service References\SaleWCF\SaleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SaleWCF\SaleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SDDepositWCF\SDDepositWCF.wsdl" />
+    <None Include="Service References\SDDepositWCF\SDDepositWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SDDepositWCF\SDDepositWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingRoleWCF\SettingRoleWCF.wsdl" />
+    <None Include="Service References\SettingRoleWCF\SettingRoleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingRoleWCF\SettingRoleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingWCF\SettingWCF.wsdl" />
+    <None Include="Service References\SettingWCF\SettingWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingWCF\SettingWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetupWCF\SetupWCF.wsdl" />
+    <None Include="Service References\SetupWCF\SetupWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetupWCF\SetupWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShiftWCF\ShiftWCF.wsdl" />
+    <None Include="Service References\ShiftWCF\ShiftWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShiftWCF\ShiftWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TDSsWCF\TDSsWCF.wsdl" />
+    <None Include="Service References\TDSsWCF\TDSsWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TDSsWCF\TDSsWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TenderWCF\TenderWCF.wsdl" />
+    <None Include="Service References\TenderWCF\TenderWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TenderWCF\TenderWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Toll6_3InvoiceWCF\Toll6_3InvoiceWCF.wsdl" />
+    <None Include="Service References\Toll6_3InvoiceWCF\Toll6_3InvoiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Toll6_3InvoiceWCF\Toll6_3InvoiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TrackingWCF\TrackingWCF.wsdl" />
+    <None Include="Service References\TrackingWCF\TrackingWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TrackingWCF\TrackingWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferIssueWCF\TransferIssueWCF.wsdl" />
+    <None Include="Service References\TransferIssueWCF\TransferIssueWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferIssueWCF\TransferIssueWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferReceiveWCF\TransferReceiveWCF.wsdl" />
+    <None Include="Service References\TransferReceiveWCF\TransferReceiveWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransferReceiveWCF\TransferReceiveWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UOMNameWCF\UOMNameWCF.wsdl" />
+    <None Include="Service References\UOMNameWCF\UOMNameWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UOMNameWCF\UOMNameWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UOMWCF\UOMWCF.wsdl" />
+    <None Include="Service References\UOMWCF\UOMWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UOMWCF\UOMWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserBranchDetailWCF\UserBranchDetailWCF.wsdl" />
+    <None Include="Service References\UserBranchDetailWCF\UserBranchDetailWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserBranchDetailWCF\UserBranchDetailWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInformationWCF\UserInformationWCF.wsdl" />
+    <None Include="Service References\UserInformationWCF\UserInformationWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInformationWCF\UserInformationWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMenuAllRollWCF\UserMenuAllRollWCF.wsdl" />
+    <None Include="Service References\UserMenuAllRollWCF\UserMenuAllRollWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMenuAllRollWCF\UserMenuAllRollWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMenuRollsWCF\UserMenuRollsWCF.wsdl" />
+    <None Include="Service References\UserMenuRollsWCF\UserMenuRollsWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserMenuRollsWCF\UserMenuRollsWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VDSWCF\VDSWCF.wsdl" />
+    <None Include="Service References\VDSWCF\VDSWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VDSWCF\VDSWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VDSWCF\VDSWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VehicleWCF\VehicleWCF.wsdl" />
+    <None Include="Service References\VehicleWCF\VehicleWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VehicleWCF\VehicleWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorGroupWCF\VendorGroupWCF.wsdl" />
+    <None Include="Service References\VendorGroupWCF\VendorGroupWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorGroupWCF\VendorGroupWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorWCF\VendorWCF.wsdl" />
+    <None Include="Service References\VendorWCF\VendorWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VendorWCF\VendorWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdjustmentHistoryWCF\" />
+    <WCFMetadataStorage Include="Service References\AdjustmentWCF\" />
+    <WCFMetadataStorage Include="Service References\BanderolProductsWCF\" />
+    <WCFMetadataStorage Include="Service References\BanderolsWCF\" />
+    <WCFMetadataStorage Include="Service References\BankInformationWCF\" />
+    <WCFMetadataStorage Include="Service References\BOMWCF\" />
+    <WCFMetadataStorage Include="Service References\BranchProfileWCF\" />
+    <WCFMetadataStorage Include="Service References\BranchWCF\" />
+    <WCFMetadataStorage Include="Service References\BureauSaleWCF\" />
+    <WCFMetadataStorage Include="Service References\CodeWCF\" />
+    <WCFMetadataStorage Include="Service References\CommonImportWCF\" />
+    <WCFMetadataStorage Include="Service References\CommonWCF\" />
+    <WCFMetadataStorage Include="Service References\CompanyInformationWCF\" />
+    <WCFMetadataStorage Include="Service References\CompanyprofileWCF\" />
+    <WCFMetadataStorage Include="Service References\CurrenciesWCF\" />
+    <WCFMetadataStorage Include="Service References\CurrencyConversionWCF\" />
+    <WCFMetadataStorage Include="Service References\CustomerDiscountWCF\" />
+    <WCFMetadataStorage Include="Service References\CustomerGroupWCF\" />
+    <WCFMetadataStorage Include="Service References\CustomerWCF\" />
+    <WCFMetadataStorage Include="Service References\DemandWCF\" />
+    <WCFMetadataStorage Include="Service References\DepositTDSWCF\" />
+    <WCFMetadataStorage Include="Service References\DepositWCF\" />
+    <WCFMetadataStorage Include="Service References\DisposeWCF\" />
+    <WCFMetadataStorage Include="Service References\DutyDrawBackWCF\" />
+    <WCFMetadataStorage Include="Service References\FiscalYearWCF\" />
+    <WCFMetadataStorage Include="Service References\HSCodeWCF\" />
+    <WCFMetadataStorage Include="Service References\ImportWCF\" />
+    <WCFMetadataStorage Include="Service References\IssueBOMWCF\" />
+    <WCFMetadataStorage Include="Service References\IssueWCF\" />
+    <WCFMetadataStorage Include="Service References\PackagingWCF\" />
+    <WCFMetadataStorage Include="Service References\PrefixWCF\" />
+    <WCFMetadataStorage Include="Service References\ProductCategoryWCF\" />
+    <WCFMetadataStorage Include="Service References\ProductWCF\" />
+    <WCFMetadataStorage Include="Service References\PurchaseWCF\" />
+    <WCFMetadataStorage Include="Service References\ReceiveWCF\" />
+    <WCFMetadataStorage Include="Service References\ReportWCF\" />
+    <WCFMetadataStorage Include="Service References\SaleExportWCF\" />
+    <WCFMetadataStorage Include="Service References\SalesInvoiceExpWCF\" />
+    <WCFMetadataStorage Include="Service References\SaleWCF\" />
+    <WCFMetadataStorage Include="Service References\SDDepositWCF\" />
+    <WCFMetadataStorage Include="Service References\SettingRoleWCF\" />
+    <WCFMetadataStorage Include="Service References\SettingWCF\" />
+    <WCFMetadataStorage Include="Service References\SetupWCF\" />
+    <WCFMetadataStorage Include="Service References\ShiftWCF\" />
+    <WCFMetadataStorage Include="Service References\TDSsWCF\" />
+    <WCFMetadataStorage Include="Service References\TenderWCF\" />
+    <WCFMetadataStorage Include="Service References\Toll6_3InvoiceWCF\" />
+    <WCFMetadataStorage Include="Service References\TrackingWCF\" />
+    <WCFMetadataStorage Include="Service References\TransferIssueWCF\" />
+    <WCFMetadataStorage Include="Service References\TransferReceiveWCF\" />
+    <WCFMetadataStorage Include="Service References\UOMNameWCF\" />
+    <WCFMetadataStorage Include="Service References\UOMWCF\" />
+    <WCFMetadataStorage Include="Service References\UserBranchDetailWCF\" />
+    <WCFMetadataStorage Include="Service References\UserInformationWCF\" />
+    <WCFMetadataStorage Include="Service References\UserMenuAllRollWCF\" />
+    <WCFMetadataStorage Include="Service References\UserMenuRollsWCF\" />
+    <WCFMetadataStorage Include="Service References\VDSWCF\" />
+    <WCFMetadataStorage Include="Service References\VehicleWCF\" />
+    <WCFMetadataStorage Include="Service References\VendorGroupWCF\" />
+    <WCFMetadataStorage Include="Service References\VendorWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleWCF\SaleWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchProfileWCF\BranchProfileWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchProfileWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchProfileWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchProfileWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonWCF\CommonWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VehicleWCF\VehicleWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VehicleWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VehicleWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VehicleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductWCF\ProductWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportWCF\ReportWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReportWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMWCF\UOMWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BOMWCF\BOMWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BOMWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BOMWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BOMWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImportWCF\ImportWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImportWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImportWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImportWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerWCF\CustomerWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserInformationWCF\UserInformationWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserInformationWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserInformationWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserInformationWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TrackingWCF\TrackingWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TrackingWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TrackingWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TrackingWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReceiveWCF\ReceiveWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReceiveWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReceiveWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReceiveWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetupWCF\SetupWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetupWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetupWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetupWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShiftWCF\ShiftWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShiftWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShiftWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShiftWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyprofileWCF\CompanyprofileWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyprofileWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyprofileWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyprofileWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenderWCF\TenderWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenderWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenderWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TenderWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyConversionWCF\CurrencyConversionWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyConversionWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyConversionWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyConversionWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseWCF\PurchaseWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PurchaseWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TDSsWCF\TDSsWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TDSsWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TDSsWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TDSsWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonImportWCF\CommonImportWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonImportWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonImportWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommonImportWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentWCF\AdjustmentWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentHistoryWCF\AdjustmentHistoryWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentHistoryWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentHistoryWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdjustmentHistoryWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolProductsWCF\BanderolProductsWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolProductsWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolProductsWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolProductsWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolsWCF\BanderolsWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolsWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolsWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BanderolsWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankInformationWCF\BankInformationWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankInformationWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankInformationWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankInformationWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchWCF\BranchWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BranchWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BureauSaleWCF\BureauSaleWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BureauSaleWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BureauSaleWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BureauSaleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CodeWCF\CodeWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CodeWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CodeWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CodeWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorGroupWCF\VendorGroupWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorGroupWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorGroupWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorGroupWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorWCF\VendorWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VendorWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyInformationWCF\CompanyInformationWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyInformationWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyInformationWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CompanyInformationWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrenciesWCF\CurrenciesWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrenciesWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrenciesWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrenciesWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerGroupWCF\CustomerGroupWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerGroupWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerGroupWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerGroupWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DemandWCF\DemandWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DemandWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DemandWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DemandWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositTDSWCF\DepositTDSWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositTDSWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositTDSWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositTDSWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VDSWCF\VDSWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VDSWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VDSWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VDSWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositWCF\DepositWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DepositWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DisposeWCF\DisposeWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DisposeWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DisposeWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DisposeWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserBranchDetailWCF\UserBranchDetailWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserBranchDetailWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserBranchDetailWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserBranchDetailWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DutyDrawBackWCF\DutyDrawBackWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DutyDrawBackWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DutyDrawBackWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DutyDrawBackWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMNameWCF\UOMNameWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMNameWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMNameWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UOMNameWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferReceiveWCF\TransferReceiveWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferReceiveWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferReceiveWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferReceiveWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HSCodeWCF\HSCodeWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HSCodeWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HSCodeWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HSCodeWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FiscalYearWCF\FiscalYearWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FiscalYearWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FiscalYearWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FiscalYearWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueBOMWCF\IssueBOMWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueBOMWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueBOMWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueBOMWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferIssueWCF\TransferIssueWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferIssueWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferIssueWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransferIssueWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Toll6_3InvoiceWCF\Toll6_3InvoiceWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Toll6_3InvoiceWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Toll6_3InvoiceWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Toll6_3InvoiceWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingRoleWCF\SettingRoleWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingRoleWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingRoleWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingRoleWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingWCF\SettingWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PackagingWCF\PackagingWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PackagingWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PackagingWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PackagingWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefixWCF\PrefixWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefixWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefixWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefixWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductCategoryWCF\ProductCategoryWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductCategoryWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductCategoryWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductCategoryWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SDDepositWCF\SDDepositWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SDDepositWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SDDepositWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SDDepositWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesInvoiceExpWCF\SalesInvoiceExpWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesInvoiceExpWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesInvoiceExpWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesInvoiceExpWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueWCF\IssueWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IssueWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleExportWCF\SaleExportWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleExportWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleExportWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SaleExportWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerDiscountWCF\CustomerDiscountWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerDiscountWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerDiscountWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CustomerDiscountWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuAllRollWCF\UserMenuAllRollWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuAllRollWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuAllRollWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuAllRollWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuRollsWCF\UserMenuRollsWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuRollsWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuRollsWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserMenuRollsWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

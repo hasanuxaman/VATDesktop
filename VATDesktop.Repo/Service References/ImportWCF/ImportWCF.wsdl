@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImportWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ImportWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/ImportWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImportWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbDataSenora_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbDataSenora" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbDataSenora_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbDataSenoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbDataSoap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbDataSoap" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleSQRDbDataSoap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleSQRDbDataSoapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleAduriDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleAduriDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleAduriDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleAduriDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataSetFromExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetFromExcel" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataSetFromExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetFromExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataTableFromExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableFromExcel" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataTableFromExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableFromExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataTableFromExcelds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableFromExcelds" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetDataTableFromExcelds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableFromExceldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbDataSenora_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbDataSenora" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbDataSenora_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbDataSenoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbDataSoap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbDataSoap" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetFGSQRDbDataSoap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGSQRDbDataSoapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleCDNData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleCDNData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleCDNData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleCDNDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleKohinoorDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleKohinoorDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleKohinoorDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleKohinoorDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleKohinoorDbDataX_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleKohinoorDbDataX" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleKohinoorDbDataX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleKohinoorDbDataXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleOtherDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleOtherDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleOtherDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleOtherDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleOtherDbDatax_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleOtherDbDatax" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSaleOtherDbDatax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleOtherDbDataxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSMCDbData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMCDbData" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_GetSMCDbData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSMCDbDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBank" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportCosting_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCosting" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportCosting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCostingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProduct" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProductOld_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProductOld" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProductOld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProductOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProductOpening_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProductOpening" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportProductOpening_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportProductOpeningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportUOM_Names_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportUOM_Names" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportUOM_Names_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportUOM_NamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportUOM_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportUOM" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportUOM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportUOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportVendor" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_ImportVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_InsertToCustomerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_InsertToCustomerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_InsertToProductDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductDetails" />
+  </wsdl:message>
+  <wsdl:message name="IImportWCF_InsertToProductDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToProductDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IImportWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/DoWork" message="tns:IImportWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/DoWorkResponse" message="tns:IImportWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbData" message="tns:IImportWCF_GetSaleSQRDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbDataResponse" message="tns:IImportWCF_GetSaleSQRDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbDataSenora">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSenora" message="tns:IImportWCF_GetSaleSQRDbDataSenora_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSenoraResponse" message="tns:IImportWCF_GetSaleSQRDbDataSenora_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbDataSoap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSoap" message="tns:IImportWCF_GetSaleSQRDbDataSoap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSoapResponse" message="tns:IImportWCF_GetSaleSQRDbDataSoap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleAduriDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleAduriDbData" message="tns:IImportWCF_GetSaleAduriDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleAduriDbDataResponse" message="tns:IImportWCF_GetSaleAduriDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetFromExcel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetDataSetFromExcel" message="tns:IImportWCF_GetDataSetFromExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetDataSetFromExcelResponse" message="tns:IImportWCF_GetDataSetFromExcel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableFromExcel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetDataTableFromExcel" message="tns:IImportWCF_GetDataTableFromExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetDataTableFromExcelResponse" message="tns:IImportWCF_GetDataTableFromExcel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableFromExcelds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetDataTableFromExcelds" message="tns:IImportWCF_GetDataTableFromExcelds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetDataTableFromExceldsResponse" message="tns:IImportWCF_GetDataTableFromExcelds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbData" message="tns:IImportWCF_GetFGSQRDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbDataResponse" message="tns:IImportWCF_GetFGSQRDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbDataSenora">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbDataSenora" message="tns:IImportWCF_GetFGSQRDbDataSenora_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbDataSenoraResponse" message="tns:IImportWCF_GetFGSQRDbDataSenora_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbDataSoap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbDataSoap" message="tns:IImportWCF_GetFGSQRDbDataSoap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetFGSQRDbDataSoapResponse" message="tns:IImportWCF_GetFGSQRDbDataSoap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleCDNData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleCDNData" message="tns:IImportWCF_GetSaleCDNData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleCDNDataResponse" message="tns:IImportWCF_GetSaleCDNData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleKohinoorDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleKohinoorDbData" message="tns:IImportWCF_GetSaleKohinoorDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleKohinoorDbDataResponse" message="tns:IImportWCF_GetSaleKohinoorDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleKohinoorDbDataX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleKohinoorDbDataX" message="tns:IImportWCF_GetSaleKohinoorDbDataX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleKohinoorDbDataXResponse" message="tns:IImportWCF_GetSaleKohinoorDbDataX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleOtherDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleOtherDbData" message="tns:IImportWCF_GetSaleOtherDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleOtherDbDataResponse" message="tns:IImportWCF_GetSaleOtherDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleOtherDbDatax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSaleOtherDbDatax" message="tns:IImportWCF_GetSaleOtherDbDatax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSaleOtherDbDataxResponse" message="tns:IImportWCF_GetSaleOtherDbDatax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMCDbData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/GetSMCDbData" message="tns:IImportWCF_GetSMCDbData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/GetSMCDbDataResponse" message="tns:IImportWCF_GetSMCDbData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportBank" message="tns:IImportWCF_ImportBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportBankResponse" message="tns:IImportWCF_ImportBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportCosting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportCosting" message="tns:IImportWCF_ImportCosting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportCostingResponse" message="tns:IImportWCF_ImportCosting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportCustomer" message="tns:IImportWCF_ImportCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportCustomerResponse" message="tns:IImportWCF_ImportCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportExcelFile" message="tns:IImportWCF_ImportExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportExcelFileResponse" message="tns:IImportWCF_ImportExcelFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportProduct" message="tns:IImportWCF_ImportProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportProductResponse" message="tns:IImportWCF_ImportProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportProductOld">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportProductOld" message="tns:IImportWCF_ImportProductOld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportProductOldResponse" message="tns:IImportWCF_ImportProductOld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportProductOpening">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportProductOpening" message="tns:IImportWCF_ImportProductOpening_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportProductOpeningResponse" message="tns:IImportWCF_ImportProductOpening_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportUOM_Names">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportUOM_Names" message="tns:IImportWCF_ImportUOM_Names_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportUOM_NamesResponse" message="tns:IImportWCF_ImportUOM_Names_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportUOM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportUOM" message="tns:IImportWCF_ImportUOM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportUOMResponse" message="tns:IImportWCF_ImportUOM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportVehicle" message="tns:IImportWCF_ImportVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportVehicleResponse" message="tns:IImportWCF_ImportVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/ImportVendor" message="tns:IImportWCF_ImportVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/ImportVendorResponse" message="tns:IImportWCF_ImportVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/InsertToCustomerAddress" message="tns:IImportWCF_InsertToCustomerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/InsertToCustomerAddressResponse" message="tns:IImportWCF_InsertToCustomerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImportWCF/InsertToProductDetails" message="tns:IImportWCF_InsertToProductDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImportWCF/InsertToProductDetailsResponse" message="tns:IImportWCF_InsertToProductDetails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IImportWCF" type="tns:IImportWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleSQRDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbDataSenora">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSenora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleSQRDbDataSoap">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleSQRDbDataSoap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleAduriDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleAduriDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetFromExcel">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetDataSetFromExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableFromExcel">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetDataTableFromExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTableFromExcelds">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetDataTableFromExcelds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetFGSQRDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbDataSenora">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetFGSQRDbDataSenora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFGSQRDbDataSoap">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetFGSQRDbDataSoap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleCDNData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleCDNData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleKohinoorDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleKohinoorDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleKohinoorDbDataX">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleKohinoorDbDataX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleOtherDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleOtherDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleOtherDbDatax">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSaleOtherDbDatax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMCDbData">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/GetSMCDbData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportBank">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCosting">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportCosting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomer">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportExcelFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportProduct">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportProductOld">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportProductOld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportProductOpening">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportProductOpening" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportUOM_Names">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportUOM_Names" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportUOM">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportUOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportVehicle">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportVendor">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/ImportVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/InsertToCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertToProductDetails">
+      <soap:operation soapAction="http://tempuri.org/IImportWCF/InsertToProductDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImportWCF">
+    <wsdl:port name="BasicHttpBinding_IImportWCF" binding="tns:BasicHttpBinding_IImportWCF">
+      <soap:address location="http://localhost:50568/WCF/ImportWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

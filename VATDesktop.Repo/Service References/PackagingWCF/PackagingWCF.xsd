@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePackageInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePackageInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePackageInformationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertToPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertToPackageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackgeSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchPackageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackSize" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActiveStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connVMwcf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePackageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

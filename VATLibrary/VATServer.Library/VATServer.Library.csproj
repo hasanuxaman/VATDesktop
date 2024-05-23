@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C01637E0-783E-4B1B-9701-45D1700ED399}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VATServer.Library</RootNamespace>
+    <AssemblyName>VATServer.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnregisterVersion|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UnregisterVersion\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugUnregisterVersion|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugUnregisterVersion\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Alpha|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Alpha\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Beta\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BureauDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\BureauDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\..\packages\ExcelDataReader.2.1.2.3\lib\net45\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.DB2.Entity">
+      <HintPath>C:\Program Files\IBM\IBM DATA SERVER DRIVER\bin\netf40_32\IBM.Data.DB2.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.Informix">
+      <HintPath>C:\Program Files\IBM\IBM DATA SERVER DRIVER\bin\netf40_32\IBM.Data.Informix.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Oracle\Oracle.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SymphonySofttech.Utilities">
+      <HintPath>..\..\packages\Utilities\SymphonySofttech.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="9_1_VATReturnDAL.cs" />
+    <Compile Include="ACIIntegration.cs" />
+    <Compile Include="AdjustmentDAL.cs" />
+    <Compile Include="AdjustmentHistoryDAL.cs" />
+    <Compile Include="AuditDAL.cs" />
+    <Compile Include="BanderolProductsDAL.cs" />
+    <Compile Include="BanderolsDAL.cs" />
+    <Compile Include="BankChannelPaymentDAL.cs" />
+    <Compile Include="Integration\BSLIntegrationDAL.cs" />
+    <Compile Include="Integration\DecathlonIntegrationDAL.cs" />
+    <Compile Include="Integration\IntegrationDataViewDAL.cs" />
+    <Compile Include="MPLDayEndClosingDAL.cs" />
+    <Compile Include="MPLTradeChallanDAL.cs" />
+    <Compile Include="MPLSalesInvoiceBankPaymentDAL.cs" />
+    <Compile Include="MPLBankPaymentReceiveDAL.cs" />
+    <Compile Include="DistrictDAL.cs" />
+    <Compile Include="SectorsDAL.cs" />
+    <Compile Include="DivisionDAL.cs" />
+    <Compile Include="MPLZoneProfileDAL.cs" />
+    <Compile Include="MPLZoneBranchMappingDAL.cs" />
+    <Compile Include="MPLBDBankInformationDAL.cs" />
+    <Compile Include="MPLSelfBankInformationDAL.cs" />
+    <Compile Include="BankInformationDAL.cs" />
+    <Compile Include="BOMDAL.cs" />
+    <Compile Include="BranchDAL.cs" />
+    <Compile Include="BranchReportDAL.cs" />
+    <Compile Include="ChartDAL.cs" />
+    <Compile Include="CodeDAL.cs" />
+    <Compile Include="CommonDAL.cs" />
+    <Compile Include="CommonImportDAL.cs" />
+    <Compile Include="CompanyprofileDAL.cs" />
+    <Compile Include="BureauSaleDAL.cs" />
+    <Compile Include="BranchProfileDAL.cs" />
+    <Compile Include="Client6_3DAL.cs" />
+    <Compile Include="CustomerItemDAL.cs" />
+    <Compile Include="BillInvoiceDAL.cs" />
+    <Compile Include="EONIntegrationDAL.cs" />
+    <Compile Include="CPCDetailsDAL.cs" />
+    <Compile Include="IASChargeCodeDAL.cs" />
+    <Compile Include="DepositTDSDAL.cs" />
+    <Compile Include="DHLIntegration.cs" />
+    <Compile Include="DisposeFinishDAL.cs" />
+    <Compile Include="DisposeRawDAL.cs" />
+    <Compile Include="EnumDAL.cs" />
+    <Compile Include="HSCodeDAL.cs" />
+    <Compile Include="Integration\9_1NBR_API_DAL.cs" />
+    <Compile Include="Integration\BataIntegrationDAL.cs" />
+    <Compile Include="Integration\APIIntegrationDAL.cs" />
+    <Compile Include="Integration\BolloreIntegrationDAL.cs" />
+    <Compile Include="Integration\BritishCouncil_IntegrationDAL.cs" />
+    <Compile Include="Integration\BeximcoIntegrationDAL.cs" />
+    <Compile Include="Integration\BergerIntegrationDAL.cs" />
+    <Compile Include="Integration\Link3IntegrationDAL.cs" />
+    <Compile Include="Integration\NourishIntegrationDAL.cs" />
+    <Compile Include="Integration\ShumiHotCakeIntegrationDAL.cs" />
+    <Compile Include="Integration\UNILEVERIntegrationDAL.cs" />
+    <Compile Include="Integration\NESTLEIntegrationDAL.cs" />
+    <Compile Include="Integration\GDICIntegrationDAL.cs" />
+    <Compile Include="Integration\SMCIntegrationDAL.cs" />
+    <Compile Include="IssueBOMDAL.cs" />
+    <Compile Include="PrefixDAL.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseMPLDAL.cs" />
+    <Compile Include="ReleaseNotesDAL.cs" />
+    <Compile Include="MPLSalesInvSA4DAL.cs" />
+    <Compile Include="TanksMPLDAL.cs" />
+    <Compile Include="MPLBankDepositSlipDAL.cs" />
+    <Compile Include="MPLIN89DAL.cs" />
+    <Compile Include="TollClientInOutDAL.cs" />
+    <Compile Include="TollContInOutDAL.cs" />
+    <Compile Include="TollProductionConsumptionDAL.cs" />
+    <Compile Include="TransferReceiveMPLDAL.cs" />
+    <Compile Include="TransferIssueMPLDAL.cs" />
+    <Compile Include="SaleMPLDAL.cs" />
+    <Compile Include="SaleDALNew.cs" />
+    <Compile Include="SalesInvoiceExpDAL.cs" />
+    <Compile Include="ShiftDAL.cs" />
+    <Compile Include="DemandDAL .cs" />
+    <Compile Include="PackagingDAL.cs" />
+    <Compile Include="SaleExportDAL.cs" />
+    <Compile Include="SettingRoleDAL.cs" />
+    <Compile Include="SqlExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="SymphonyVATSysCompanyInformationDAL.cs" />
+    <Compile Include="CustomerDiscountDAL.cs" />
+    <Compile Include="TDSsDAL.cs" />
+    <Compile Include="Toll6_3InvoiceDAL.cs" />
+    <Compile Include="TrackingDAL.cs" />
+    <Compile Include="TransferDAL.cs" />
+    <Compile Include="ProductTransferDAL.cs" />
+    <Compile Include="TransferIssueDAL.cs" />
+    <Compile Include="TransferRawDAL.cs" />
+    <Compile Include="TransferReceiveDAL.cs" />
+    <Compile Include="UOMNameDAL.cs" />
+    <Compile Include="CurrenciesDAL.cs" />
+    <Compile Include="CurrencyConversionDAL.cs" />
+    <Compile Include="CustomerDAL.cs" />
+    <Compile Include="CustomerGroupDAL.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DBConstant.cs" />
+    <Compile Include="DBSQLConnection.cs" />
+    <Compile Include="DepositDAL.cs" />
+    <Compile Include="DisposeDAL.cs" />
+    <Compile Include="DutyDrawBackDAL.cs" />
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="FiscalYearDAL.cs" />
+    <Compile Include="ImportDAL.cs" />
+    <Compile Include="IssueDAL.cs" />
+    <Compile Include="ProductCategoryDAL.cs" />
+    <Compile Include="ProductDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseDAL.cs" />
+    <Compile Include="ReceiveDAL.cs" />
+    <Compile Include="ReportDSDAL.cs" />
+    <Compile Include="SaleDAL.cs" />
+    <Compile Include="SDDepositDAL.cs" />
+    <Compile Include="SettingDAL.cs" />
+    <Compile Include="SetupDAL.cs" />
+    <Compile Include="TenderDAL.cs" />
+    <Compile Include="UOMDAL.cs" />
+    <Compile Include="UserBranchDetailDAL.cs" />
+    <Compile Include="UserGroupDAL.cs" />
+    <Compile Include="UserInformationDAL.cs" />
+    <Compile Include="UserMenuAllRollDAL.cs" />
+    <Compile Include="UserMenuRollsDAL.cs" />
+    <Compile Include="VAT7DAL.cs" />
+    <Compile Include="VATName.cs" />
+    <Compile Include="VATRegistersDAL.cs" />
+    <Compile Include="VDSDAL.cs" />
+    <Compile Include="CustomsHouseDAL.cs" />
+    <Compile Include="VehicleDAL.cs" />
+    <Compile Include="VendorDAL.cs" />
+    <Compile Include="VendorGroupDAL.cs" />
+    <Compile Include="Web References\NBRWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="YearEndProcessDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NBRWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NBRWebService\SI_RET_SENDER.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VATServer.Interface\VATServer.Interface.csproj">
+      <Project>{31A02E04-EA0B-4AA6-BAC1-9EFCD3F9259F}</Project>
+      <Name>VATServer.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VATServer.Ordinary\VATServer.Ordinary.csproj">
+      <Project>{5a796eb3-bd98-4d23-8d78-aceb4969c2e9}</Project>
+      <Name>VATServer.Ordinary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VATViewModel\VATViewModel.csproj">
+      <Project>{59C2521F-549A-4906-A3E4-ADDB9BE584BA}</Project>
+      <Name>VATViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\VAT Import Files\Integration\NBR\22-Dec-2020\11.11.2020_M9.1_XML.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NBRWebService\</RelPath>
+      <UpdateFromURL>D:\VAT Import Files\Integration\NBR\22-Dec-2020\11.11.2020_M9.1_XML.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>VATServer_Library_NBRWebService_SI_RET_SENDERService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

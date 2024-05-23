@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IssueBOMWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/IssueBOMWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/IssueBOMWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIssueBOMWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ImportExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ImportExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssueInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueInsert" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssueInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssuePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssuePost" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssuePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssuePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssueUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_IssueUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ReturnIssueQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnIssueQty" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_ReturnIssueQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnIssueQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SearchIssueDetailDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssueDetailDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SearchIssueDetailDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssueDetailDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectIssueDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIssueDetail" />
+  </wsdl:message>
+  <wsdl:message name="IIssueBOMWCF_SelectIssueDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIssueDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIssueBOMWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/DoWork" message="tns:IIssueBOMWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/DoWorkResponse" message="tns:IIssueBOMWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/ImportData" message="tns:IIssueBOMWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/ImportDataResponse" message="tns:IIssueBOMWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/ImportExcelFile" message="tns:IIssueBOMWCF_ImportExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/ImportExcelFileResponse" message="tns:IIssueBOMWCF_ImportExcelFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssueInsert" message="tns:IIssueBOMWCF_IssueInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssueInsertResponse" message="tns:IIssueBOMWCF_IssueInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssuePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssuePost" message="tns:IIssueBOMWCF_IssuePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssuePostResponse" message="tns:IIssueBOMWCF_IssuePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssueUpdate" message="tns:IIssueBOMWCF_IssueUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/IssueUpdateResponse" message="tns:IIssueBOMWCF_IssueUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnIssueQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/ReturnIssueQty" message="tns:IIssueBOMWCF_ReturnIssueQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/ReturnIssueQtyResponse" message="tns:IIssueBOMWCF_ReturnIssueQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssueDetailDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/SearchIssueDetailDTNew" message="tns:IIssueBOMWCF_SearchIssueDetailDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/SearchIssueDetailDTNewResponse" message="tns:IIssueBOMWCF_SearchIssueDetailDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectAll" message="tns:IIssueBOMWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectAllResponse" message="tns:IIssueBOMWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectAllList" message="tns:IIssueBOMWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectAllListResponse" message="tns:IIssueBOMWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssueDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectIssueDetail" message="tns:IIssueBOMWCF_SelectIssueDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueBOMWCF/SelectIssueDetailResponse" message="tns:IIssueBOMWCF_SelectIssueDetail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IIssueBOMWCF" type="tns:IIssueBOMWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/ImportExcelFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueInsert">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/IssueInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssuePost">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/IssuePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueUpdate">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/IssueUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnIssueQty">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/ReturnIssueQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssueDetailDTNew">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/SearchIssueDetailDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssueDetail">
+      <soap:operation soapAction="http://tempuri.org/IIssueBOMWCF/SelectIssueDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IssueBOMWCF">
+    <wsdl:port name="BasicHttpBinding_IIssueBOMWCF" binding="tns:BasicHttpBinding_IIssueBOMWCF">
+      <soap:address location="http://localhost:50568/WCF/IssueBOMWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

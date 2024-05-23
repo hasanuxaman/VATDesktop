@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TenderWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TenderWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/TenderWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITenderWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetailSaleNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetailSaleNew" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetailSaleNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetailSaleNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetailSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetailSale" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetailSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetailSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderHeaderByCustomerGrp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderHeaderByCustomerGrp" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SearchTenderHeaderByCustomerGrp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTenderHeaderByCustomerGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAllDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAllDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_TenderInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:TenderInsert" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_TenderInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TenderInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_TenderUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TenderUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ITenderWCF_TenderUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TenderUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITenderWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/DoWork" message="tns:ITenderWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/DoWorkResponse" message="tns:ITenderWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetailSaleNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetailSaleNew" message="tns:ITenderWCF_SearchTenderDetailSaleNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetailSaleNewResponse" message="tns:ITenderWCF_SearchTenderDetailSaleNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetailSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetailSale" message="tns:ITenderWCF_SearchTenderDetailSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetailSaleResponse" message="tns:ITenderWCF_SearchTenderDetailSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/ImportData" message="tns:ITenderWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/ImportDataResponse" message="tns:ITenderWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetail" message="tns:ITenderWCF_SearchTenderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderDetailResponse" message="tns:ITenderWCF_SearchTenderDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderHeaderByCustomerGrp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderHeaderByCustomerGrp" message="tns:ITenderWCF_SearchTenderHeaderByCustomerGrp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SearchTenderHeaderByCustomerGrpResponse" message="tns:ITenderWCF_SearchTenderHeaderByCustomerGrp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SelectAll" message="tns:ITenderWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SelectAllResponse" message="tns:ITenderWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SelectAllDetails" message="tns:ITenderWCF_SelectAllDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SelectAllDetailsResponse" message="tns:ITenderWCF_SelectAllDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/SelectAllList" message="tns:ITenderWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/SelectAllListResponse" message="tns:ITenderWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TenderInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/TenderInsert" message="tns:ITenderWCF_TenderInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/TenderInsertResponse" message="tns:ITenderWCF_TenderInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TenderUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITenderWCF/TenderUpdate" message="tns:ITenderWCF_TenderUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITenderWCF/TenderUpdateResponse" message="tns:ITenderWCF_TenderUpdate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITenderWCF" type="tns:ITenderWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetailSaleNew">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SearchTenderDetailSaleNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetailSale">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SearchTenderDetailSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderDetail">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SearchTenderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTenderHeaderByCustomerGrp">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SearchTenderHeaderByCustomerGrp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllDetails">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SelectAllDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TenderInsert">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/TenderInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TenderUpdate">
+      <soap:operation soapAction="http://tempuri.org/ITenderWCF/TenderUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TenderWCF">
+    <wsdl:port name="BasicHttpBinding_ITenderWCF" binding="tns:BasicHttpBinding_ITenderWCF">
+      <soap:address location="http://localhost:50568/WCF/TenderWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

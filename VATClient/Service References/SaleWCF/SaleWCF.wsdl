@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SaleWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VATViewModel.DTOs" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/SaleWCF.svc?xsd=xsd6" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISaleWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetCategoryName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryName" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_GetCategoryName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsert" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SalesInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_Test1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test1" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_Test1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Test1Response" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ListTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTest" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ListTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ArrayTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArrayTest" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ArrayTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArrayTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ArrayTest2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArrayTest2" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_ArrayTest2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArrayTest2Response" />
+  </wsdl:message>
+  <wsdl:portType name="ISaleWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/DoWork" message="tns:ISaleWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/DoWorkResponse" message="tns:ISaleWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/GetCategoryName" message="tns:ISaleWCF_GetCategoryName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/GetCategoryNameResponse" message="tns:ISaleWCF_GetCategoryName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SalesInsert" message="tns:ISaleWCF_SalesInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SalesInsertResponse" message="tns:ISaleWCF_SalesInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/Test" message="tns:ISaleWCF_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/TestResponse" message="tns:ISaleWCF_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test1">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/Test1" message="tns:ISaleWCF_Test1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/Test1Response" message="tns:ISaleWCF_Test1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ListTest" message="tns:ISaleWCF_ListTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ListTestResponse" message="tns:ISaleWCF_ListTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArrayTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ArrayTest" message="tns:ISaleWCF_ArrayTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ArrayTestResponse" message="tns:ISaleWCF_ArrayTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArrayTest2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/ArrayTest2" message="tns:ISaleWCF_ArrayTest2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/ArrayTest2Response" message="tns:ISaleWCF_ArrayTest2_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISaleWCF" type="tns:ISaleWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/GetCategoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesInsert">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SalesInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test1">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/Test1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListTest">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ListTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArrayTest">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ArrayTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArrayTest2">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/ArrayTest2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaleWCF">
+    <wsdl:port name="BasicHttpBinding_ISaleWCF" binding="tns:BasicHttpBinding_ISaleWCF">
+      <soap:address location="http://localhost:50568/WCF/SaleWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

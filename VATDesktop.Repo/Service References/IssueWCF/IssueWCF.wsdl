@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IssueWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50568/WCF/IssueWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50568/WCF/IssueWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIssueWCF_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_GetExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_GetExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_GetUnProcessedCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCount" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_GetUnProcessedCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnProcessedCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportBigData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigData" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportBigData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportBigDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportData" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportReceiveBigData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportReceiveBigData" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ImportReceiveBigData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportReceiveBigDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssueInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueInsert" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssueInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssuePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssuePost" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssuePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssuePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssueUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_IssueUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_MultiplePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePost" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_MultiplePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ReturnIssueQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnIssueQty" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_ReturnIssueQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnIssueQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SaveTempIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempIssue" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SaveTempIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTempIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SearchIssueDetailDTNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssueDetailDTNew" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SearchIssueDetailDTNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIssueDetailDTNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllList" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectIssueDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIssueDetail" />
+  </wsdl:message>
+  <wsdl:message name="IIssueWCF_SelectIssueDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectIssueDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIssueWCF">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/DoWork" message="tns:IIssueWCF_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/DoWorkResponse" message="tns:IIssueWCF_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/GetExcelData" message="tns:IIssueWCF_GetExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/GetExcelDataResponse" message="tns:IIssueWCF_GetExcelData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/GetUnProcessedCount" message="tns:IIssueWCF_GetUnProcessedCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/GetUnProcessedCountResponse" message="tns:IIssueWCF_GetUnProcessedCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/ImportBigData" message="tns:IIssueWCF_ImportBigData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/ImportBigDataResponse" message="tns:IIssueWCF_ImportBigData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/ImportData" message="tns:IIssueWCF_ImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/ImportDataResponse" message="tns:IIssueWCF_ImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/ImportExcelFile" message="tns:IIssueWCF_ImportExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/ImportExcelFileResponse" message="tns:IIssueWCF_ImportExcelFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportReceiveBigData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/ImportReceiveBigData" message="tns:IIssueWCF_ImportReceiveBigData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/ImportReceiveBigDataResponse" message="tns:IIssueWCF_ImportReceiveBigData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/IssueInsert" message="tns:IIssueWCF_IssueInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/IssueInsertResponse" message="tns:IIssueWCF_IssueInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssuePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/IssuePost" message="tns:IIssueWCF_IssuePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/IssuePostResponse" message="tns:IIssueWCF_IssuePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/IssueUpdate" message="tns:IIssueWCF_IssueUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/IssueUpdateResponse" message="tns:IIssueWCF_IssueUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/MultiplePost" message="tns:IIssueWCF_MultiplePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/MultiplePostResponse" message="tns:IIssueWCF_MultiplePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnIssueQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/ReturnIssueQty" message="tns:IIssueWCF_ReturnIssueQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/ReturnIssueQtyResponse" message="tns:IIssueWCF_ReturnIssueQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/SaveTempIssue" message="tns:IIssueWCF_SaveTempIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/SaveTempIssueResponse" message="tns:IIssueWCF_SaveTempIssue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssueDetailDTNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/SearchIssueDetailDTNew" message="tns:IIssueWCF_SearchIssueDetailDTNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/SearchIssueDetailDTNewResponse" message="tns:IIssueWCF_SearchIssueDetailDTNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/SelectAll" message="tns:IIssueWCF_SelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/SelectAllResponse" message="tns:IIssueWCF_SelectAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/SelectAllList" message="tns:IIssueWCF_SelectAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/SelectAllListResponse" message="tns:IIssueWCF_SelectAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssueDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIssueWCF/SelectIssueDetail" message="tns:IIssueWCF_SelectIssueDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIssueWCF/SelectIssueDetailResponse" message="tns:IIssueWCF_SelectIssueDetail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IIssueWCF" type="tns:IIssueWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcelData">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/GetExcelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnProcessedCount">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/GetUnProcessedCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportBigData">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/ImportBigData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportData">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/ImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportExcelFile">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/ImportExcelFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportReceiveBigData">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/ImportReceiveBigData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueInsert">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/IssueInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssuePost">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/IssuePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueUpdate">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/IssueUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiplePost">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/MultiplePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnIssueQty">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/ReturnIssueQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTempIssue">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/SaveTempIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchIssueDetailDTNew">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/SearchIssueDetailDTNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllList">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/SelectAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectIssueDetail">
+      <soap:operation soapAction="http://tempuri.org/IIssueWCF/SelectIssueDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IssueWCF">
+    <wsdl:port name="BasicHttpBinding_IIssueWCF" binding="tns:BasicHttpBinding_IIssueWCF">
+      <soap:address location="http://localhost:50568/WCF/IssueWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
